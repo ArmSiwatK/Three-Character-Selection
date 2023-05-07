@@ -16,24 +16,24 @@ function Carousel() {
     });
 
 
+    
+    const updateSelectedCharacters = (updatedSelectedCharacters) => {
+        setSelectedCharacters(updatedSelectedCharacters);
+        updateLockedPanels(updatedSelectedCharacters);
+    };
 
     const handleCharSelect = (charID) => {
         if (selectedCharacters.length < 3) {
             const newIndex = findCharacterIndex(characters, charID);
             setCurrentIndex(newIndex);
-            const updatedSelectedCharacters = [...selectedCharacters];
-            updatedSelectedCharacters.push(character);
-            setSelectedCharacters(updatedSelectedCharacters);
-            updateLockedPanels(updatedSelectedCharacters);
+            updateSelectedCharacters([...selectedCharacters, character]);
         }
     };
 
     const handleCharDeselect = () => {
         if (selectedCharacters.length > 0) {
-            const updatedSelectedCharacters = [...selectedCharacters];
-            updatedSelectedCharacters.pop();
-            setSelectedCharacters(updatedSelectedCharacters);
-            updateLockedPanels(updatedSelectedCharacters);
+            const updatedSelectedCharacters = selectedCharacters.slice(0, -1);
+            updateSelectedCharacters(updatedSelectedCharacters);
             if (currentIndex > 0) {
                 setCurrentIndex(currentIndex - 1);
             }
