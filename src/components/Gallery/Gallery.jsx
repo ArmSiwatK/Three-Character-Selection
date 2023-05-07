@@ -6,6 +6,8 @@ import "./Gallery.css";
 const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
     const initialDisplayCount = 9;
 
+
+
     const circularIndex = (index, length) => (index + length) % length;
 
     const handleImageClick = (event, index) => {
@@ -49,20 +51,20 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
 
     return (
         <div className="gallery-side">
-            {displayedCharacters.map((character, index) => (
-                <div
-                    key={character.charID}
-                    className={`gallery-wrapper ${index === 0 || index === displayedCharacters.length - 1 ? "hidden" : ""}`}
-                    onClick={(event) =>
-                        handleImageClick(
-                            event,
-                            circularIndex(currentIndex - Math.floor(initialDisplayCount / 2) + index, characters.length)
-                        )
-                    }
-                >
-                    <img src={character.profileImg} alt={character.name} />
-                </div>
-            ))}
+            {displayedCharacters.map((character, index) => {
+                const characterIndex = circularIndex(currentIndex - Math.floor(initialDisplayCount / 2) + index, characters.length);
+                const isHidden = index === 0 || index === displayedCharacters.length - 1;
+
+                return (
+                    <div
+                        key={character.charID}
+                        className={`gallery-wrapper ${isHidden ? "hidden" : ""}`}
+                        onClick={(event) => handleImageClick(event, characterIndex)}
+                    >
+                        <img src={character.profileImg} alt={character.name} />
+                    </div>
+                );
+            })}
         </div>
     );
 };
