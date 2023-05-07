@@ -18,6 +18,8 @@ const Gallery = ({ currentIndex, setCurrentIndex }) => {
 
     const displayedCharacters = getDisplayedCharacters();
 
+
+
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.key === "ArrowDown") {
@@ -36,6 +38,8 @@ const Gallery = ({ currentIndex, setCurrentIndex }) => {
         };
     }, [currentIndex, setCurrentIndex]);
 
+
+    
     const handleImageClick = (event, index) => {
         event.preventDefault();
         setCurrentIndex(index);
