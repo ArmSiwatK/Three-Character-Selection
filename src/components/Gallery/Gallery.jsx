@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import characters from "../../assets/characters.json";
 import "./Gallery.css";
 
 const Gallery = ({ onCharSelect, selectedCharID }) => {
-    const initialDisplayCount = 7;
+    const initialDisplayCount = 9;
 
     const circularIndex = (index, length) => (index + length) % length;
 
@@ -16,7 +16,7 @@ const Gallery = ({ onCharSelect, selectedCharID }) => {
         const displayedCount = Math.min(initialDisplayCount, characters.length);
 
         return Array.from({ length: displayedCount }, (_, i) =>
-            characters[circularIndex(selectedIndex - 3 + i, characters.length)]
+            characters[circularIndex(selectedIndex - Math.floor(initialDisplayCount / 2) + i, characters.length)]
         );
     };
 
@@ -44,11 +44,10 @@ const Gallery = ({ onCharSelect, selectedCharID }) => {
 
     return (
         <div className="gallery-side">
-            {displayedCharacters.map((character) => (
+            {displayedCharacters.map((character, index) => (
                 <div
                     key={character.charID}
-                    className={`gallery-wrapper ${character.charID === selectedCharID ? "active" : ""
-                        }`}
+                    className={`gallery-wrapper ${character.charID === selectedCharID ? "active" : ""} ${index === 0 || index === displayedCharacters.length - 1 ? "hidden" : ""}`}
                     onClick={() => handleImageClick(character.charID)}
                 >
                     <img src={character.profileImg} alt={character.name} />
