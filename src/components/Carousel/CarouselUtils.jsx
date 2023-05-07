@@ -13,7 +13,10 @@ export function goToPreviousSlide(currentIndex, charactersLength, setCurrentInde
     setCurrentIndex(prevIndex);
 }
 
-export function handleKeyDown(event, goToNextSlide, goToPreviousSlide) {
+export function handleKeyDown(event, goToNextSlide, goToPreviousSlide, selectedCharacters) {
+    if (selectedCharacters.length === 3) {
+        return;
+    }
     if (event.key === 'ArrowRight') {
         goToNextSlide();
     } else if (event.key === 'ArrowLeft') {

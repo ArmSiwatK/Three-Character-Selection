@@ -33,7 +33,8 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
             handleKeyDown(
                 event,
                 () => goToNextSlide(currentIndex, characters.length, setCurrentIndex),
-                () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex)
+                () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex),
+                selectedCharacters
             );
         };
 
@@ -42,7 +43,7 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
         return () => {
             document.removeEventListener("keydown", handleKeyDownEvent);
         };
-    }, [currentIndex, setCurrentIndex]);
+    }, [currentIndex, setCurrentIndex, selectedCharacters]);
 
 
 
