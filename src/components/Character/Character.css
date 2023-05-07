@@ -1,7 +1,7 @@
 .characters-container {
     display: flex;
     justify-content: center;
-    margin: 4% 0 0;
+    margin: 2% 0 0;
 }
 
 .character-panel {

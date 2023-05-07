@@ -4,8 +4,8 @@ import './Character.css';
 function Character(props) {
     const [locked, setLocked] = useState({
         panel1: false,
-        panel2: false,
-        panel3: false
+        panel2: true,
+        panel3: true
     });
 
     const [latestProps, setLatestProps] = useState({
@@ -22,45 +22,39 @@ function Character(props) {
     };
 
     useEffect(() => {
-        if (!locked.panel1) {
-            setLatestProps((prevLatestProps) => ({
-                ...prevLatestProps,
-                panel1: { name: props.name, image: props.image }
-            }));
-        }
-        if (!locked.panel2) {
-            setLatestProps((prevLatestProps) => ({
-                ...prevLatestProps,
-                panel2: { name: props.name, image: props.image }
-            }));
-        }
-        if (!locked.panel3) {
-            setLatestProps((prevLatestProps) => ({
-                ...prevLatestProps,
-                panel3: { name: props.name, image: props.image }
-            }));
-        }
+        const updateLatestProps = (panel) => {
+            if (!locked[panel]) {
+                setLatestProps((prevLatestProps) => ({
+                    ...prevLatestProps,
+                    [panel]: { name: props.name, image: props.image }
+                }));
+            }
+        };
+
+        updateLatestProps('panel1');
+        updateLatestProps('panel2');
+        updateLatestProps('panel3');
     }, [props, locked]);
 
-    return (
-        <div className="characters-container">
+    const renderCharacterPanel = (panel) => {
+        return (
             <div className="character-panel">
-                <h1>{latestProps.panel1.name || props.name}</h1>
-                <img className="character-portrait" src={latestProps.panel1.image || props.image} alt={props.name} />
-                <button onClick={() => toggleLock('panel1')}>{locked.panel1 ? 'Unlock' : 'Lock'}</button>
+                <button onClick={() => toggleLock(panel)}>
+                    {locked[panel] ? 'Unlock' : 'Lock'}
+                </button>
+                <h1>{latestProps[panel].name || props.name}</h1>
+                <img
+                    className="character-portrait"
+                    src={latestProps[panel].image || props.image}
+                    alt={props.name}
+                />
             </div>
-            <div className="character-panel">
-                <h1>{latestProps.panel2.name || props.name}</h1>
-                <img className="character-portrait" src={latestProps.panel2.image || props.image} alt={props.name} />
-                <button onClick={() => toggleLock('panel2')}>{locked.panel2 ? 'Unlock' : 'Lock'}</button>
-            </div>
-            <div className="character-panel">
-                <h1>{latestProps.panel3.name || props.name}</h1>
-                <img className="character-portrait" src={latestProps.panel3.image || props.image} alt={props.name} />
-                <button onClick={() => toggleLock('panel3')}>{locked.panel3 ? 'Unlock' : 'Lock'}</button>
-            </div>
-        </div>
-    );
+        );
+    };
+
+    return <div className="characters-container">
+        {['panel1', 'panel2', 'panel3'].map((panel) => renderCharacterPanel(panel))}
+    </div>;
 }
 
 export default Character;
