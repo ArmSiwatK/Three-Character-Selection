@@ -3,14 +3,9 @@ function getSlideIndex(currentIndex, direction, charactersLength) {
     return (currentIndex + offset + charactersLength) % charactersLength;
 }
 
-function findCharacterIndex(characters, charID) {
+export function findCharacterIndex(characters, charID) {
     return characters.findIndex((char) => char.charID === charID);
 }
-
-
-
-
-
 
 export function goToNextSlide(currentIndex, charactersLength, setCurrentIndex) {
     const nextIndex = getSlideIndex(currentIndex, 'next', charactersLength);
@@ -28,16 +23,4 @@ export function handleKeyDown(event, goToNextSlide, goToPreviousSlide) {
     } else if (event.key === 'ArrowLeft') {
         goToPreviousSlide();
     }
-}
-
-export function handleCharSelect(characters, charID, setCurrentIndex) {
-    const newIndex = findCharacterIndex(characters, charID);
-    setCurrentIndex(newIndex);
-}
-
-export function toggleLock(panel, prevLockedPanels, setLockedPanels) {
-    setLockedPanels((prevLockedPanels) => ({
-        ...prevLockedPanels,
-        [panel]: !prevLockedPanels[panel]
-    }));
 }

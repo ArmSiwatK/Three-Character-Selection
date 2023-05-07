@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { handleKeyDown, goToNextSlide, goToPreviousSlide, handleCharSelect, toggleLock } from './CarouselUtils';
+import { handleKeyDown, findCharacterIndex, goToNextSlide, goToPreviousSlide } from './CarouselUtils';
 import Character from '../Character/Character';
 import Gallery from '../Gallery/Gallery';
 import characters from '../../assets/characters.json';
@@ -14,15 +14,21 @@ function Carousel() {
         panel3: true
     });
 
+    const handleCharSelect = (charID) => {
+        const newIndex = findCharacterIndex(characters, charID);
+        setCurrentIndex(newIndex);
+    };
 
+    const toggleLock = (panel) => {
+        setLockedPanels((prevLockedPanels) => ({
+            ...prevLockedPanels,
+            [panel]: !prevLockedPanels[panel]
+        }));
+    };
 
     useEffect(() => {
         const handleKeyDownEvent = (event) => {
-            handleKeyDown(
-                event,
-                () => goToNextSlide(currentIndex, characters.length, setCurrentIndex),
-                () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex)
-            );
+            handleKeyDown(event, () => goToNextSlide(currentIndex, characters.length, setCurrentIndex), () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex));
         };
 
         document.addEventListener('keydown', handleKeyDownEvent);
