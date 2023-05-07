@@ -11,10 +11,18 @@ function Character(props) {
     useEffect(() => {
         const updateLatestProps = (panel) => {
             if (!props.lockedPanels[panel]) {
-                setLatestProps((prevLatestProps) => ({
-                    ...prevLatestProps,
-                    [panel]: { name: props.name, image: props.image }
-                }));
+                setLatestProps((prevLatestProps) => {
+                    if (panel === 'panel3' && !props.lockedPanels['panel2']) {
+                        return {
+                            ...prevLatestProps,
+                            panel3: { name: ' ', image: './portraits/blank.png' }
+                        };
+                    }
+                    return {
+                        ...prevLatestProps,
+                        [panel]: { name: props.name, image: props.image }
+                    };
+                });
             }
         };
 
