@@ -3,10 +3,17 @@ import { handleKeyDown, goToNextSlide, goToPreviousSlide } from '../Carousel/Car
 import characters from "../../assets/characters.json";
 import "./Gallery.css";
 
-const Gallery = ({ currentIndex, setCurrentIndex }) => {
+const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
     const initialDisplayCount = 9;
 
     const circularIndex = (index, length) => (index + length) % length;
+
+    const handleImageClick = (event, index) => {
+        event.preventDefault();
+        if (selectedCharacters.length < 3) {
+            setCurrentIndex(index);
+        }
+    };
 
     const getDisplayedCharacters = () => {
         const selectedIndex = currentIndex;
@@ -20,7 +27,7 @@ const Gallery = ({ currentIndex, setCurrentIndex }) => {
     const displayedCharacters = getDisplayedCharacters();
 
 
-    
+
     useEffect(() => {
         const handleKeyDownEvent = (event) => {
             handleKeyDown(
@@ -36,11 +43,6 @@ const Gallery = ({ currentIndex, setCurrentIndex }) => {
             document.removeEventListener("keydown", handleKeyDownEvent);
         };
     }, [currentIndex, setCurrentIndex]);
-
-    const handleImageClick = (event, index) => {
-        event.preventDefault();
-        setCurrentIndex(index);
-    };
 
 
 

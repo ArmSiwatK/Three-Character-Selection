@@ -73,7 +73,13 @@ function Carousel() {
         <div className="carousel-container">
             <div className="top-side">
                 <h1 className="character-title">{character.title}</h1>
-                <Gallery onCharSelect={handleCharSelect} selectedCharID={character.charID} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
+                <Gallery
+                    onCharSelect={handleCharSelect}
+                    selectedCharID={character.charID}
+                    currentIndex={currentIndex}
+                    setCurrentIndex={setCurrentIndex}
+                    selectedCharacters={selectedCharacters}
+                />
                 <div className="lock-buttons">
                     <button onClick={() => handleCharSelect(character.charID)} disabled={selectedCharacters.length >= 3}>
                         Select
