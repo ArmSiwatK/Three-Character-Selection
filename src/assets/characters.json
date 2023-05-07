@@ -1,0 +1,151 @@
+[
+  {
+    "charID": "reimu",
+    "videoID": "fMdGSTE4-Zk",
+    "name": "Hakurei Reimu",
+    "title": "Shrine Maiden of Paradise",
+    "image": "./portraits/reimu.png",
+    "profileImg": "./profiles/reimu.png",
+    "description": "Reimu, the Hakurei Shrine Maiden, leads a life dedicated to exterminating youkai in Gensokyo. Positioned at the eastern border with the “Outside World”, the Hakurei Shrine sees scarce worshipers, allowing Reimu to pass her days leisurely sipping tea and pretending to sweep the grounds. When questioned about her motivation for battling youkai, she emphasizes that it is an integral duty bestowed upon the “Hakurei Shrine Maiden”, inseparable from the existence of Gensokyo itself."
+  },
+
+  {
+    "charID": "marisa",
+    "videoID": "7RBJ4NMOBV0",
+    "name": "Kirisame Marisa",
+    "title": "Ordinary Magician",
+    "image": "./portraits/marisa.png",
+    "profileImg": "./profiles/marisa.png",
+    "description": "Marisa is a powerful human magician who exterminates youkai as if competing with Reimu. She lives in the Forest of Magic, where she runs the Kirisame Magic Shop. However, since the forest is inhospitable to normal humans, she hardly gets any customers. Because of that, most of her time is devoted either to magical research or visiting the Hakurei Shrine. She wears black clothes both because you can't tell when they're dirty, and because she thinks that's what magicians ought to wear."
+  },
+
+  {
+    "charID": "rumia",
+    "videoID": "zUvEHNW6y_A",
+    "name": "Rumia",
+    "title": "Youkai of the Dusk",
+    "image": "./portraits/rumia.png",
+    "profileImg": "./profiles/rumia.png",
+    "description": "Rumia is a youkai of darkness and the Stage 1 Boss in “Embodiment of Scarlet Devil”. She has the power to manipulate darkness and avoids sunlight, surrounding herself in a pitch-black shroud to keep it at bay. However, her darkness also blinds her and has limited range. Rumia is often seen aimlessly flying around Gensokyo. During full moon nights, she may appear outside of her darkness. The ribbon on her head is actually an ofuda, but its origin is unknown, and she cannot touch it herself."
+  },
+
+  {
+    "charID": "daiyousei",
+    "videoID": "-Gx6D-i2Fqo",
+    "name": "Daiyousei",
+    "title": "Big Fairy",
+    "image": "./portraits/daiyousei.png",
+    "profileImg": "./profiles/daiyousei.png",
+    "description": "Although she does not have a specific name, for convenience, she is referred to as “Daiyousei” to distinguish her from the regular fairies. She makes her first appearance at Stage 2 of “Embodiment of Scarlet Devil”, where she is encountered while traveling over the Misty Lake. Fairies are generally cheerful, so she may have attacked the protagonists simply out of mischief. She also appears again at the Misty Lake stage in Great Fairy War, which means she probably lives in that area."
+  },
+
+  {
+    "charID": "cirno",
+    "videoID": "FG7flaqNFIY",
+    "name": "Cirno",
+    "title": "Fairy of the Ice",
+    "image": "./portraits/cirno.png",
+    "profileImg": "./profiles/cirno.png",
+    "description": "Cirno is an ice fairy. She first appeared as the Stage 2 Boss in “Embodiment of Scarlet Devil”, but was defeated by Reimu and Marisa as they hurried to solve the incident. She seems to live near the Misty Lake in the foothills of the Youkai Mountain, though her exact dwelling is unknown. She has the ability to manipulate the cold and freeze anything (sometimes even danmaku). The cold is severe enough to instantly freeze small objects, and she seems to even emanate it while asleep."
+  },
+
+  {
+    "charID": "meiling",
+    "videoID": "qefeBGGszRI",
+    "name": "Hong Meiling",
+    "title": "Chinese Girl",
+    "image": "./portraits/meiling.png",
+    "profileImg": "./profiles/meiling.png",
+    "description": "Meiling is the Stage 3 Boss in “Embodiment of Scarlet Devil”. She guards Koumakan as its gatekeeper. Though she may look no different from a human, she is a full-fledged youkai. However, Meiling does not rely on unusual abilities. Instead, she harnesses her expertise in martial arts, specifically the art of “Qigong”, allowing her to manipulate qi energy. Notably, her physical prowess aligns with her master, Remilia, suggesting a shared inclination towards the physical aspects of combat."
+  },
+
+  {
+    "charID": "koakuma",
+    "videoID": "ogtZZLPHqus",
+    "name": "Koakuma",
+    "title": "Little Demon",
+    "image": "./portraits/koakuma.png",
+    "profileImg": "./profiles/koakuma.png",
+    "description": "Although she does not have a specific name, for convenience, she is referred to as “Koakuma” from her appearance. She first appeared as the Stage 4 Midboss in “Embodiment of Scarlet Devil” attacking the protagonist. From the perspective of Koumakan, the protagonist is an intruder, so Koakuma felt she had no choice but to attack this suspicious individual. While she is seen in the library, it is unclear whether or not Patchouli who summoned her as a familiar."
+  },
+
+  {
+    "charID": "patchouli",
+    "videoID": "qUEPCSzOHmo",
+    "name": "Patchouli Knowledge",
+    "title": "Immovable Great Library",
+    "image": "./portraits/patchouli.png",
+    "profileImg": "./profiles/patchouli.png",
+    "description": "Patchouli is a magician and friend of Remilia who settled in Koumakan's library. Despite suffering from asthma since birth, she spends most of her time reading books and has shut herself in the library for at least 100 years. The library contains a vast collection ranging from magical grimoires to outside world books. Though the library is located in the mansion's dusty and moldy basement, Patchouli refuses to be separated from her books, even if her asthma can prevent her from reciting spells."
+  },
+
+  {
+    "charID": "sakuya",
+    "videoID": "m1nRuWqW09Q",
+    "name": "Izayoi Sakuya",
+    "title": "Perfect and Elegant Maid",
+    "image": "./portraits/sakuya.png",
+    "profileImg": "./profiles/sakuya.png",
+    "description": "Sakuya is a devoted maid to the vampire Remilia Scarlet. She is the Stage 5 Boss in “Embodiment of Scarlet Devil”. The Western mansion, Koumakan, stands out in Gensokyo, surrounded by traditional Japanese-style buildings. Sakuya is the head maid in charge of the mansion's staff of whimsical fairies. She handles everything herself, as they are useless for real work. Despite the mansion's devilish reputation, Sakuya is dedicated to fulfilling the whims of her mistresses."
+  },
+
+  {
+    "charID": "remilia",
+    "videoID": "uQ1YJMvSKP8",
+    "name": "Remilia Scarlet",
+    "title": "The Scarlet Devil",
+    "image": "./portraits/remilia.png",
+    "profileImg": "./profiles/remilia.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+
+  {
+    "charID": "flandre",
+    "videoID": "xcvouNwZbI0",
+    "name": "Flandre Scarlet",
+    "title": "Sister of the Devil",
+    "image": "./portraits/flandre.png",
+    "profileImg": "./profiles/flandre.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+
+  {
+    "charID": "alice",
+    "videoID": "3K38Z8qAkqo",
+    "name": "Alice Margatroid",
+    "title": "Seven-Colored Puppeteer",
+    "image": "./portraits/alice.png",
+    "profileImg": "./profiles/alice.png",
+    "description": "Alice is a magician who is the Stage 3 Boss in “Perfect Cherry Blossom”. Despite her recent youkai transformation, she still clings to human habits like eating and sleeping. Like Marisa, she resides in the Forest of Magic, immersing herself in research. Her expertise lies in manipulating numerous dolls simultaneously with magic. Her house is filled with her handmade dolls. While they do assist her in housekeeping, it isn't any less work given that she has to be the one moving them in the first place."
+  },
+
+  {
+    "charID": "suika",
+    "videoID": "l6LcKxjICek",
+    "name": "Ibuki Suika",
+    "title": "Tiny Night Parade of One Hundred Demons",
+    "image": "./portraits/suika.png",
+    "profileImg": "./profiles/suika.png",
+    "description": "Suika is an oni and the Final Boss of “Immaterial and Missing Power”. She carries an infinite sake-producing gourd, her insatiable love for sake spanning centuries. Long ago, oni resided in Gensokyo until they retreated to a place called the “Land of Oni”, prompted by a betrayal of trust from humans who feared, but also shared a bond with them. Suika, however, defied this trend and returned to Gensokyo, orchestrating a peculiar incident – a banquet held at the Hakurei Shrine every three days."
+  },
+
+  {
+    "charID": "komachi",
+    "videoID": "eZuC4d-AL1U",
+    "name": "Onozuka Komachi",
+    "title": "Guide of the Sanzu River",
+    "image": "./portraits/komachi.png",
+    "profileImg": "./profiles/komachi.png",
+    "description": "Komachi is a shinigami, and the Penultimate Boss in “Phantasmagoria of Flower View”. Shinigami oversee lifespans from the afterlife, write court transcripts for the Yama's trials, and perform various other tasks. Komachi's role is as the boatwoman of the Sanzu River, ferrying souls from Shigan to Higan, where the Yama awaits. Shinigami are subordinates to the Yama, and Komachi works under Shiki Eiki, Yamaxanadu. Her charge is to transport humans and youkai of Gensokyo across the river."
+  },
+
+  {
+    "charID": "sanae",
+    "videoID": "-goM1TtuZ_8",
+    "name": "Kochiya Sanae",
+    "title": "Deified Human of the Wind",
+    "image": "./portraits/sanae.png",
+    "profileImg": "./profiles/sanae.png",
+    "description": "Sanae is the shrine maiden of the Moriya Shrine, located deep within the Youkai Mountain, where she serves the gods enshrined there. She is the Stage 5 Boss in “Mountain of Faith”. Descended from native gods, she inherited the revered title “Wind Priestess” and their ancient techniques. As a living god, she possessed the power to perform miracles. Yet, faith in the gods had waned among humans. Undeterred, she eagerly anticipated a world where her powers would be acknowledged."
+  }
+]

@@ -1,0 +1,17 @@
+#illustration-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#illustration {
+    width: 90%;
+    margin-top: 5%;
+}
+
+.frame {
+    position: absolute;
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    box-sizing: border-box;
+}

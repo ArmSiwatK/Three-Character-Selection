@@ -1,0 +1,21 @@
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./landscape.jpg');
+    background-size: cover;
+    opacity: .5;
+    z-index: -2;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom left, white, transparent);
+    z-index: -1;
+}
