@@ -43,19 +43,17 @@ const Gallery = ({ onCharSelect, selectedCharID }) => {
     };
 
     return (
-        <div className="gallery-container">
-            <div className="gallery-side">
-                {displayedCharacters.map((character) => (
-                    <div
-                        key={character.charID}
-                        className={`gallery-wrapper ${character.charID === selectedCharID ? "active" : ""
-                            }`}
-                        onClick={() => handleImageClick(character.charID)}
-                    >
-                        <img src={character.profileImg} alt={character.name} />
-                    </div>
-                ))}
-            </div>
+        <div className="gallery-side">
+            {displayedCharacters.map((character) => (
+                <div
+                    key={character.charID}
+                    className={`gallery-wrapper ${character.charID === selectedCharID ? "active" : ""
+                        }`}
+                    onClick={() => handleImageClick(character.charID)}
+                >
+                    <img src={character.profileImg} alt={character.name} />
+                </div>
+            ))}
         </div>
     );
 };

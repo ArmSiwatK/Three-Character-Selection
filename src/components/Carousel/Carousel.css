@@ -8,14 +8,3 @@
     font-family: 'Playfair Display', serif;
     text-align: center;
 }
-
-
-
-
-
-
-@media screen and (max-width: 1600px) {
-    .character-title {
-        display: none;
-    }
-}
