@@ -8,34 +8,8 @@ function Character(props) {
         panel3: { name: ' ', image: './portraits/blank.png' }
     });
 
-    useEffect(() => {
-        const updateLatestProps = (panel) => {
-            if (!props.lockedPanels[panel]) {
-                setLatestProps((prevLatestProps) => {
-                    if (panel === 'panel3' && !props.lockedPanels['panel2']) {
-                        return {
-                            ...prevLatestProps,
-                            panel3: { name: ' ', image: './portraits/blank.png' }
-                        };
-                    } else if (panel === 'panel2' && !props.lockedPanels['panel1']) {
-                        return {
-                            ...prevLatestProps,
-                            panel2: { name: ' ', image: './portraits/blank.png' }
-                        };
-                    }
-                    return {
-                        ...prevLatestProps,
-                        [panel]: { name: props.name, image: props.image }
-                    };
-                });
-            }
-        };
 
-        updateLatestProps('panel1');
-        updateLatestProps('panel2');
-        updateLatestProps('panel3');
-    }, [props]);
-
+    
     const renderCharacterPanel = (panel) => {
         return (
             <div key={panel} className="character-panel">
@@ -48,6 +22,38 @@ function Character(props) {
             </div>
         );
     };
+
+    const updateLatestProps = (panel) => {
+        if (!props.lockedPanels[panel]) {
+            setLatestProps((prevLatestProps) => {
+                if (panel === 'panel3' && !props.lockedPanels['panel2']) {
+                    return {
+                        ...prevLatestProps,
+                        panel3: { name: ' ', image: './portraits/blank.png' }
+                    };
+                } else if (panel === 'panel2' && !props.lockedPanels['panel1']) {
+                    return {
+                        ...prevLatestProps,
+                        panel2: { name: ' ', image: './portraits/blank.png' }
+                    };
+                }
+                return {
+                    ...prevLatestProps,
+                    [panel]: { name: props.name, image: props.image }
+                };
+            });
+        }
+    };
+
+
+
+    useEffect(() => {
+        updateLatestProps('panel1');
+        updateLatestProps('panel2');
+        updateLatestProps('panel3');
+    }, [props]);
+
+
 
     return (
         <div className="characters-container">
