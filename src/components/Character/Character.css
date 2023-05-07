@@ -13,9 +13,17 @@
 
 .character-panel h1 {
     font-family: 'Playfair Display', serif;
+    z-index: 2;
+    background-image: linear-gradient(to right, transparent, white, white, white, white, white, transparent);
+    padding: 10px 30px;
+}
+
+.character-panel.blank-panel h1 {
+    background-image: none;
 }
 
 .character-portrait {
     max-width: 100%;
     height: auto;
+    margin-top: -17%;
 }

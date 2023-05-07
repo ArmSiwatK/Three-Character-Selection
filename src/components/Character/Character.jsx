@@ -9,11 +9,13 @@ function Character(props) {
     });
 
 
-
+    
     const renderCharacterPanel = (panel) => {
         const { name, image } = latestProps[panel];
+        const isBlankPanel = name === ' ' && image === './portraits/blank.png';
+
         return (
-            <div key={panel} className="character-panel">
+            <div key={panel} className={`character-panel ${isBlankPanel ? 'blank-panel' : ''}`}>
                 <h1>{name || props.name}</h1>
                 <img
                     className="character-portrait"
