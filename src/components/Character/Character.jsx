@@ -9,14 +9,15 @@ function Character(props) {
     });
 
 
-    
+
     const renderCharacterPanel = (panel) => {
+        const { name, image } = latestProps[panel];
         return (
             <div key={panel} className="character-panel">
-                <h1>{latestProps[panel].name || props.name}</h1>
+                <h1>{name || props.name}</h1>
                 <img
                     className="character-portrait"
-                    src={latestProps[panel].image || props.image}
+                    src={image || props.image}
                     alt={props.name}
                 />
             </div>
@@ -25,41 +26,30 @@ function Character(props) {
 
     const updateLatestProps = (panel) => {
         if (!props.lockedPanels[panel]) {
-            setLatestProps((prevLatestProps) => {
-                if (panel === 'panel3' && !props.lockedPanels['panel2']) {
-                    return {
-                        ...prevLatestProps,
-                        panel3: { name: ' ', image: './portraits/blank.png' }
-                    };
-                } else if (panel === 'panel2' && !props.lockedPanels['panel1']) {
-                    return {
-                        ...prevLatestProps,
-                        panel2: { name: ' ', image: './portraits/blank.png' }
-                    };
-                }
-                return {
-                    ...prevLatestProps,
-                    [panel]: { name: props.name, image: props.image }
-                };
-            });
+            let updatedPanel;
+            if (panel === 'panel3' && !props.lockedPanels['panel2']) {
+                updatedPanel = { name: ' ', image: './portraits/blank.png' };
+            } else if (panel === 'panel2' && !props.lockedPanels['panel1']) {
+                updatedPanel = { name: ' ', image: './portraits/blank.png' };
+            } else {
+                updatedPanel = { name: props.name, image: props.image };
+            }
+            setLatestProps((prevLatestProps) => ({
+                ...prevLatestProps,
+                [panel]: updatedPanel
+            }));
         }
     };
 
 
 
     useEffect(() => {
-        updateLatestProps('panel1');
-        updateLatestProps('panel2');
-        updateLatestProps('panel3');
+        ['panel1', 'panel2', 'panel3'].forEach(updateLatestProps);
     }, [props]);
 
 
 
-    return (
-        <div className="characters-container">
-            {['panel1', 'panel2', 'panel3'].map((panel) => renderCharacterPanel(panel))}
-        </div>
-    );
+    return <div className="characters-container">{['panel1', 'panel2', 'panel3'].map(renderCharacterPanel)}</div>;
 }
 
 export default Character;
