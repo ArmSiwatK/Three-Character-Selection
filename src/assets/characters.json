@@ -1,7 +1,6 @@
 [
   {
     "charID": "reimu",
-    "videoID": "fMdGSTE4-Zk",
     "name": "Hakurei Reimu",
     "title": "Shrine Maiden of Paradise",
     "image": "./portraits/reimu.png",
@@ -11,7 +10,6 @@
 
   {
     "charID": "marisa",
-    "videoID": "7RBJ4NMOBV0",
     "name": "Kirisame Marisa",
     "title": "Ordinary Magician",
     "image": "./portraits/marisa.png",
@@ -21,7 +19,6 @@
 
   {
     "charID": "rumia",
-    "videoID": "zUvEHNW6y_A",
     "name": "Rumia",
     "title": "Youkai of the Dusk",
     "image": "./portraits/rumia.png",
@@ -31,7 +28,6 @@
 
   {
     "charID": "daiyousei",
-    "videoID": "-Gx6D-i2Fqo",
     "name": "Daiyousei",
     "title": "Big Fairy",
     "image": "./portraits/daiyousei.png",
@@ -41,7 +37,6 @@
 
   {
     "charID": "cirno",
-    "videoID": "FG7flaqNFIY",
     "name": "Cirno",
     "title": "Fairy of the Ice",
     "image": "./portraits/cirno.png",
@@ -51,7 +46,6 @@
 
   {
     "charID": "meiling",
-    "videoID": "qefeBGGszRI",
     "name": "Hong Meiling",
     "title": "Chinese Girl",
     "image": "./portraits/meiling.png",
@@ -61,7 +55,6 @@
 
   {
     "charID": "koakuma",
-    "videoID": "ogtZZLPHqus",
     "name": "Koakuma",
     "title": "Little Demon",
     "image": "./portraits/koakuma.png",
@@ -71,7 +64,6 @@
 
   {
     "charID": "patchouli",
-    "videoID": "qUEPCSzOHmo",
     "name": "Patchouli Knowledge",
     "title": "Immovable Great Library",
     "image": "./portraits/patchouli.png",
@@ -81,7 +73,6 @@
 
   {
     "charID": "sakuya",
-    "videoID": "m1nRuWqW09Q",
     "name": "Izayoi Sakuya",
     "title": "Perfect and Elegant Maid",
     "image": "./portraits/sakuya.png",
@@ -91,7 +82,6 @@
 
   {
     "charID": "remilia",
-    "videoID": "uQ1YJMvSKP8",
     "name": "Remilia Scarlet",
     "title": "The Scarlet Devil",
     "image": "./portraits/remilia.png",
@@ -101,7 +91,6 @@
 
   {
     "charID": "flandre",
-    "videoID": "xcvouNwZbI0",
     "name": "Flandre Scarlet",
     "title": "Sister of the Devil",
     "image": "./portraits/flandre.png",
@@ -111,7 +100,6 @@
 
   {
     "charID": "alice",
-    "videoID": "3K38Z8qAkqo",
     "name": "Alice Margatroid",
     "title": "Seven-Colored Puppeteer",
     "image": "./portraits/alice.png",
@@ -121,7 +109,6 @@
 
   {
     "charID": "suika",
-    "videoID": "l6LcKxjICek",
     "name": "Ibuki Suika",
     "title": "Tiny Night Parade of One Hundred Demons",
     "image": "./portraits/suika.png",
@@ -131,7 +118,6 @@
 
   {
     "charID": "komachi",
-    "videoID": "eZuC4d-AL1U",
     "name": "Onozuka Komachi",
     "title": "Guide of the Sanzu River",
     "image": "./portraits/komachi.png",
@@ -141,7 +127,6 @@
 
   {
     "charID": "sanae",
-    "videoID": "-goM1TtuZ_8",
     "name": "Kochiya Sanae",
     "title": "Deified Human of the Wind",
     "image": "./portraits/sanae.png",
