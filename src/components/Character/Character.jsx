@@ -33,7 +33,7 @@ function Character(props) {
 
     const renderCharacterPanel = (panel) => {
         return (
-            <div className="character-panel">
+            <div key={panel} className="character-panel">
                 <h1>{latestProps[panel].name || props.name}</h1>
                 <img
                     className="character-portrait"
