@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { handleKeyDown, goToNextSlide, goToPreviousSlide } from '../Carousel/CarouselUtils';
 import characters from "../../assets/characters.json";
 import "./Gallery.css";
 
@@ -19,31 +20,29 @@ const Gallery = ({ currentIndex, setCurrentIndex }) => {
     const displayedCharacters = getDisplayedCharacters();
 
 
-
+    
     useEffect(() => {
-        const handleKeyDown = (event) => {
-            if (event.key === "ArrowDown") {
-                event.preventDefault();
-                setCurrentIndex((prevIndex) => prevIndex + 1);
-            } else if (event.key === "ArrowUp") {
-                event.preventDefault();
-                setCurrentIndex((prevIndex) => prevIndex - 1);
-            }
+        const handleKeyDownEvent = (event) => {
+            handleKeyDown(
+                event,
+                () => goToNextSlide(currentIndex, characters.length, setCurrentIndex),
+                () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex)
+            );
         };
 
-        document.addEventListener("keydown", handleKeyDown);
+        document.addEventListener("keydown", handleKeyDownEvent);
 
         return () => {
-            document.removeEventListener("keydown", handleKeyDown);
+            document.removeEventListener("keydown", handleKeyDownEvent);
         };
     }, [currentIndex, setCurrentIndex]);
 
-
-    
     const handleImageClick = (event, index) => {
         event.preventDefault();
         setCurrentIndex(index);
     };
+
+
 
     return (
         <div className="gallery-side">
@@ -51,7 +50,12 @@ const Gallery = ({ currentIndex, setCurrentIndex }) => {
                 <div
                     key={character.charID}
                     className={`gallery-wrapper ${index === 0 || index === displayedCharacters.length - 1 ? "hidden" : ""}`}
-                    onClick={(event) => handleImageClick(event, circularIndex(currentIndex - Math.floor(initialDisplayCount / 2) + index, characters.length))}
+                    onClick={(event) =>
+                        handleImageClick(
+                            event,
+                            circularIndex(currentIndex - Math.floor(initialDisplayCount / 2) + index, characters.length)
+                        )
+                    }
                 >
                     <img src={character.profileImg} alt={character.name} />
                 </div>
