@@ -15,6 +15,8 @@ function Carousel() {
         panel3: true
     });
 
+
+
     const handleCharSelect = (charID) => {
         if (selectedCharacters.length < 3) {
             const newIndex = findCharacterIndex(characters, charID);
@@ -53,6 +55,8 @@ function Carousel() {
         }));
     };
 
+
+
     useEffect(() => {
         const handleKeyDownEvent = (event) => {
             handleKeyDown(
@@ -68,6 +72,8 @@ function Carousel() {
             document.removeEventListener('keydown', handleKeyDownEvent);
         };
     }, [currentIndex]);
+
+
 
     return (
         <div className="carousel-container">
