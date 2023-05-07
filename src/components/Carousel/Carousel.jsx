@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { handleKeyDown, goToNextSlide, goToPreviousSlide, handleCharSelect, toggleLock } from './CarouselUtils';
 import Character from '../Character/Character';
 import Gallery from '../Gallery/Gallery';
 import characters from '../../assets/characters.json';
@@ -13,48 +14,25 @@ function Carousel() {
         panel3: true
     });
 
-    const getSlideIndex = (direction) => {
-        const offset = direction === 'next' ? 1 : -1;
-        return (currentIndex + offset + characters.length) % characters.length;
-    };
 
-    const goToNextSlide = () => {
-        const nextIndex = getSlideIndex('next');
-        setCurrentIndex(nextIndex);
-    };
-
-    const goToPreviousSlide = () => {
-        const prevIndex = getSlideIndex('prev');
-        setCurrentIndex(prevIndex);
-    };
-
-    const handleCharSelect = (charID) => {
-        const newIndex = characters.findIndex((char) => char.charID === charID);
-        setCurrentIndex(newIndex);
-    };
-
-    const toggleLock = (panel) => {
-        setLockedPanels((prevLockedPanels) => ({
-            ...prevLockedPanels,
-            [panel]: !prevLockedPanels[panel]
-        }));
-    };
 
     useEffect(() => {
-        const handleKeyDown = (event) => {
-            if (event.key === 'ArrowRight') {
-                goToNextSlide();
-            } else if (event.key === 'ArrowLeft') {
-                goToPreviousSlide();
-            }
+        const handleKeyDownEvent = (event) => {
+            handleKeyDown(
+                event,
+                () => goToNextSlide(currentIndex, characters.length, setCurrentIndex),
+                () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex)
+            );
         };
 
-        document.addEventListener('keydown', handleKeyDown);
+        document.addEventListener('keydown', handleKeyDownEvent);
 
         return () => {
-            document.removeEventListener('keydown', handleKeyDown);
+            document.removeEventListener('keydown', handleKeyDownEvent);
         };
     }, [currentIndex]);
+
+
 
     return (
         <div className="carousel-container">
