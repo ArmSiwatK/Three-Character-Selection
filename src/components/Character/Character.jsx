@@ -17,6 +17,11 @@ function Character(props) {
                             ...prevLatestProps,
                             panel3: { name: ' ', image: './portraits/blank.png' }
                         };
+                    } else if (panel === 'panel2' && !props.lockedPanels['panel1']) {
+                        return {
+                            ...prevLatestProps,
+                            panel2: { name: ' ', image: './portraits/blank.png' }
+                        };
                     }
                     return {
                         ...prevLatestProps,
