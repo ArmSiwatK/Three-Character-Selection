@@ -15,7 +15,8 @@
     font-family: 'Playfair Display', serif;
     z-index: 2;
     background-image: linear-gradient(to right, transparent, white, white, white, white, white, transparent);
-    padding: 10px 30px;
+    padding: 10px 80px;
+    font-size: 40px;
 }
 
 .character-panel.blank-panel h1 {
