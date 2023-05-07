@@ -10,8 +10,8 @@ function Character(props) {
 
     const [latestProps, setLatestProps] = useState({
         panel1: { name: '', image: '' },
-        panel2: { name: '', image: '' },
-        panel3: { name: '', image: '' }
+        panel2: { name: ' ', image: './portraits/blank.png' },
+        panel3: { name: ' ', image: './portraits/blank.png' }
     });
 
     const toggleLock = (panel) => {
