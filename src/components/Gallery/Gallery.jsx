@@ -2,17 +2,13 @@ import React, { useEffect } from "react";
 import characters from "../../assets/characters.json";
 import "./Gallery.css";
 
-const Gallery = ({ onCharSelect, selectedCharID }) => {
+const Gallery = ({ currentIndex, setCurrentIndex }) => {
     const initialDisplayCount = 9;
 
     const circularIndex = (index, length) => (index + length) % length;
 
     const getDisplayedCharacters = () => {
-        if (!selectedCharID) return characters.slice(0, initialDisplayCount);
-
-        const selectedIndex = characters.findIndex(
-            (character) => character.charID === selectedCharID
-        );
+        const selectedIndex = currentIndex;
         const displayedCount = Math.min(initialDisplayCount, characters.length);
 
         return Array.from({ length: displayedCount }, (_, i) =>
@@ -26,8 +22,10 @@ const Gallery = ({ onCharSelect, selectedCharID }) => {
         const handleKeyDown = (event) => {
             if (event.key === "ArrowDown") {
                 event.preventDefault();
+                setCurrentIndex((prevIndex) => prevIndex + 1);
             } else if (event.key === "ArrowUp") {
                 event.preventDefault();
+                setCurrentIndex((prevIndex) => prevIndex - 1);
             }
         };
 
@@ -36,10 +34,11 @@ const Gallery = ({ onCharSelect, selectedCharID }) => {
         return () => {
             document.removeEventListener("keydown", handleKeyDown);
         };
-    }, []);
+    }, [currentIndex, setCurrentIndex]);
 
-    const handleImageClick = (charID) => {
-        onCharSelect(charID);
+    const handleImageClick = (event, index) => {
+        event.preventDefault();
+        setCurrentIndex(index);
     };
 
     return (
@@ -47,8 +46,8 @@ const Gallery = ({ onCharSelect, selectedCharID }) => {
             {displayedCharacters.map((character, index) => (
                 <div
                     key={character.charID}
-                    className={`gallery-wrapper ${character.charID === selectedCharID ? "active" : ""} ${index === 0 || index === displayedCharacters.length - 1 ? "hidden" : ""}`}
-                    onClick={() => handleImageClick(character.charID)}
+                    className={`gallery-wrapper ${index === 0 || index === displayedCharacters.length - 1 ? "hidden" : ""}`}
+                    onClick={(event) => handleImageClick(event, circularIndex(currentIndex - Math.floor(initialDisplayCount / 2) + index, characters.length))}
                 >
                     <img src={character.profileImg} alt={character.name} />
                 </div>
