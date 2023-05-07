@@ -65,6 +65,12 @@ function Carousel() {
                 () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex),
                 selectedCharacters
             );
+
+            if (event.key === 'Enter' && selectedCharacters.length < 3) {
+                handleCharSelect(character.charID);
+            } else if (event.key === 'Backspace' && selectedCharacters.length > 0) {
+                handleCharDeselect();
+            }
         };
 
         document.addEventListener('keydown', handleKeyDownEvent);

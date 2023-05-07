@@ -15,8 +15,11 @@ export function goToPreviousSlide(currentIndex, charactersLength, setCurrentInde
 
 export function handleKeyDown(event, goToNextSlide, goToPreviousSlide, selectedCharacters) {
     if (selectedCharacters.length === 3) return;
-    if (event.key === 'ArrowRight') goToNextSlide();
-    else if (event.key === 'ArrowLeft') goToPreviousSlide();
+    if (event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D') {
+        goToNextSlide();
+    } else if (event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A') {
+        goToPreviousSlide();
+    }
 }
 
 export function findCharacterIndex(characters, charID) {
