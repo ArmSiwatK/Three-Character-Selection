@@ -11,6 +11,10 @@
     margin: auto 1%;
 }
 
+.character-panel h1 {
+    font-family: 'Playfair Display', serif;
+}
+
 .character-portrait {
     max-width: 100%;
     height: auto;
