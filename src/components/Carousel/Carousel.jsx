@@ -16,7 +16,7 @@ function Carousel() {
     });
 
 
-    
+
     const updateSelectedCharacters = (updatedSelectedCharacters) => {
         setSelectedCharacters(updatedSelectedCharacters);
         updateLockedPanels(updatedSelectedCharacters);
@@ -62,7 +62,8 @@ function Carousel() {
             handleKeyDown(
                 event,
                 () => goToNextSlide(currentIndex, characters.length, setCurrentIndex),
-                () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex)
+                () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex),
+                selectedCharacters
             );
         };
 
@@ -71,7 +72,7 @@ function Carousel() {
         return () => {
             document.removeEventListener('keydown', handleKeyDownEvent);
         };
-    }, [currentIndex]);
+    }, [currentIndex, selectedCharacters]);
 
 
 
