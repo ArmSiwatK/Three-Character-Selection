@@ -1,8 +1,12 @@
 .carousel-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-evenly;
 }
+
+/* .top-side {
+    margin-bottom: 7.5%;
+} */
 
 .character-title {
     font-family: 'Playfair Display', serif;

@@ -52,8 +52,10 @@ function Carousel() {
 
     return (
         <div className="carousel-container">
-            <h1 className="character-title">{character.title}</h1>
-            <Gallery onCharSelect={handleCharSelect} selectedCharID={character.charID} />
+            <div className="top-side">
+                <h1 className="character-title">{character.title}</h1>
+                <Gallery onCharSelect={handleCharSelect} selectedCharID={character.charID} />
+            </div>
             <Character
                 name={character.name}
                 image={character.image}
