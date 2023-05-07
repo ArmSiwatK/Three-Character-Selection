@@ -8,6 +8,7 @@ import './Carousel.css';
 function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const character = characters[currentIndex];
+    const [selectedCharacters, setSelectedCharacters] = useState([]);
     const [lockedPanels, setLockedPanels] = useState({
         panel1: false,
         panel2: true,
@@ -15,8 +16,34 @@ function Carousel() {
     });
 
     const handleCharSelect = (charID) => {
-        const newIndex = findCharacterIndex(characters, charID);
-        setCurrentIndex(newIndex);
+        if (selectedCharacters.length < 3) {
+            const newIndex = findCharacterIndex(characters, charID);
+            setCurrentIndex(newIndex);
+            const updatedSelectedCharacters = [...selectedCharacters];
+            updatedSelectedCharacters.push(character);
+            setSelectedCharacters(updatedSelectedCharacters);
+            updateLockedPanels(updatedSelectedCharacters);
+        }
+    };
+
+    const handleCharDeselect = () => {
+        if (selectedCharacters.length > 0) {
+            const updatedSelectedCharacters = [...selectedCharacters];
+            updatedSelectedCharacters.pop();
+            setSelectedCharacters(updatedSelectedCharacters);
+            updateLockedPanels(updatedSelectedCharacters);
+            if (currentIndex > 0) {
+                setCurrentIndex(currentIndex - 1);
+            }
+        }
+    };
+
+    const updateLockedPanels = (selectedChars) => {
+        setLockedPanels({
+            panel1: selectedChars.length >= 1,
+            panel2: selectedChars.length >= 2,
+            panel3: selectedChars.length === 3
+        });
     };
 
     const toggleLock = (panel) => {
@@ -28,7 +55,11 @@ function Carousel() {
 
     useEffect(() => {
         const handleKeyDownEvent = (event) => {
-            handleKeyDown(event, () => goToNextSlide(currentIndex, characters.length, setCurrentIndex), () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex));
+            handleKeyDown(
+                event,
+                () => goToNextSlide(currentIndex, characters.length, setCurrentIndex),
+                () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex)
+            );
         };
 
         document.addEventListener('keydown', handleKeyDownEvent);
@@ -38,22 +69,17 @@ function Carousel() {
         };
     }, [currentIndex]);
 
-
-
     return (
         <div className="carousel-container">
             <div className="top-side">
                 <h1 className="character-title">{character.title}</h1>
                 <Gallery onCharSelect={handleCharSelect} selectedCharID={character.charID} />
                 <div className="lock-buttons">
-                    <button onClick={() => toggleLock('panel1')}>
-                        {lockedPanels.panel1 ? 'Unlock' : 'Lock'}
+                    <button onClick={() => handleCharSelect(character.charID)} disabled={selectedCharacters.length >= 3}>
+                        Select
                     </button>
-                    <button onClick={() => toggleLock('panel2')}>
-                        {lockedPanels.panel2 ? 'Unlock' : 'Lock'}
-                    </button>
-                    <button onClick={() => toggleLock('panel3')}>
-                        {lockedPanels.panel3 ? 'Unlock' : 'Lock'}
+                    <button onClick={handleCharDeselect} disabled={selectedCharacters.length === 0}>
+                        Deselect
                     </button>
                 </div>
             </div>
