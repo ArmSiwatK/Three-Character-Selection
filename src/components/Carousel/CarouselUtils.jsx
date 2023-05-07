@@ -3,10 +3,6 @@ function getSlideIndex(currentIndex, direction, charactersLength) {
     return (currentIndex + offset + charactersLength) % charactersLength;
 }
 
-export function findCharacterIndex(characters, charID) {
-    return characters.findIndex((char) => char.charID === charID);
-}
-
 export function goToNextSlide(currentIndex, charactersLength, setCurrentIndex) {
     const nextIndex = getSlideIndex(currentIndex, 'next', charactersLength);
     setCurrentIndex(nextIndex);
@@ -23,4 +19,8 @@ export function handleKeyDown(event, goToNextSlide, goToPreviousSlide) {
     } else if (event.key === 'ArrowLeft') {
         goToPreviousSlide();
     }
+}
+
+export function findCharacterIndex(characters, charID) {
+    return characters.findIndex((char) => char.charID === charID);
 }
