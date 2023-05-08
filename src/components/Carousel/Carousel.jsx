@@ -18,7 +18,15 @@ function Carousel() {
     });
 
 
-    
+
+    const updateLockedPanels = (selectedChars) => {
+        setLockedPanels({
+            panel1: selectedChars.length >= 1,
+            panel2: selectedChars.length >= 2,
+            panel3: selectedChars.length === 3,
+        });
+    };
+
     const updateSelectedCharacters = (updatedSelectedCharacters) => {
         setSelectedCharacters(updatedSelectedCharacters);
         updateLockedPanels(updatedSelectedCharacters);
@@ -41,14 +49,6 @@ function Carousel() {
             const updatedSelectedCharacters = selectedCharacters.slice(0, -1);
             updateSelectedCharacters(updatedSelectedCharacters);
         }
-    };
-
-    const updateLockedPanels = (selectedChars) => {
-        setLockedPanels({
-            panel1: selectedChars.length >= 1,
-            panel2: selectedChars.length >= 2,
-            panel3: selectedChars.length === 3,
-        });
     };
 
 
