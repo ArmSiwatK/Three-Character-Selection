@@ -4,7 +4,8 @@
     "name": "Hakurei Reimu",
     "title": "Shrine Maiden of Paradise",
     "image": "./portraits/reimu.png",
-    "profileImg": "./profiles/reimu.png"
+    "profileImg": "./profiles/reimu.png",
+    "reactionImg": "./portraits-reaction/reimu.png"
   },
 
   {
@@ -12,7 +13,8 @@
     "name": "Kirisame Marisa",
     "title": "Ordinary Magician",
     "image": "./portraits/marisa.png",
-    "profileImg": "./profiles/marisa.png"
+    "profileImg": "./profiles/marisa.png",
+    "reactionImg": "./portraits-reaction/reimu.png"
   },
 
   {
@@ -20,7 +22,8 @@
     "name": "Rumia",
     "title": "Youkai of the Dusk",
     "image": "./portraits/rumia.png",
-    "profileImg": "./profiles/rumia.png"
+    "profileImg": "./profiles/rumia.png",
+    "reactionImg": "./portraits-reaction/rumia.png"
   },
 
   {
@@ -28,7 +31,8 @@
     "name": "Daiyousei",
     "title": "Big Fairy",
     "image": "./portraits/daiyousei.png",
-    "profileImg": "./profiles/daiyousei.png"
+    "profileImg": "./profiles/daiyousei.png",
+    "reactionImg": "./portraits-reaction/daiyousei.png"
   },
 
   {
@@ -36,7 +40,8 @@
     "name": "Cirno",
     "title": "Fairy of the Ice",
     "image": "./portraits/cirno.png",
-    "profileImg": "./profiles/cirno.png"
+    "profileImg": "./profiles/cirno.png",
+    "reactionImg": "./portraits-reaction/cirno.png"
   },
 
   {
@@ -44,7 +49,8 @@
     "name": "Hong Meiling",
     "title": "Chinese Girl",
     "image": "./portraits/meiling.png",
-    "profileImg": "./profiles/meiling.png"
+    "profileImg": "./profiles/meiling.png",
+    "reactionImg": "./portraits-reaction/meiling.png"
   },
 
   {
@@ -52,7 +58,8 @@
     "name": "Koakuma",
     "title": "Little Demon",
     "image": "./portraits/koakuma.png",
-    "profileImg": "./profiles/koakuma.png"
+    "profileImg": "./profiles/koakuma.png",
+    "reactionImg": "./portraits-reaction/koakuma.png"
   },
 
   {
@@ -60,7 +67,8 @@
     "name": "Patchouli Knowledge",
     "title": "Immovable Great Library",
     "image": "./portraits/patchouli.png",
-    "profileImg": "./profiles/patchouli.png"
+    "profileImg": "./profiles/patchouli.png",
+    "reactionImg": "./portraits-reaction/patchouli.png"
   },
 
   {
@@ -68,7 +76,8 @@
     "name": "Izayoi Sakuya",
     "title": "Perfect and Elegant Maid",
     "image": "./portraits/sakuya.png",
-    "profileImg": "./profiles/sakuya.png"
+    "profileImg": "./profiles/sakuya.png",
+    "reactionImg": "./portraits-reaction/sakuya.png"
   },
 
   {
@@ -76,7 +85,8 @@
     "name": "Remilia Scarlet",
     "title": "The Scarlet Devil",
     "image": "./portraits/remilia.png",
-    "profileImg": "./profiles/remilia.png"
+    "profileImg": "./profiles/remilia.png",
+    "reactionImg": "./portraits-reaction/remilia.png"
   },
 
   {
@@ -84,7 +94,8 @@
     "name": "Flandre Scarlet",
     "title": "Sister of the Devil",
     "image": "./portraits/flandre.png",
-    "profileImg": "./profiles/flandre.png"
+    "profileImg": "./profiles/flandre.png",
+    "reactionImg": "./portraits-reaction/flandre.png"
   },
 
   {
@@ -92,7 +103,8 @@
     "name": "Alice Margatroid",
     "title": "Seven-Colored Puppeteer",
     "image": "./portraits/alice.png",
-    "profileImg": "./profiles/alice.png"
+    "profileImg": "./profiles/alice.png",
+    "reactionImg": "./portraits-reaction/alice.png"
   },
 
   {
@@ -100,7 +112,8 @@
     "name": "Ibuki Suika",
     "title": "Tiny Night Parade of One Hundred Demons",
     "image": "./portraits/suika.png",
-    "profileImg": "./profiles/suika.png"
+    "profileImg": "./profiles/suika.png",
+    "reactionImg": "./portraits-reaction/suika.png"
   },
 
   {
@@ -108,7 +121,8 @@
     "name": "Onozuka Komachi",
     "title": "Guide of the Sanzu River",
     "image": "./portraits/komachi.png",
-    "profileImg": "./profiles/komachi.png"
+    "profileImg": "./profiles/komachi.png",
+    "reactionImg": "./portraits-reaction/komachi.png"
   },
 
   {
@@ -116,6 +130,7 @@
     "name": "Kochiya Sanae",
     "title": "Deified Human of the Wind",
     "image": "./portraits/sanae.png",
-    "profileImg": "./profiles/sanae.png"
+    "profileImg": "./profiles/sanae.png",
+    "reactionImg": "./portraits-reaction/sanae.png"
   }
 ]

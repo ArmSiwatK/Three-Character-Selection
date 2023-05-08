@@ -9,6 +9,7 @@ function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const character = characters[currentIndex];
     const [selectedCharacters, setSelectedCharacters] = useState([]);
+    const [selectedCharacterImage, setSelectedCharacterImage] = useState(character.image);
     const [lockedPanels, setLockedPanels] = useState({
         panel1: false,
         panel2: true,
@@ -29,6 +30,13 @@ function Carousel() {
             if (selectedCharacters.length !== 2) {
                 goToNextSlide(newIndex, characters.length, setCurrentIndex, selectedCharacters);
             }
+
+            const selectedCharacter = characters[newIndex];
+            setSelectedCharacterImage(selectedCharacter.reactionImg);
+
+            setTimeout(() => {
+                setSelectedCharacterImage(selectedCharacter.image);
+            }, 1000);
         }
     };
 
@@ -113,6 +121,8 @@ function Carousel() {
             <Character
                 name={character.name}
                 image={character.image}
+                selectedCharacterImage={selectedCharacterImage}
+                setSelectedCharacterImage={setSelectedCharacterImage}
                 lockedPanels={lockedPanels}
                 toggleLock={toggleLock}
                 selectedCharacters={selectedCharacters}
