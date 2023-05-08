@@ -25,6 +25,7 @@ function Carousel() {
             const newIndex = findCharacterIndex(characters, charID);
             setCurrentIndex(newIndex);
             updateSelectedCharacters([...selectedCharacters, newIndex]);
+            goToNextSlide(newIndex, characters.length, setCurrentIndex, selectedCharacters);
         }
     };
 
@@ -32,9 +33,6 @@ function Carousel() {
         if (selectedCharacters.length > 0) {
             const updatedSelectedCharacters = selectedCharacters.slice(0, -1);
             updateSelectedCharacters(updatedSelectedCharacters);
-            if (currentIndex > 0) {
-                setCurrentIndex(currentIndex - 1);
-            }
         }
     };
 
