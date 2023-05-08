@@ -90,13 +90,24 @@ function Carousel() {
                     setCurrentIndex={setCurrentIndex}
                     selectedCharacters={selectedCharacters}
                 />
-                <div className="lock-buttons">
-                    <button onClick={() => handleCharSelect(character.charID)} disabled={selectedCharacters.length >= 3}>
+                <div className="navigation-buttons">
+                    <button
+                        onClick={() => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)}
+                        className="left-button"
+                    >◄</button>
+                    <button
+                        onClick={() => handleCharSelect(character.charID)}
+                        disabled={selectedCharacters.length >= 3}
+                    >
                         Select
                     </button>
                     <button onClick={handleCharDeselect} disabled={selectedCharacters.length === 0}>
                         Deselect
                     </button>
+                    <button
+                        onClick={() => goToNextSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)}
+                        className="right-button"
+                    >►</button>
                 </div>
             </div>
             <Character
