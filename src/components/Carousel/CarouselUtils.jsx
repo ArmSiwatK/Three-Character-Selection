@@ -10,13 +10,11 @@ export function getSlideIndex(currentIndex, direction, charactersLength, selecte
 }
 
 export function goToNextSlide(currentIndex, charactersLength, setCurrentIndex, selectedCharacters) {
-    const nextIndex = getSlideIndex(currentIndex, 'next', charactersLength, selectedCharacters);
-    setCurrentIndex(nextIndex);
+    setCurrentIndex(getSlideIndex(currentIndex, 'next', charactersLength, selectedCharacters));
 }
 
 export function goToPreviousSlide(currentIndex, charactersLength, setCurrentIndex, selectedCharacters) {
-    const prevIndex = getSlideIndex(currentIndex, 'prev', charactersLength, selectedCharacters);
-    setCurrentIndex(prevIndex);
+    setCurrentIndex(getSlideIndex(currentIndex, 'prev', charactersLength, selectedCharacters));
 }
 
 export function handleKeyDown(event, goToNextSlide, goToPreviousSlide, selectedCharacters) {
