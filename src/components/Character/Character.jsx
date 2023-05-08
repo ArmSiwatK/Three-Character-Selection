@@ -8,8 +8,6 @@ function Character(props) {
         panel2: { name: ' ', image: './portraits/blank.png' },
     });
 
-
-
     const renderCharacterPanel = (panel) => {
         const { name, image } = latestProps[panel];
         const isBlankPanel = name === ' ' && image === './portraits/blank.png';
@@ -34,12 +32,10 @@ function Character(props) {
             }
             setLatestProps((prevLatestProps) => ({
                 ...prevLatestProps,
-                [panel]: updatedPanel
+                [panel]: updatedPanel,
             }));
         }
     };
-
-
 
     useEffect(() => {
         ['panel1', 'panel3', 'panel2'].forEach(updateLatestProps);
@@ -48,4 +44,4 @@ function Character(props) {
     return <div className="characters-container">{['panel1', 'panel3', 'panel2'].map(renderCharacterPanel)}</div>;
 }
 
-export default Character;
+export default Character;   

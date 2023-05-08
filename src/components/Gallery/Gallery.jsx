@@ -8,8 +8,6 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
 
     const [activeIndex, setActiveIndex] = useState(null);
 
-
-
     const circularIndex = (index, length) => (index + length) % length;
 
     const handleImageClick = (event, index) => {
@@ -30,8 +28,6 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
 
     const displayedCharacters = getDisplayedCharacters();
 
-
-
     useEffect(() => {
         setActiveIndex(currentIndex);
 
@@ -50,8 +46,6 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
             document.removeEventListener("keydown", handleKeyDownEvent);
         };
     }, [currentIndex, setCurrentIndex, selectedCharacters]);
-
-
 
     return (
         <div className="gallery-side">

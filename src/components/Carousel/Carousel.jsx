@@ -12,10 +12,8 @@ function Carousel() {
     const [lockedPanels, setLockedPanels] = useState({
         panel1: false,
         panel2: true,
-        panel3: true
+        panel3: true,
     });
-
-
 
     const updateSelectedCharacters = (updatedSelectedCharacters) => {
         setSelectedCharacters(updatedSelectedCharacters);
@@ -26,7 +24,7 @@ function Carousel() {
         if (selectedCharacters.length < 3) {
             const newIndex = findCharacterIndex(characters, charID);
             setCurrentIndex(newIndex);
-            updateSelectedCharacters([...selectedCharacters, character]);
+            updateSelectedCharacters([...selectedCharacters, newIndex]);
         }
     };
 
@@ -44,25 +42,23 @@ function Carousel() {
         setLockedPanels({
             panel1: selectedChars.length >= 1,
             panel2: selectedChars.length >= 2,
-            panel3: selectedChars.length === 3
+            panel3: selectedChars.length === 3,
         });
     };
 
     const toggleLock = (panel) => {
         setLockedPanels((prevLockedPanels) => ({
             ...prevLockedPanels,
-            [panel]: !prevLockedPanels[panel]
+            [panel]: !prevLockedPanels[panel],
         }));
     };
-
-
 
     useEffect(() => {
         const handleKeyDownEvent = (event) => {
             handleKeyDown(
                 event,
-                () => goToNextSlide(currentIndex, characters.length, setCurrentIndex),
-                () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex),
+                () => goToNextSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters),
+                () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters),
                 selectedCharacters
             );
 
@@ -107,6 +103,8 @@ function Carousel() {
                 image={character.image}
                 lockedPanels={lockedPanels}
                 toggleLock={toggleLock}
+                selectedCharacters={selectedCharacters}
+                currentIndex={currentIndex}
             />
         </div>
     );
