@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { handleKeyDown, findCharacterIndex, goToNextSlide, goToPreviousSlide } from './NavigationUtils';
+import { toggleLock } from './CharacterUtils';
 import Character from '../Character/Character';
 import Gallery from '../Gallery/Gallery';
 import NavigationButtons from './NavigationButtons';
@@ -16,6 +17,8 @@ function Carousel() {
         panel3: true,
     });
 
+
+    
     const updateSelectedCharacters = (updatedSelectedCharacters) => {
         setSelectedCharacters(updatedSelectedCharacters);
         updateLockedPanels(updatedSelectedCharacters);
@@ -48,12 +51,7 @@ function Carousel() {
         });
     };
 
-    const toggleLock = (panel) => {
-        setLockedPanels((prevLockedPanels) => ({
-            ...prevLockedPanels,
-            [panel]: !prevLockedPanels[panel],
-        }));
-    };
+
 
     useEffect(() => {
         const handleKeyDownEvent = (event) => {
