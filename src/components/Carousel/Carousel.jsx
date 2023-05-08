@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { handleKeyDown, findCharacterIndex, goToNextSlide, goToPreviousSlide } from './NavigationUtils';
-import { toggleLock } from './CharacterUtils';
+import { handleKeyDown, findCharacterIndex, goToNextSlide, goToPreviousSlide, toggleLock } from './CarouselUtils';
+import TopSide from './TopSide';
 import Character from '../Character/Character';
-import Gallery from '../Gallery/Gallery';
-import NavigationButtons from './NavigationButtons';
 import characters from '../../assets/characters.json';
 import './Carousel.css';
 
@@ -18,7 +16,7 @@ function Carousel() {
     });
 
 
-
+    
     const updateLockedPanels = (selectedChars) => {
         setLockedPanels({
             panel1: selectedChars.length >= 1,
@@ -80,23 +78,18 @@ function Carousel() {
 
     return (
         <div className="carousel-container">
-            <div className="top-side">
-                <h1 className="character-title">{character.title}</h1>
-                <Gallery
-                    onCharSelect={handleCharSelect}
-                    selectedCharID={character.charID}
-                    currentIndex={currentIndex}
-                    setCurrentIndex={setCurrentIndex}
-                    selectedCharacters={selectedCharacters}
-                />
-                <NavigationButtons
-                    goToPreviousSlide={() => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)}
-                    handleCharSelect={() => handleCharSelect(character.charID)}
-                    handleCharDeselect={() => handleCharDeselect(character.charID)}
-                    selectedCharacters={selectedCharacters}
-                    goToNextSlide={() => goToNextSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)}
-                />
-            </div>
+            <TopSide
+                character={character}
+                currentIndex={currentIndex}
+                setCurrentIndex={setCurrentIndex}
+                selectedCharacters={selectedCharacters}
+                handleCharSelect={handleCharSelect}
+                handleCharDeselect={handleCharDeselect}
+                goToPreviousSlide={() =>
+                    goToPreviousSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)
+                }
+                goToNextSlide={() => goToNextSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)}
+            />
             <Character
                 name={character.name}
                 image={character.image}

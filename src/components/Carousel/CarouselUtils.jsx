@@ -9,13 +9,19 @@ export function getSlideIndex(currentIndex, direction, charactersLength, selecte
     return nextIndex;
 }
 
+
+
 export function goToNextSlide(currentIndex, charactersLength, setCurrentIndex, selectedCharacters) {
     setCurrentIndex(getSlideIndex(currentIndex, 'next', charactersLength, selectedCharacters));
 }
 
+
+
 export function goToPreviousSlide(currentIndex, charactersLength, setCurrentIndex, selectedCharacters) {
     setCurrentIndex(getSlideIndex(currentIndex, 'prev', charactersLength, selectedCharacters));
 }
+
+
 
 export function handleKeyDown(event, goToNextSlide, goToPreviousSlide, selectedCharacters) {
     if (!selectedCharacters || selectedCharacters.length === 3) return;
@@ -26,6 +32,17 @@ export function handleKeyDown(event, goToNextSlide, goToPreviousSlide, selectedC
     }
 }
 
+
+
 export function findCharacterIndex(characters, charID) {
     return characters.findIndex((char) => char.charID === charID);
+}
+
+
+
+export function toggleLock(panel, lockedPanels, setLockedPanels) {
+    setLockedPanels((prevLockedPanels) => ({
+        ...prevLockedPanels,
+        [panel]: !prevLockedPanels[panel],
+    }));
 }
