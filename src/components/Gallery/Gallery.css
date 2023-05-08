@@ -16,7 +16,6 @@
     opacity: 0.5;
 }
 
-.gallery-wrapper:hover,
 .gallery-wrapper.active {
     cursor: pointer;
     transform: scale(1.1);
