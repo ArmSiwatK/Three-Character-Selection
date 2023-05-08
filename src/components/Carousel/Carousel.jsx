@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { handleKeyDown, findCharacterIndex, goToNextSlide, goToPreviousSlide } from './CarouselUtils';
 import Character from '../Character/Character';
 import Gallery from '../Gallery/Gallery';
+import NavigationButtons from './NavigationButtons';
 import characters from '../../assets/characters.json';
 import './Carousel.css';
 
@@ -90,25 +91,13 @@ function Carousel() {
                     setCurrentIndex={setCurrentIndex}
                     selectedCharacters={selectedCharacters}
                 />
-                <div className="navigation-buttons">
-                    <button
-                        onClick={() => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)}
-                        className="left-button"
-                    >◄</button>
-                    <button
-                        onClick={() => handleCharSelect(character.charID)}
-                        disabled={selectedCharacters.length >= 3}
-                    >
-                        Select
-                    </button>
-                    <button onClick={handleCharDeselect} disabled={selectedCharacters.length === 0}>
-                        Deselect
-                    </button>
-                    <button
-                        onClick={() => goToNextSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)}
-                        className="right-button"
-                    >►</button>
-                </div>
+                <NavigationButtons
+                    goToPreviousSlide={() => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)}
+                    handleCharSelect={() => handleCharSelect(character.charID)}
+                    handleCharDeselect={() => handleCharDeselect(character.charID)}
+                    selectedCharacters={selectedCharacters}
+                    goToNextSlide={() => goToNextSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)}
+                />
             </div>
             <Character
                 name={character.name}
