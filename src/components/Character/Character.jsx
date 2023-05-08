@@ -9,19 +9,15 @@ function Character(props) {
     });
 
 
-
+    
     const renderCharacterPanel = (panel) => {
-        const { name } = latestProps[panel];
-        const isBlankPanel = name === ' ';
+        const { name, image } = latestProps[panel];
+        const isBlankPanel = name === ' ' && image === './portraits/blank.png';
 
         return (
             <div key={panel} className={`character-panel ${isBlankPanel ? 'blank-panel' : ''}`}>
                 <h1>{name || props.name}</h1>
-                <img
-                    className="character-portrait"
-                    src={isBlankPanel ? './portraits/blank.png' : props.selectedCharacterImage || props.image}
-                    alt={props.name}
-                />
+                <img className="character-portrait" src={image || props.image} alt={props.name} />
             </div>
         );
     };
@@ -54,4 +50,4 @@ function Character(props) {
     return <div className="characters-container">{['panel1', 'panel3', 'panel2'].map(renderCharacterPanel)}</div>;
 }
 
-export default Character;   
+export default Character;
