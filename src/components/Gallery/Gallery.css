@@ -11,7 +11,7 @@
     overflow: hidden;
     width: 150px;
     height: 150px;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, opacity 0.2s ease-in-out;
     transform: scale(.9);
     opacity: 0.5;
 }
