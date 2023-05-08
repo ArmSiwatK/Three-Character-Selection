@@ -25,7 +25,10 @@ function Carousel() {
             const newIndex = findCharacterIndex(characters, charID);
             setCurrentIndex(newIndex);
             updateSelectedCharacters([...selectedCharacters, newIndex]);
-            goToNextSlide(newIndex, characters.length, setCurrentIndex, selectedCharacters);
+
+            if (selectedCharacters.length !== 2) {
+                goToNextSlide(newIndex, characters.length, setCurrentIndex, selectedCharacters);
+            }
         }
     };
 
