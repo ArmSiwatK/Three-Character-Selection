@@ -22,9 +22,9 @@ export function goToPreviousSlide(currentIndex, charactersLength, setCurrentInde
 export function handleKeyDown(event, goToNextSlide, goToPreviousSlide, selectedCharacters) {
     if (!selectedCharacters || selectedCharacters.length === 3) return;
     if (event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D') {
-        goToNextSlide();
+        goToNextSlide(event, selectedCharacters);
     } else if (event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A') {
-        goToPreviousSlide();
+        goToPreviousSlide(event, selectedCharacters);
     }
 }
 

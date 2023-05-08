@@ -34,8 +34,8 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
         const handleKeyDownEvent = (event) => {
             handleKeyDown(
                 event,
-                () => goToNextSlide(currentIndex, characters.length, setCurrentIndex),
-                () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex),
+                () => goToNextSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters),
+                () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters),
                 selectedCharacters
             );
         };
