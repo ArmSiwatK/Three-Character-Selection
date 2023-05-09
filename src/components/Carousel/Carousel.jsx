@@ -102,7 +102,7 @@ function Carousel() {
             >
                 <Character
                     name={character.name}
-                    image={character.image}
+                    image={`./portraits/${character.charID}.png`}
                     lockedPanels={lockedPanels}
                 />
             </div>
@@ -112,7 +112,7 @@ function Carousel() {
             >
                 <CharacterReaction
                     name={character.name}
-                    reactionImg={character.reactionImg}
+                    reactionImg={`./portraits-reaction/${character.charID}.png`}
                     lockedPanels={lockedPanels}
                 />
             </div>

@@ -2,225 +2,150 @@
   {
     "charID": "reimu",
     "name": "Hakurei Reimu",
-    "title": "Shrine Maiden of Paradise",
-    "image": "./portraits/reimu.png",
-    "profileImg": "./profiles/reimu.png",
-    "reactionImg": "./portraits-reaction/reimu.png"
+    "title": "Shrine Maiden of Paradise"
   },
 
   {
     "charID": "marisa",
     "name": "Kirisame Marisa",
-    "title": "Ordinary Magician",
-    "image": "./portraits/marisa.png",
-    "profileImg": "./profiles/marisa.png",
-    "reactionImg": "./portraits-reaction/marisa.png"
+    "title": "Ordinary Magician"
   },
 
   {
     "charID": "rumia",
     "name": "Rumia",
-    "title": "Youkai of the Dusk",
-    "image": "./portraits/rumia.png",
-    "profileImg": "./profiles/rumia.png",
-    "reactionImg": "./portraits-reaction/rumia.png"
+    "title": "Youkai of the Dusk"
   },
 
   {
     "charID": "daiyousei",
     "name": "Daiyousei",
-    "title": "Big Fairy",
-    "image": "./portraits/daiyousei.png",
-    "profileImg": "./profiles/daiyousei.png",
-    "reactionImg": "./portraits-reaction/daiyousei.png"
+    "title": "Big Fairy"
   },
 
   {
     "charID": "cirno",
     "name": "Cirno",
-    "title": "Fairy of the Ice",
-    "image": "./portraits/cirno.png",
-    "profileImg": "./profiles/cirno.png",
-    "reactionImg": "./portraits-reaction/cirno.png"
+    "title": "Fairy of the Ice"
   },
 
   {
     "charID": "meiling",
     "name": "Hong Meiling",
-    "title": "Chinese Girl",
-    "image": "./portraits/meiling.png",
-    "profileImg": "./profiles/meiling.png",
-    "reactionImg": "./portraits-reaction/meiling.png"
+    "title": "Chinese Girl"
   },
 
   {
     "charID": "koakuma",
     "name": "Koakuma",
-    "title": "Little Demon",
-    "image": "./portraits/koakuma.png",
-    "profileImg": "./profiles/koakuma.png",
-    "reactionImg": "./portraits-reaction/koakuma.png"
+    "title": "Little Demon"
   },
 
   {
     "charID": "patchouli",
     "name": "Patchouli Knowledge",
-    "title": "Immovable Great Library",
-    "image": "./portraits/patchouli.png",
-    "profileImg": "./profiles/patchouli.png",
-    "reactionImg": "./portraits-reaction/patchouli.png"
+    "title": "Immovable Great Library"
   },
 
   {
     "charID": "sakuya",
     "name": "Izayoi Sakuya",
-    "title": "Maid of the Scarlet Devil Mansion",
-    "image": "./portraits/sakuya.png",
-    "profileImg": "./profiles/sakuya.png",
-    "reactionImg": "./portraits-reaction/sakuya.png"
+    "title": "Maid of the Scarlet Devil Mansion"
   },
 
   {
     "charID": "remilia",
     "name": "Remilia Scarlet",
-    "title": "The Scarlet Devil",
-    "image": "./portraits/remilia.png",
-    "profileImg": "./profiles/remilia.png",
-    "reactionImg": "./portraits-reaction/remilia.png"
+    "title": "The Scarlet Devil"
   },
 
   {
     "charID": "flandre",
     "name": "Flandre Scarlet",
-    "title": "Sister of the Devil",
-    "image": "./portraits/flandre.png",
-    "profileImg": "./profiles/flandre.png",
-    "reactionImg": "./portraits-reaction/flandre.png"
+    "title": "Sister of the Devil"
   },
 
   {
     "charID": "letty",
     "name": "Letty Whiterock",
-    "title": "Youkai of Winter",
-    "image": "./portraits/letty.png",
-    "profileImg": "./profiles/letty.png",
-    "reactionImg": "./portraits-reaction/letty.png"
+    "title": "Youkai of Winter"
   },
 
   {
     "charID": "chen",
     "name": "Chen",
-    "title": "Black Cat of Bad Omens",
-    "image": "./portraits/chen.png",
-    "profileImg": "./profiles/chen.png",
-    "reactionImg": "./portraits-reaction/chen.png"
+    "title": "Black Cat of Bad Omens"
   },
 
   {
     "charID": "alice",
     "name": "Alice Margatroid",
-    "title": "Seven-Colored Puppeteer",
-    "image": "./portraits/alice.png",
-    "profileImg": "./profiles/alice.png",
-    "reactionImg": "./portraits-reaction/alice.png"
+    "title": "Seven-Colored Puppeteer"
   },
 
   {
     "charID": "lilywhite",
     "name": "Lily White",
-    "title": "Fairy Herald of Spring",
-    "image": "./portraits/lilywhite.png",
-    "profileImg": "./profiles/lilywhite.png",
-    "reactionImg": "./portraits-reaction/lilywhite.png"
+    "title": "Fairy Herald of Spring"
   },
 
   {
     "charID": "lunasa",
     "name": "Lunasa Prismriver",
-    "title": "Poltergeist Violinist",
-    "image": "./portraits/lunasa.png",
-    "profileImg": "./profiles/lunasa.png",
-    "reactionImg": "./portraits-reaction/lunasa.png"
+    "title": "Poltergeist Violinist"
   },
 
   {
     "charID": "merlin",
     "name": "Merlin Prismriver",
-    "title": "Poltergeist Trumpeteer",
-    "image": "./portraits/merlin.png",
-    "profileImg": "./profiles/merlin.png",
-    "reactionImg": "./portraits-reaction/merlin.png"
+    "title": "Poltergeist Trumpeteer"
   },
 
   {
     "charID": "lyrica",
     "name": "Lyrica Prismriver",
-    "title": "Poltergeist Keyboardist",
-    "image": "./portraits/lyrica.png",
-    "profileImg": "./profiles/lyrica.png",
-    "reactionImg": "./portraits-reaction/lyrica.png"
+    "title": "Poltergeist Keyboardist"
   },
 
   {
     "charID": "youmu",
     "name": "Konpaku Youmu",
-    "title": "Half-Human Half-Phantom Gardener",
-    "image": "./portraits/youmu.png",
-    "profileImg": "./profiles/youmu.png",
-    "reactionImg": "./portraits-reaction/youmu.png"
+    "title": "Half-Human Half-Phantom Gardener"
   },
 
   {
     "charID": "yuyuko",
     "name": "Saigyouji Yuyuko",
-    "title": "Dreaming Ghost",
-    "image": "./portraits/yuyuko.png",
-    "profileImg": "./profiles/yuyuko.png",
-    "reactionImg": "./portraits-reaction/yuyuko.png"
+    "title": "Dreaming Ghost"
   },
 
   {
     "charID": "ran",
     "name": "Yakumo Ran",
-    "title": "Cunning Nine-Tailed Fox",
-    "image": "./portraits/ran.png",
-    "profileImg": "./profiles/ran.png",
-    "reactionImg": "./portraits-reaction/ran.png"
+    "title": "Cunning Nine-Tailed Fox"
   },
 
   {
     "charID": "yukari",
     "name": "Yakumo Yukari",
-    "title": "Youkai of Boundaries",
-    "image": "./portraits/yukari.png",
-    "profileImg": "./profiles/yukari.png",
-    "reactionImg": "./portraits-reaction/yukari.png"
+    "title": "Youkai of Boundaries"
   },
 
   {
     "charID": "suika",
     "name": "Ibuki Suika",
-    "title": "Tiny Night Parade of One Hundred Demons",
-    "image": "./portraits/suika.png",
-    "profileImg": "./profiles/suika.png",
-    "reactionImg": "./portraits-reaction/suika.png"
+    "title": "Tiny Night Parade of One Hundred Demons"
   },
 
   {
     "charID": "komachi",
     "name": "Onozuka Komachi",
-    "title": "Guide of the Sanzu River",
-    "image": "./portraits/komachi.png",
-    "profileImg": "./profiles/komachi.png",
-    "reactionImg": "./portraits-reaction/komachi.png"
+    "title": "Guide of the Sanzu River"
   },
 
   {
     "charID": "sanae",
     "name": "Kochiya Sanae",
-    "title": "Deified Human of the Wind",
-    "image": "./portraits/sanae.png",
-    "profileImg": "./profiles/sanae.png",
-    "reactionImg": "./portraits-reaction/sanae.png"
+    "title": "Deified Human of the Wind"
   }
 ]
