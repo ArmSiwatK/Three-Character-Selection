@@ -14,23 +14,10 @@ function Character(props) {
         const { name, image } = latestProps[panel];
         const isBlankPanel = name === ' ' && image === './portraits/blank.png';
 
-        const handleClick = () => {
-            if (!props.lockedPanels[panel]) {
-                setLatestProps((prevLatestProps) => {
-                    const updatedPanel = { ...prevLatestProps[panel] };
-                    updatedPanel.image = updatedPanel.image === props.image ? props.reactionImg : props.image;
-                    return {
-                        ...prevLatestProps,
-                        [panel]: updatedPanel,
-                    };
-                });
-            }
-        };
-
         return (
             <div key={panel} className={`character-panel ${isBlankPanel ? 'blank-panel' : ''}`}>
                 <h1>{name || props.name}</h1>
-                <img className="character-portrait" src={image || props.image} alt={props.name} onClick={handleClick} />
+                <img className="character-portrait" src={image || props.image} alt={props.name} />
             </div>
         );
     };
