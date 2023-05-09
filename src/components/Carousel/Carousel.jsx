@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { handleKeyDown, findCharacterIndex, goToNextSlide, goToPreviousSlide } from './CarouselUtils';
-import TopSide from '../CarouselTop/CarouselTop';
+import CarouselTop from '../CarouselTop/CarouselTop';
 import Character from '../Character/Character';
+import CharacterReaction from '../Character/CharacterReaction';
 import characters from '../../assets/characters.json';
 import './Carousel.css';
 
@@ -9,6 +10,7 @@ function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const character = characters[currentIndex];
     const [selectedCharacters, setSelectedCharacters] = useState([]);
+    const [isAnimationActive, setIsAnimationActive] = useState(false);
     const [lockedPanels, setLockedPanels] = useState({
         panel1: false,
         panel2: true,
@@ -16,7 +18,7 @@ function Carousel() {
     });
 
 
-    
+
     const updateLockedPanels = (selectedChars) => {
         setLockedPanels({
             panel1: selectedChars.length >= 1,
@@ -28,6 +30,10 @@ function Carousel() {
     const updateSelectedCharacters = (updatedSelectedCharacters) => {
         setSelectedCharacters(updatedSelectedCharacters);
         updateLockedPanels(updatedSelectedCharacters);
+        setIsAnimationActive(true);
+        setTimeout(() => {
+            setIsAnimationActive(false);
+        }, 1000);
     };
 
     const handleCharSelect = (charID) => {
@@ -78,7 +84,7 @@ function Carousel() {
 
     return (
         <div className="carousel-container">
-            <TopSide
+            <CarouselTop
                 character={character}
                 currentIndex={currentIndex}
                 setCurrentIndex={setCurrentIndex}
@@ -90,12 +96,26 @@ function Carousel() {
                 }
                 goToNextSlide={() => goToNextSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)}
             />
-            <Character
-                name={character.name}
-                image={character.image}
-                reactionImg={character.reactionImg}
-                lockedPanels={lockedPanels}
-            />
+            <div
+                className={`character-wrapper ${isAnimationActive ? 'animate-opacity' : ''}`}
+                style={{ opacity: isAnimationActive ? 0 : 1 }}
+            >
+                <Character
+                    name={character.name}
+                    image={character.image}
+                    lockedPanels={lockedPanels}
+                />
+            </div>
+            <div
+                className={`character-reaction-wrapper ${isAnimationActive ? 'animate-opacity' : ''}`}
+                style={{ opacity: isAnimationActive ? 1 : 0 }}
+            >
+                <CharacterReaction
+                    name={character.name}
+                    reactionImg={character.reactionImg}
+                    lockedPanels={lockedPanels}
+                />
+            </div>
         </div>
     );
 }
