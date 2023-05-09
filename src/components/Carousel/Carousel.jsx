@@ -93,6 +93,7 @@ function Carousel() {
             <Character
                 name={character.name}
                 image={character.image}
+                reactionImg={character.reactionImg}
                 lockedPanels={lockedPanels}
                 toggleLock={toggleLock}
                 selectedCharacters={selectedCharacters}
