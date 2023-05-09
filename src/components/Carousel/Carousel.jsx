@@ -95,9 +95,6 @@ function Carousel() {
                 image={character.image}
                 reactionImg={character.reactionImg}
                 lockedPanels={lockedPanels}
-                toggleLock={toggleLock}
-                selectedCharacters={selectedCharacters}
-                currentIndex={currentIndex}
             />
         </div>
     );
