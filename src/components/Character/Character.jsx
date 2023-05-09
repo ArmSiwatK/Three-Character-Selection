@@ -3,35 +3,21 @@ import './Character.css';
 
 function Character(props) {
     const [latestProps, setLatestProps] = useState({
-        panel1: { name: '', image: '', reactionImg: '', locked: false },
-        panel3: { name: ' ', image: './portraits/blank.png', reactionImg: '', locked: false },
-        panel2: { name: ' ', image: './portraits/blank.png', reactionImg: '', locked: false },
+        panel1: { name: '', image: '' },
+        panel3: { name: ' ', image: './portraits/blank.png' },
+        panel2: { name: ' ', image: './portraits/blank.png' },
     });
 
 
 
     const renderCharacterPanel = (panel) => {
-        const { name, image, reactionImg, locked } = latestProps[panel];
+        const { name, image } = latestProps[panel];
         const isBlankPanel = name === ' ' && image === './portraits/blank.png';
-
-        const toggleLock = () => {
-            setLatestProps((prevLatestProps) => ({
-                ...prevLatestProps,
-                [panel]: {
-                    ...prevLatestProps[panel],
-                    locked: !locked,
-                },
-            }));
-        };
 
         return (
             <div key={panel} className={`character-panel ${isBlankPanel ? 'blank-panel' : ''}`}>
                 <h1>{name || props.name}</h1>
-                <img
-                    className="character-portrait"
-                    src={locked ? (reactionImg || props.reactionImg) : (image || props.image)}
-                    onClick={toggleLock}
-                />
+                <img className="character-portrait" src={image || props.image} alt={props.name} />
             </div>
         );
     };
@@ -40,11 +26,11 @@ function Character(props) {
         if (!props.lockedPanels[panel]) {
             let updatedPanel;
             if (panel === 'panel2' && !props.lockedPanels['panel1']) {
-                updatedPanel = { name: ' ', image: './portraits/blank.png', reactionImg: '', locked: false };
+                updatedPanel = { name: ' ', image: './portraits/blank.png' };
             } else if (panel === 'panel3' && !props.lockedPanels['panel2']) {
-                updatedPanel = { name: ' ', image: './portraits/blank.png', reactionImg: '', locked: false };
+                updatedPanel = { name: ' ', image: './portraits/blank.png' };
             } else {
-                updatedPanel = { name: props.name, image: props.image, reactionImg: props.reactionImg, locked: false };
+                updatedPanel = { name: props.name, image: props.image };
             }
             setLatestProps((prevLatestProps) => ({
                 ...prevLatestProps,
