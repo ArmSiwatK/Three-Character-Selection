@@ -25,7 +25,7 @@ function Character(props) {
                     };
                 });
             }
-        };        
+        };
 
         return (
             <div key={panel} className={`character-panel ${isBlankPanel ? 'blank-panel' : ''}`}>
