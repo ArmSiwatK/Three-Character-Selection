@@ -1,8 +1,9 @@
 import React from 'react';
 import Gallery from '../Gallery/Gallery';
-import NavigationButtons from './NavigationButtons';
+import NavigationButtons from '../NavigationButtons/NavigationButtons';
+import "./CarouselTop.css";
 
-function TopSide({
+function CarouselTop({
     character,
     currentIndex,
     setCurrentIndex,
@@ -33,4 +34,4 @@ function TopSide({
     );
 }
 
-export default TopSide;
+export default CarouselTop;

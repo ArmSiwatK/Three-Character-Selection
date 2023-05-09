@@ -1,4 +1,5 @@
 import React from 'react';
+import "./NavigationButtons.css";
 
 const NavigationButtons = ({ goToPreviousSlide, handleCharSelect, handleCharDeselect, selectedCharacters, goToNextSlide }) => {
     return (
