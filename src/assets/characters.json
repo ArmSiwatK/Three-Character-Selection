@@ -74,7 +74,7 @@
   {
     "charID": "sakuya",
     "name": "Izayoi Sakuya",
-    "title": "Perfect and Elegant Maid",
+    "title": "Maid of the Scarlet Devil Mansion",
     "image": "./portraits/sakuya.png",
     "profileImg": "./profiles/sakuya.png",
     "reactionImg": "./portraits-reaction/sakuya.png"
@@ -99,12 +99,102 @@
   },
 
   {
+    "charID": "letty",
+    "name": "Letty Whiterock",
+    "title": "Youkai of Winter",
+    "image": "./portraits/letty.png",
+    "profileImg": "./profiles/letty.png",
+    "reactionImg": "./portraits-reaction/letty.png"
+  },
+
+  {
+    "charID": "chen",
+    "name": "Chen",
+    "title": "Black Cat of Bad Omens",
+    "image": "./portraits/chen.png",
+    "profileImg": "./profiles/chen.png",
+    "reactionImg": "./portraits-reaction/chen.png"
+  },
+
+  {
     "charID": "alice",
     "name": "Alice Margatroid",
     "title": "Seven-Colored Puppeteer",
     "image": "./portraits/alice.png",
     "profileImg": "./profiles/alice.png",
     "reactionImg": "./portraits-reaction/alice.png"
+  },
+
+  {
+    "charID": "lilywhite",
+    "name": "Lily White",
+    "title": "Fairy Herald of Spring",
+    "image": "./portraits/lilywhite.png",
+    "profileImg": "./profiles/lilywhite.png",
+    "reactionImg": "./portraits-reaction/lilywhite.png"
+  },
+
+  {
+    "charID": "lunasa",
+    "name": "Lunasa Prismriver",
+    "title": "Poltergeist Violinist",
+    "image": "./portraits/lunasa.png",
+    "profileImg": "./profiles/lunasa.png",
+    "reactionImg": "./portraits-reaction/lunasa.png"
+  },
+
+  {
+    "charID": "merlin",
+    "name": "Merlin Prismriver",
+    "title": "Poltergeist Trumpeteer",
+    "image": "./portraits/merlin.png",
+    "profileImg": "./profiles/merlin.png",
+    "reactionImg": "./portraits-reaction/merlin.png"
+  },
+
+  {
+    "charID": "lyrica",
+    "name": "Lyrica Prismriver",
+    "title": "Poltergeist Keyboardist",
+    "image": "./portraits/lyrica.png",
+    "profileImg": "./profiles/lyrica.png",
+    "reactionImg": "./portraits-reaction/lyrica.png"
+  },
+
+  {
+    "charID": "youmu",
+    "name": "Konpaku Youmu",
+    "title": "Half-Human Half-Phantom Gardener",
+    "image": "./portraits/youmu.png",
+    "profileImg": "./profiles/youmu.png",
+    "reactionImg": "./portraits-reaction/youmu.png"
+  },
+
+  {
+    "charID": "yuyuko",
+    "name": "Saigyouji Yuyuko",
+    "title": "Dreaming Ghost",
+    "image": "./portraits/yuyuko.png",
+    "profileImg": "./profiles/yuyuko.png",
+    "reactionImg": "./portraits-reaction/yuyuko.png"
+  },
+
+  {
+    "charID": "ran",
+    "name": "Yakumo Ran",
+    "title": "Cunning Nine-Tailed Fox",
+    "image": "./portraits/ran.png",
+    "profileImg": "./profiles/ran.png",
+    "reactionImg": "./portraits-reaction/ran.png"
+  },
+
+  {
+    "charID": "yukari",
+    "name": "Yakumo Yukari",
+    "title": "Youkai of Boundaries",
+    "image": "./portraits/yukari.png",
+    "profileImg": "./profiles/yukari.png",
+    "reactionImg": "./portraits-reaction/yukari.png"
   },
 
   {
