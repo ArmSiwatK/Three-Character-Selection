@@ -7,8 +7,6 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
     const initialDisplayCount = 9;
     const [activeIndex, setActiveIndex] = useState(null);
 
-
-
     const circularIndex = (index, length) => (index + length) % length;
 
     const getDisplayedCharacters = () => {
@@ -21,8 +19,6 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
     };
 
     const displayedCharacters = getDisplayedCharacters();
-
-
 
     useEffect(() => {
         setActiveIndex(currentIndex);
@@ -43,8 +39,6 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
         };
     }, [currentIndex, setCurrentIndex, selectedCharacters]);
 
-
-
     return (
         <div className="gallery-side">
             {displayedCharacters.map((character, index) => {
@@ -54,13 +48,14 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
                 );
                 const isHidden = index === 0 || index === displayedCharacters.length - 1;
                 const isActive = characterIndex === activeIndex;
+                const profileImg = `./profiles/${character.charID}.png`;
 
                 return (
                     <div
                         key={character.charID}
                         className={`gallery-wrapper ${isHidden ? "hidden" : ""} ${isActive ? "active" : ""}`}
                     >
-                        <img src={character.profileImg} alt={character.name} />
+                        <img src={profileImg} alt={character.name} />
                     </div>
                 );
             })}
