@@ -37,12 +37,3 @@ export function handleKeyDown(event, goToNextSlide, goToPreviousSlide, selectedC
 export function findCharacterIndex(characters, charID) {
     return characters.findIndex((char) => char.charID === charID);
 }
-
-
-
-export function toggleLock(panel, lockedPanels, setLockedPanels) {
-    setLockedPanels((prevLockedPanels) => ({
-        ...prevLockedPanels,
-        [panel]: !prevLockedPanels[panel],
-    }));
-}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { handleKeyDown, findCharacterIndex, goToNextSlide, goToPreviousSlide, toggleLock } from './CarouselUtils';
+import { handleKeyDown, findCharacterIndex, goToNextSlide, goToPreviousSlide } from './CarouselUtils';
 import TopSide from '../CarouselTop/CarouselTop';
 import Character from '../Character/Character';
 import characters from '../../assets/characters.json';
