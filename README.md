@@ -27,6 +27,6 @@ Alright. The reason why I brought up responsiveness is that I can guarantee the 
 # Acknowledgments
 
 - React and Vite for providing the framework to build this project.
-- These Touhou standing portraits I use are made by [kaoru](https://www.pixiv.net/en/users/743845), which can be downloaded [over here](https://gensoukyou.1000.tv/dl.html) (I hope you can make your way around Japanese).
+- These Touhou standing portraits I use are made by [kaoru](https://www.pixiv.net/en/users/743845), which can be downloaded [over here](https://gensoukyou.1000.tv/dl.html) (*I hope you can make your way around Japanese*).
 - The background image I'm using is made by [R_A_D_A](https://www.pixiv.net/en/artworks/54346102).
 - A ludicrous amount of queries to ChatGPT.
