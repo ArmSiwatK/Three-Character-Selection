@@ -186,9 +186,33 @@
   },
 
   {
+    "charID": "aya",
+    "name": "Shameimaru Aya",
+    "title": "Traditional Reporter of Fantasy"
+  },
+
+  {
+    "charID": "medicine",
+    "name": "Medicine Melancholy",
+    "title": "Little Sweet Poison"
+  },
+
+  {
+    "charID": "yuuka",
+    "name": "Kazami Yuuka",
+    "title": "Flower Master of the Four Seasons"
+  },
+
+  {
     "charID": "komachi",
     "name": "Onozuka Komachi",
     "title": "Guide of the Sanzu River"
+  },
+
+  {
+    "charID": "eiki",
+    "name": "Shiki Eiki, Yamaxanadu",
+    "title": "Supreme Judge of Paradise"
   },
 
   {
