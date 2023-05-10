@@ -24,14 +24,13 @@ function Character(props) {
 
     const updateLatestProps = (panel) => {
         if (!props.lockedPanels[panel]) {
-            let updatedPanel;
-            if (panel === 'panel2' && !props.lockedPanels['panel1']) {
-                updatedPanel = { name: ' ', image: './portraits/blank.png' };
-            } else if (panel === 'panel3' && !props.lockedPanels['panel2']) {
-                updatedPanel = { name: ' ', image: './portraits/blank.png' };
-            } else {
-                updatedPanel = { name: props.name, image: props.image };
-            }
+            const updatedPanel =
+                panel === 'panel2' && !props.lockedPanels['panel1']
+                    ? { name: ' ', image: './portraits/blank.png' }
+                    : panel === 'panel3' && !props.lockedPanels['panel2']
+                        ? { name: ' ', image: './portraits/blank.png' }
+                        : { name: props.name, image: props.image };
+
             setLatestProps((prevLatestProps) => ({
                 ...prevLatestProps,
                 [panel]: updatedPanel,
