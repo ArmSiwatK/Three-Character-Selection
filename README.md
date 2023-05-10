@@ -15,7 +15,7 @@ Anyway, this is a simple React application that allows users to browse through a
 
 Keep the charID in mind when naming the images that you will put into these three folders. For instance with Reimu here, all three of hers are named `reimu.png`.
 
-## `public`
+### `public`
 - `portraits`
 - `portraits-reaction`
 - `profiles`
