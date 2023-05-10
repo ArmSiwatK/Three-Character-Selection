@@ -138,6 +138,54 @@
   },
 
   {
+    "charID": "wriggle",
+    "name": "Wriggle Nightbug",
+    "title": "A Bug of Light Wriggling in the Dark"
+  },
+
+  {
+    "charID": "mystia",
+    "name": "Mystia Lorelei",
+    "title": "Night Sparrow Youkai"
+  },
+
+  {
+    "charID": "keine",
+    "name": "Kamishirasawa Keine",
+    "title": "Half Beast Who Eats History"
+  },
+
+  {
+    "charID": "tewi",
+    "name": "Inaba Tewi",
+    "title": "Bare White Rabbit of Good Fortune"
+  },
+
+  {
+    "charID": "reisen",
+    "name": "Reisen Udongein Inaba",
+    "title": "Lunatic Red Eyes"
+  },
+
+  {
+    "charID": "eirin",
+    "name": "Yagokoro Eirin",
+    "title": "Brain of the Moon"
+  },
+
+  {
+    "charID": "kaguya",
+    "name": "Houraisan Kaguya",
+    "title": "Eternal Princess"
+  },
+
+  {
+    "charID": "mokou",
+    "name": "Fujiwara no Mokou",
+    "title": "Form of Hourai Figure"
+  },
+
+  {
     "charID": "komachi",
     "name": "Onozuka Komachi",
     "title": "Guide of the Sanzu River"
