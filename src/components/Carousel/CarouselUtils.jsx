@@ -25,9 +25,9 @@ export function goToPreviousSlide(currentIndex, charactersLength, setCurrentInde
 
 export function handleKeyDown(event, goToNextSlide, goToPreviousSlide, selectedCharacters) {
     if (!selectedCharacters || selectedCharacters.length === 3) return;
-    if (event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D') {
+    if (['ArrowRight', 'd', 'D'].includes(event.key)) {
         goToNextSlide(event, selectedCharacters);
-    } else if (event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A') {
+    } else if (['ArrowLeft', 'a', 'A'].includes(event.key)) {
         goToPreviousSlide(event, selectedCharacters);
     }
 }
@@ -35,5 +35,5 @@ export function handleKeyDown(event, goToNextSlide, goToPreviousSlide, selectedC
 
 
 export function findCharacterIndex(characters, charID) {
-    return characters.findIndex((char) => char.charID === charID);
+    return characters.findIndex(char => char.charID === charID);
 }
