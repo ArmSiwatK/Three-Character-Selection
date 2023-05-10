@@ -29,7 +29,7 @@ function CharacterReaction(props) {
                     ? { name: ' ', image: './portraits/blank.png' }
                     : panel === 'panel3' && !props.lockedPanels['panel2']
                         ? { name: ' ', image: './portraits/blank.png' }
-                        : { name: props.name, image: props.image };
+                        : { name: props.name, image: props.reactionImg };
 
             setLatestProps((prevLatestProps) => ({
                 ...prevLatestProps,
