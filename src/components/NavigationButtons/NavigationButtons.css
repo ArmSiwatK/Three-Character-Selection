@@ -17,6 +17,12 @@
     text-transform: uppercase;
     font-weight: bold;
     width: 300px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.navigation-buttons button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .navigation-buttons button:hover {
