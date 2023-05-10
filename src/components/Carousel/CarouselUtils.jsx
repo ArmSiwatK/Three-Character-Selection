@@ -11,14 +11,24 @@ export function getSlideIndex(currentIndex, direction, charactersLength, selecte
 
 
 
+function playSlideTransitionSound() {
+    const audio = new Audio('./audio/scroll.wav');
+    audio.play();
+}
+
+
+
+
 export function goToNextSlide(currentIndex, charactersLength, setCurrentIndex, selectedCharacters) {
     setCurrentIndex(getSlideIndex(currentIndex, 'next', charactersLength, selectedCharacters));
+    playSlideTransitionSound();
 }
 
 
 
 export function goToPreviousSlide(currentIndex, charactersLength, setCurrentIndex, selectedCharacters) {
     setCurrentIndex(getSlideIndex(currentIndex, 'prev', charactersLength, selectedCharacters));
+    playSlideTransitionSound();
 }
 
 

@@ -11,6 +11,8 @@ function Carousel() {
     const character = characters[currentIndex];
     const [selectedCharacters, setSelectedCharacters] = useState([]);
     const [isAnimationActive, setIsAnimationActive] = useState(false);
+    const selectSound = new Audio('./audio/select.wav');
+    const deselectSound = new Audio('./audio/deselect.wav');
     const [lockedPanels, setLockedPanels] = useState({
         panel1: false,
         panel2: true,
@@ -45,6 +47,7 @@ function Carousel() {
             if (selectedCharacters.length !== 2) {
                 goToNextSlide(newIndex, characters.length, setCurrentIndex, selectedCharacters);
             }
+            selectSound.play();
         }
     };
 
@@ -52,6 +55,7 @@ function Carousel() {
         if (selectedCharacters.length > 0) {
             const updatedSelectedCharacters = selectedCharacters.slice(0, -1);
             updateSelectedCharacters(updatedSelectedCharacters);
+            deselectSound.play();
         }
     };
 

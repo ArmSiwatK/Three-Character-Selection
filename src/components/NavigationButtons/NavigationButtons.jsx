@@ -18,12 +18,13 @@ const NavigationButtons = ({ goToPreviousSlide, handleCharSelect, handleCharDese
 
     const handleBgmToggle = () => {
         toggleBackgroundMusic();
+        document.activeElement.blur();
     };
 
 
 
     useEffect(() => {
-        const bgmAudio = new Audio('./bgm.mp3');
+        const bgmAudio = new Audio('./audio/bgm.mp3');
         bgmAudio.loop = true;
         setAudio(bgmAudio);
 
