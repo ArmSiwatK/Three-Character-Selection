@@ -7,18 +7,20 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
     const initialDisplayCount = 9;
     const [activeIndex, setActiveIndex] = useState(null);
 
+
+
     const circularIndex = (index, length) => (index + length) % length;
 
     const getDisplayedCharacters = () => {
-        const selectedIndex = currentIndex;
         const displayedCount = Math.min(initialDisplayCount, characters.length);
-
         return Array.from({ length: displayedCount }, (_, i) =>
-            characters[circularIndex(selectedIndex - Math.floor(initialDisplayCount / 2) + i, characters.length)]
+            characters[circularIndex(currentIndex - Math.floor(initialDisplayCount / 2) + i, characters.length)]
         );
     };
 
     const displayedCharacters = getDisplayedCharacters();
+
+
 
     useEffect(() => {
         setActiveIndex(currentIndex);
@@ -38,6 +40,8 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
             document.removeEventListener("keydown", handleKeyDownEvent);
         };
     }, [currentIndex, setCurrentIndex, selectedCharacters]);
+
+
 
     return (
         <div className="gallery-side">
