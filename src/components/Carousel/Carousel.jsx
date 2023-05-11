@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { handleKeyDown, findCharacterIndex, goToNextSlide, goToPreviousSlide } from './CarouselUtils';
 import CarouselTop from '../CarouselTop/CarouselTop';
 import Character from '../Character/Character';
+import CharacterResponsive from '../Character/CharacterResponsive';
 import characters from '../../assets/characters.json';
 import './Carousel.css';
 
@@ -100,11 +101,19 @@ function Carousel() {
                 }
                 goToNextSlide={() => goToNextSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)}
             />
-            <Character
-                name={character.name}
-                image={`./portraits/${character.charID}.png`}
-                lockedPanels={lockedPanels}
-            />
+            {window.innerWidth <= 768 ? (
+                <CharacterResponsive
+                    name={character.name}
+                    image={`./portraits/${character.charID}.png`}
+                    lockedPanels={lockedPanels}
+                />
+            ) : (
+                <Character
+                    name={character.name}
+                    image={`./portraits/${character.charID}.png`}
+                    lockedPanels={lockedPanels}
+                />
+            )}
         </div>
     );
 }
