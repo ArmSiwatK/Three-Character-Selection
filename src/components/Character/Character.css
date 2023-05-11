@@ -38,4 +38,9 @@
     .character-panel h1 {
         display: none;
     }
+
+    .character-portrait {
+        position: absolute;
+        margin-top: -100%;
+    }
 }

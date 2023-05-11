@@ -51,12 +51,17 @@
 
 
 @media (max-width: 768px) {
+
+    .navigation-buttons {
+        margin-bottom: 10%;
+    }
+
     .navigation-buttons button,
     .navigation-buttons .left-button,
     .navigation-buttons .right-button {
         font-size: 12px;
-        width: 50px;
+        width: initial;
         letter-spacing: initial;
-        padding: 0;
+        padding: 10px;
     }
 }
