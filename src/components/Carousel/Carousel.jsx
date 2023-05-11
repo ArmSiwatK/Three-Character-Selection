@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { handleKeyDown, findCharacterIndex, goToNextSlide, goToPreviousSlide } from './CarouselUtils';
-import CarouselTop from '../CarouselTop/CarouselTop';
+import Gallery from '../Gallery/Gallery';
+import NavigationButtons from '../NavigationButtons/NavigationButtons';
 import Character from '../Character/Character';
 import CharacterResponsive from '../Character/CharacterResponsive';
 import characters from '../../assets/characters.json';
@@ -89,17 +90,24 @@ function Carousel() {
 
     return (
         <div className="carousel-container">
-            <CarouselTop
-                character={character}
+            {window.innerWidth <= 768 ? (
+                <h1 className="character-title">{character.name}</h1>
+            ) : (
+                <h1 className="character-title">{character.title}</h1>
+            )}
+            <Gallery
+                onCharSelect={handleCharSelect}
+                selectedCharID={character.charID}
                 currentIndex={currentIndex}
                 setCurrentIndex={setCurrentIndex}
                 selectedCharacters={selectedCharacters}
-                handleCharSelect={handleCharSelect}
+            />
+            <NavigationButtons
+                goToPreviousSlide={goToPreviousSlide}
+                handleCharSelect={() => handleCharSelect(character.charID)}
                 handleCharDeselect={handleCharDeselect}
-                goToPreviousSlide={() =>
-                    goToPreviousSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)
-                }
-                goToNextSlide={() => goToNextSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)}
+                selectedCharacters={selectedCharacters}
+                goToNextSlide={goToNextSlide}
             />
             {window.innerWidth <= 768 ? (
                 <CharacterResponsive
