@@ -3,14 +3,3 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
-
-
-
-
-
-
-@media (max-width: 768px) {
-    .carousel-container {
-        justify-content: center;
-    }
-}

@@ -38,12 +38,4 @@
     .character-panel h1 {
         display: none;
     }
-
-    /* .character-portrait {
-        max-width: 100%;
-        margin-top: initial;
-        height: auto;
-        position: relative;
-        z-index: -1
-    } */
 }
