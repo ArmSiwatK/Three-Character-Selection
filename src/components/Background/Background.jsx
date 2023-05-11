@@ -4,7 +4,9 @@ import "./Background.css";
 function Background() {
     return (
         <>
-            <div className="background-image"></div>
+            <video className="background-video" autoPlay loop muted>
+                <source src="./background.mp4" type="video/mp4" />
+            </video>
             <div className="gradient-overlay"></div>
         </>
     );
