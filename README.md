@@ -4,7 +4,6 @@ I wanted to try something else, but I liked how the project looked at the time, 
 
 Anyway, this is a simple React application that allows users to browse through a gallery of characters and select three of them. It provides a straightforward way to showcase and choose characters from a given list. This selection screen should work with any other set of characters, as long as the data format in `characters.json` and the naming convention for the images in the `public` folder are adhered.
 
-
 ```
 {
     "charID": "reimu",
@@ -13,11 +12,11 @@ Anyway, this is a simple React application that allows users to browse through a
 }
 ```
 
-Keep the charID in mind when naming the images that you will put into these three folders. For instance with Reimu here, all three of hers are named `reimu.png`.
+Keep the charID in mind when naming the images that you will put into these two folders. For instance with Reimu here, hers are named `reimu.png`.
 
 ### `public`
+
 - `portraits`
-- `portraits-reaction`
 - `profiles`
 
 This project is not responsive. I haven't figured that one out, so I hope your screen size is 1920×1080. If you happen to have a bigger monitor than mine, you can try `Ctrl + Shift + M` on your browser when running the project and set the screen size to 1920×1080 – but you shouldn't be that desperate to see my little ole' sandbox here in action.
@@ -27,6 +26,6 @@ Alright. The reason why I brought up responsiveness is that I can guarantee the 
 # Acknowledgments
 
 - React and Vite for providing the framework to build this project.
-- These Touhou standing portraits I use are made by [kaoru](https://www.pixiv.net/en/users/743845), which can be downloaded [over here](https://gensoukyou.1000.tv/dl.html) (*I hope you can/know how to make your way around Japanese*).
+- These Touhou standing portraits I use are made by [kaoru](https://www.pixiv.net/en/users/743845), which can be downloaded [over here](https://gensoukyou.1000.tv/dl.html) (_I hope you can/know how to make your way around Japanese_).
 - The background image I'm using is made by [R_A_D_A](https://www.pixiv.net/en/artworks/54346102).
 - A ludicrous amount of queries to ChatGPT.

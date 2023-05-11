@@ -6,8 +6,8 @@ import "./Gallery.css";
 const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
 
     // The initial number of characters to display in the gallery
-    // Actual displayed characters is displayCount - 2; characters at both ends are invisible.
-    const displayCount = 9;
+    // Actual displayed characters is displayCount-2; characters at both ends are invisible.
+    const [displayCount, setDisplayCount] = useState(9);
     const [activeIndex, setActiveIndex] = useState(null);
 
 
@@ -52,6 +52,27 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
             document.removeEventListener("keydown", handleKeyDownEvent);
         };
     }, [currentIndex, setCurrentIndex, selectedCharacters]);
+
+    useEffect(() => {
+        const updateDisplayCount = () => {
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                setDisplayCount(5); // Set the displayCount for smaller screens
+            } else {
+                setDisplayCount(9); // Set the default displayCount for larger screens
+            }
+        };
+
+        // Initial update
+        updateDisplayCount();
+
+        // Listen for screen size changes
+        window.addEventListener("resize", updateDisplayCount);
+
+        // Clean up the event listener when the component unmounts
+        return () => {
+            window.removeEventListener("resize", updateDisplayCount);
+        };
+    }, []);
 
 
 

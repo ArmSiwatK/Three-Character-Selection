@@ -34,3 +34,15 @@
     width: 0;
     height: 0;
 }
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .gallery-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+}

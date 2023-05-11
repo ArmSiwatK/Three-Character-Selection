@@ -1,6 +1,22 @@
+.carousel-top {
+    display: flex;
+    flex-direction: column;
+}
+
 .character-title {
     font-family: 'Playfair Display', serif;
     text-align: center;
     background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), white, white, white, rgba(255, 255, 255, 0.5), transparent);
     padding: 10px 30px;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .character-title {
+        font-size: 28px;
+    }
 }

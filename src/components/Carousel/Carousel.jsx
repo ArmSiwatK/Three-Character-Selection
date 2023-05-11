@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { handleKeyDown, findCharacterIndex, goToNextSlide, goToPreviousSlide } from './CarouselUtils';
 import CarouselTop from '../CarouselTop/CarouselTop';
 import Character from '../Character/Character';
-import CharacterReaction from '../Character/CharacterReaction';
 import characters from '../../assets/characters.json';
 import './Carousel.css';
 
@@ -106,26 +105,11 @@ function Carousel() {
                 }
                 goToNextSlide={() => goToNextSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)}
             />
-            <div
-                className={`character-wrapper ${isAnimationActive ? 'animate-opacity' : ''}`}
-                style={{ opacity: isAnimationActive ? 0 : 1 }}
-            >
-                <Character
-                    name={character.name}
-                    image={`./portraits/${character.charID}.png`}
-                    lockedPanels={lockedPanels}
-                />
-            </div>
-            <div
-                className={`character-reaction-wrapper ${isAnimationActive ? 'animate-opacity' : ''}`}
-                style={{ opacity: isAnimationActive ? 1 : 0 }}
-            >
-                <CharacterReaction
-                    name={character.name}
-                    reactionImg={`./portraits-reaction/${character.charID}.png`}
-                    lockedPanels={lockedPanels}
-                />
-            </div>
+            <Character
+                name={character.name}
+                image={`./portraits/${character.charID}.png`}
+                lockedPanels={lockedPanels}
+            />
         </div>
     );
 }

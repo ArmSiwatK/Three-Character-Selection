@@ -27,4 +27,23 @@
     max-width: 100%;
     height: auto;
     margin-top: -20%;
+    z-index: -1;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .character-panel h1 {
+        display: none;
+    }
+
+    /* .character-portrait {
+        max-width: 100%;
+        margin-top: initial;
+        height: auto;
+        position: relative;
+        z-index: -1
+    } */
 }

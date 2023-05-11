@@ -17,5 +17,6 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(to bottom left, white, transparent);
+    background-size: cover;
     z-index: -1;
 }

@@ -13,9 +13,15 @@ function CarouselTop({
     goToPreviousSlide,
     goToNextSlide,
 }) {
+    const isMobile = window.innerWidth <= 768;
+
     return (
-        <div className="top-side">
-            <h1 className="character-title">{character.title}</h1>
+        <div className="carousel-top">
+            {isMobile ? (
+                <h1 className="character-title">{character.name}</h1>
+            ) : (
+                <h1 className="character-title">{character.title}</h1>
+            )}
             <Gallery
                 onCharSelect={handleCharSelect}
                 selectedCharID={character.charID}

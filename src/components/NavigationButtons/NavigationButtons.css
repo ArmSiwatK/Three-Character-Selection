@@ -44,3 +44,19 @@
     width: 100px;
     border-radius: 25% 100% 100% 25%;
 }
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .navigation-buttons button,
+    .navigation-buttons .left-button,
+    .navigation-buttons .right-button {
+        font-size: 12px;
+        width: 50px;
+        letter-spacing: initial;
+        padding: 0;
+    }
+}

@@ -4,16 +4,13 @@
     justify-content: space-evenly;
 }
 
-.character-reaction-wrapper {
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
-}
 
-.character-wrapper.animate-opacity {
-    opacity: 0;
-}
 
-.character-reaction-wrapper.animate-opacity {
-    opacity: 1;
+
+
+
+@media (max-width: 768px) {
+    .carousel-container {
+        justify-content: center;
+    }
 }
