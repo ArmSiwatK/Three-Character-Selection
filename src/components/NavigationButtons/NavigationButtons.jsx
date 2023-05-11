@@ -60,9 +60,15 @@ const NavigationButtons = ({ goToPreviousSlide, handleCharSelect, handleCharDese
                 Select
             </button>
             {/* Button to toggle the background music */}
-            <button onClick={handleBgmToggle}>
-                {bgmPlaying ? 'Pause BGM' : 'Play BGM'}
-            </button>
+            {window.innerWidth <= 768 ? (
+                <button onClick={handleBgmToggle}>
+                    BGM
+                </button>
+            ) : (
+                <button onClick={handleBgmToggle}>
+                    {bgmPlaying ? 'Pause BGM' : 'Play BGM'}
+                </button>
+            )}
             {/* Button to handle character deselection */}
             <button onClick={handleCharDeselect} disabled={selectedCharacters.length === 0}>
                 Deselect
