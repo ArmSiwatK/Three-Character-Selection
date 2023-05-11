@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import "./NavigationButtons.css";
 
-const NavigationButtons = ({ goToPreviousSlide, handleCharSelect, handleCharDeselect, selectedCharacters, goToNextSlide }) => {
+const NavigationButtons = ({
+    goToPreviousSlide,
+    handleCharSelect,
+    handleCharDeselect,
+    selectedCharacters,
+    goToNextSlide,
+}) => {
 
     // State to track whether the background music (BGM) is currently playing
     const [bgmPlaying, setBgmPlaying] = useState(false);
     // State to store the audio object for the BGM
     const [audio, setAudio] = useState(null);
-
-
+    // State to track video playback
+    const [videoPlaying, setVideoPlaying] = useState(true);
 
     // Function to toggle the background music playback
     const toggleBackgroundMusic = () => {
@@ -28,6 +34,11 @@ const NavigationButtons = ({ goToPreviousSlide, handleCharSelect, handleCharDese
         toggleBackgroundMusic();
         // Remove focus from the clicked button to prevent unwanted key events
         document.activeElement.blur();
+    };
+
+    // Function to toggle video playback
+    const toggleVideoPlayback = () => {
+        setVideoPlaying(!videoPlaying);
     };
 
 
@@ -59,16 +70,14 @@ const NavigationButtons = ({ goToPreviousSlide, handleCharSelect, handleCharDese
             <button onClick={handleCharSelect} disabled={selectedCharacters.length >= 3}>
                 Select
             </button>
+            {/* Button to toggle video playback */}
+            <button onClick={toggleVideoPlayback}>
+                Video
+            </button>
             {/* Button to toggle the background music */}
-            {window.innerWidth <= 768 ? (
-                <button onClick={handleBgmToggle}>
-                    BGM
-                </button>
-            ) : (
-                <button onClick={handleBgmToggle}>
-                    {bgmPlaying ? 'Pause BGM' : 'Play BGM'}
-                </button>
-            )}
+            <button onClick={handleBgmToggle}>
+                BGM
+            </button>
             {/* Button to handle character deselection */}
             <button onClick={handleCharDeselect} disabled={selectedCharacters.length === 0}>
                 Deselect
@@ -77,6 +86,13 @@ const NavigationButtons = ({ goToPreviousSlide, handleCharSelect, handleCharDese
             <button onClick={goToNextSlide} className="right-button">
                 ►
             </button>
+            {/* Video element with conditional playback */}
+            {videoPlaying && (
+                <video className="background-video" autoPlay loop muted>
+                    <source src="./background.mp4" type="video/mp4" />
+                </video>
+            )}
+            <div className="gradient-overlay"></div>
         </div>
     );
 };
