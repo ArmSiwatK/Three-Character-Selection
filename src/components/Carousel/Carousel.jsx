@@ -8,7 +8,6 @@ import './Carousel.css';
 function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0); // State variable to track the current index of the carousel
     const [selectedCharacters, setSelectedCharacters] = useState([]); // State variable to store the selected characters
-    const [isAnimationActive, setIsAnimationActive] = useState(false); // State variable to control animation
     const [lockedPanels, setLockedPanels] = useState({
         panel1: false,
         panel2: true,
@@ -34,10 +33,6 @@ function Carousel() {
     const updateSelectedCharacters = (updatedSelectedCharacters) => {
         setSelectedCharacters(updatedSelectedCharacters); // Update the selected characters
         updateLockedPanels(updatedSelectedCharacters); // Update the locked panels based on the updated selected characters
-        setIsAnimationActive(true); // Activate the animation
-        setTimeout(() => {
-            setIsAnimationActive(false); // Deactivate the animation after a delay
-        }, 1000);
     };
 
     // Handle character selection
