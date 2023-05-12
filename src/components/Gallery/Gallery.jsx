@@ -79,12 +79,6 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, titl
 
     return (
         <div className="gallery-side">
-            {window.innerWidth <= 768 && (
-                <GallerySelect
-                    selectedCharacters={selectedCharacters}
-                    lockedPanels={lockedPanels}
-                />
-            )}
             {window.innerWidth <= 768 ? (
                 <h1 className="character-title">{name}</h1>
             ) : (
@@ -114,6 +108,12 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, titl
                     );
                 })}
             </div>
+            {window.innerWidth <= 768 && (
+                <GallerySelect
+                    selectedCharacters={selectedCharacters}
+                    lockedPanels={lockedPanels}
+                />
+            )}
         </div>
     );
 };

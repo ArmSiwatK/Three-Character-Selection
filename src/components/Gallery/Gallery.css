@@ -52,7 +52,6 @@
 
 .gallery-select {
     display: flex;
-    margin-bottom: 40%;
 }
 
 .gallery-select-item {
@@ -91,9 +90,8 @@
 
 @media (max-width: 768px) {
 
-    .gallery-select {
-        margin-top: 5%;
-        margin-bottom: 20%;
+    .gallery-set {
+        margin-bottom: 10%;
     }
 
     .gallery-wrapper {
@@ -105,5 +103,6 @@
     .character-title {
         font-size: 26px;
         padding: 1% 9%;
+        margin-top: 10%;
     }
 }
