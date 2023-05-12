@@ -2,7 +2,7 @@
 
 I wanted to try something else, but I liked how the project looked at the time, so I thought I might as well kept it around with Git – and by extension, use GitHub for convenience.
 
-Anyway, this is a simple React application that allows users to browse through a gallery of characters and select three of them. It provides a straightforward way to showcase and choose characters from a given list. This selection screen should work with any other set of characters, as long as the data format in `characters.json` and the naming convention for the images in the `public` folder are adhered.
+Anyway, this is a mockup made with React that allows users to browse through a gallery of characters and select three of them. It provides a straightforward way to showcase and choose characters from a given list. This selection screen should work with any other set of characters, as long as the data format in `characters.json` and the naming convention for the images in the `public` folder are adhered.
 
 ```
 {
@@ -27,5 +27,5 @@ Alright. The reason why I brought up responsiveness is that I can guarantee the 
 
 - React and Vite for providing the framework to build this project.
 - These Touhou standing portraits I use are made by [kaoru](https://www.pixiv.net/en/users/743845), which can be downloaded [over here](https://gensoukyou.1000.tv/dl.html) (_I hope you can/know how to make your way around Japanese_).
-- The background image I'm using is made by [R_A_D_A](https://www.pixiv.net/en/artworks/54346102).
+- The background video I'm using is from [ArtSqb](https://pixabay.com/videos/background-abstract-waves-slow-8788/).
 - A ludicrous amount of queries to ChatGPT.
