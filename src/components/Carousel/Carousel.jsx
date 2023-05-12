@@ -116,11 +116,11 @@ function Carousel() {
                 lockedPanels={lockedPanels}
             />
             <NavigationButtons
-                goToPreviousSlide={goToPreviousSlide}
+                goToPreviousSlide={() => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)}
                 handleCharSelect={() => handleCharSelect(character.charID)}
                 handleCharDeselect={handleCharDeselect}
                 selectedCharacters={selectedCharacters}
-                goToNextSlide={goToNextSlide}
+                goToNextSlide={() => goToNextSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)}
                 scrollToRandomCharacter={scrollToRandomCharacter}
             />
             {window.innerWidth <= 768 ? (
