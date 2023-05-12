@@ -186,6 +186,24 @@
   },
 
   {
+    "charID": "sunny",
+    "name": "Sunny Milk",
+    "title": "Radiant Light of the Sun"
+  },
+
+  {
+    "charID": "luna",
+    "name": "Luna Child",
+    "title": "Silent Light of the Moon"
+  },
+
+  {
+    "charID": "star",
+    "name": "Star Sapphire",
+    "title": "Showering Light of the Star"
+  },
+
+  {
     "charID": "aya",
     "name": "Shameimaru Aya",
     "title": "Traditional Reporter of Fantasy"
