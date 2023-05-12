@@ -5,8 +5,14 @@
     align-items: center;
 }
 
+
+
+
+
+
 .gallery-set {
     display: flex;
+    margin-top: 5%;
 }
 
 .gallery-wrapper {
@@ -47,6 +53,7 @@
 
 .gallery-select {
     display: flex;
+    margin-bottom: 40%;
 }
 
 .gallery-select-item {
