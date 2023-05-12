@@ -41,9 +41,9 @@ export function goToPreviousSlide(currentIndex, charactersLength, setCurrentInde
 export function handleKeyDown(event, goToNextSlide, goToPreviousSlide, selectedCharacters) {
     if (!selectedCharacters || selectedCharacters.length === 3) return; // Return if there are no selected characters or already three selected characters
 
-    if (['d', 'D'].includes(event.key)) {
+    if (['d', 'D', 'ArrowRight'].includes(event.key)) {
         goToNextSlide(event, selectedCharacters); // Go to the next slide when the 'D' key is pressed
-    } else if (['a', 'A'].includes(event.key)) {
+    } else if (['a', 'A', 'ArrowLeft'].includes(event.key)) {
         goToPreviousSlide(event, selectedCharacters); // Go to the previous slide when the 'A' key is pressed
     }
 }
