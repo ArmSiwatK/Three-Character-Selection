@@ -7,6 +7,7 @@ const NavigationButtons = ({
     handleCharDeselect,
     selectedCharacters,
     goToNextSlide,
+    scrollToRandomCharacter,
 }) => {
 
     // State to track whether the background music (BGM) is currently playing
@@ -74,6 +75,9 @@ const NavigationButtons = ({
                 {/* Button to toggle video playback */}
                 <button onClick={toggleVideoPlayback}>
                     Video
+                </button>
+                <button onClick={scrollToRandomCharacter}>
+                    Random
                 </button>
                 {/* Button to toggle the background music */}
                 <button onClick={handleBgmToggle}>

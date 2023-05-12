@@ -19,6 +19,7 @@ function Carousel() {
     const character = characters[currentIndex]; // Get the character object based on the current index
     const selectSound = new Audio('./audio/select.wav'); // Create an audio element for the select sound
     const deselectSound = new Audio('./audio/deselect.wav'); // Create an audio element for the deselect sound
+    const scrollSound = new Audio('./audio/scroll.wav');
 
 
 
@@ -58,6 +59,20 @@ function Carousel() {
             updateSelectedCharacters(updatedSelectedCharacters); // Update the selected characters array
             deselectSound.play(); // Play the deselect sound
         }
+    };
+
+    const scrollToRandomCharacter = () => {
+        let randomIndex = Math.floor(Math.random() * characters.length); // Generate a random index within the characters array
+
+        // Check if the randomly selected index is already selected in Panel 1 or Panel 2
+        const panel1Index = selectedCharacters[0];
+        const panel2Index = selectedCharacters[1];
+        if (panel1Index === randomIndex || panel2Index === randomIndex) {
+            randomIndex = getSlideIndex(randomIndex, 'next', characters.length, selectedCharacters); // Find the next available index
+        }
+
+        setCurrentIndex(randomIndex); // Set the current index to the random index
+        scrollSound.play();
     };
 
 
@@ -104,6 +119,7 @@ function Carousel() {
                 handleCharDeselect={handleCharDeselect}
                 selectedCharacters={selectedCharacters}
                 goToNextSlide={goToNextSlide}
+                scrollToRandomCharacter={scrollToRandomCharacter}
             />
             {window.innerWidth <= 768 ? (
                 <CharacterResponsive
