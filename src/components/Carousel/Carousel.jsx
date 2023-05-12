@@ -74,6 +74,7 @@ function Carousel() {
 
             setCurrentIndex(randomIndex); // Set the current index to the random index
             scrollSound.play();
+            document.activeElement.blur();
         }
     };
 
