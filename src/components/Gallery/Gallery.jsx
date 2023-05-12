@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { handleKeyDown, goToNextSlide, goToPreviousSlide } from '../Carousel/CarouselUtils';
+import GallerySelect from "./GallerySelect";
 import characters from "../../assets/characters.json";
 import "./Gallery.css";
 
-const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, title }) => {
+const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, title, lockedPanels }) => {
 
     // The initial number of characters to display in the gallery
     // Actual displayed characters is displayCount-2; characters at both ends are invisible.
@@ -78,6 +79,12 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, titl
 
     return (
         <div className="gallery-side">
+            {window.innerWidth <= 768 && (
+                <GallerySelect
+                    selectedCharacters={selectedCharacters}
+                    lockedPanels={lockedPanels}
+                />
+            )}
             {window.innerWidth <= 768 ? (
                 <h1 className="character-title">{name}</h1>
             ) : (
