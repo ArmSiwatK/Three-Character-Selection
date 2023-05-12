@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { handleKeyDown, goToNextSlide, goToPreviousSlide } from '../Carousel/CarouselUtils';
-import GallerySelect from "./GallerySelect";
 import characters from "../../assets/characters.json";
 import "./Gallery.css";
 
@@ -108,12 +107,6 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, titl
                     );
                 })}
             </div>
-            {window.innerWidth <= 768 && (
-                <GallerySelect
-                    selectedCharacters={selectedCharacters}
-                    lockedPanels={lockedPanels}
-                />
-            )}
         </div>
     );
 };
