@@ -1,9 +1,8 @@
-.navigation-buttons {
+.navigation-buttons-row {
     display: flex;
     justify-content: space-evenly;
     gap: 2%;
     font-family: 'Playfair Display', serif;
-    margin: 1% 20% auto;
 }
 
 .navigation-buttons button {
@@ -79,8 +78,11 @@
 
 @media (max-width: 768px) {
 
-    .navigation-buttons {
-        margin-bottom: 10%;
+    .navigation-buttons-row {
+        display: flex;
+        position: absolute;
+        bottom: 5%;
+        justify-content: initial;
     }
 
     .navigation-buttons button,

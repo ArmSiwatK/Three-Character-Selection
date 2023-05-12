@@ -62,30 +62,32 @@ const NavigationButtons = ({
 
     return (
         <div className="navigation-buttons">
-            {/* Button to go to the previous slide */}
-            <button onClick={goToPreviousSlide} className="left-button">
-                ◄
-            </button>
-            {/* Button to handle character selection */}
-            <button onClick={handleCharSelect} disabled={selectedCharacters.length >= 3}>
-                Select
-            </button>
-            {/* Button to toggle video playback */}
-            <button onClick={toggleVideoPlayback}>
-                Video
-            </button>
-            {/* Button to toggle the background music */}
-            <button onClick={handleBgmToggle}>
-                BGM
-            </button>
-            {/* Button to handle character deselection */}
-            <button onClick={handleCharDeselect} disabled={selectedCharacters.length === 0}>
-                Deselect
-            </button>
-            {/* Button to go to the next slide */}
-            <button onClick={goToNextSlide} className="right-button">
-                ►
-            </button>
+            <div className="navigation-buttons-row">
+                {/* Button to go to the previous slide */}
+                <button onClick={goToPreviousSlide} className="left-button">
+                    ◄
+                </button>
+                {/* Button to handle character selection */}
+                <button onClick={handleCharSelect} disabled={selectedCharacters.length >= 3}>
+                    Select
+                </button>
+                {/* Button to toggle video playback */}
+                <button onClick={toggleVideoPlayback}>
+                    Video
+                </button>
+                {/* Button to toggle the background music */}
+                <button onClick={handleBgmToggle}>
+                    BGM
+                </button>
+                {/* Button to handle character deselection */}
+                <button onClick={handleCharDeselect} disabled={selectedCharacters.length === 0}>
+                    Deselect
+                </button>
+                {/* Button to go to the next slide */}
+                <button onClick={goToNextSlide} className="right-button">
+                    ►
+                </button>
+            </div>
             {/* Video element with conditional playback */}
             {videoPlaying && (
                 <video className="background-video" autoPlay loop muted>
