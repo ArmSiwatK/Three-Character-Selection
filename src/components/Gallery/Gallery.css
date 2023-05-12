@@ -90,8 +90,10 @@
 
 
 @media (max-width: 768px) {
-    .gallery-side {
-        margin-bottom: 75%;
+
+    .gallery-select {
+        margin-top: 5%;
+        margin-bottom: 20%;
     }
 
     .gallery-wrapper {
