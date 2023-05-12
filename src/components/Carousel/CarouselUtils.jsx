@@ -42,9 +42,9 @@ export function handleKeyDown(event, goToNextSlide, goToPreviousSlide, selectedC
     if (!selectedCharacters || selectedCharacters.length === 3) return; // Return if there are no selected characters or already three selected characters
 
     if (['d', 'D'].includes(event.key)) {
-        goToNextSlide(event, selectedCharacters); // Go to the next slide when the right arrow key or 'D' key is pressed
+        goToNextSlide(event, selectedCharacters); // Go to the next slide when the 'D' key is pressed
     } else if (['a', 'A'].includes(event.key)) {
-        goToPreviousSlide(event, selectedCharacters); // Go to the previous slide when the left arrow key or 'A' key is pressed
+        goToPreviousSlide(event, selectedCharacters); // Go to the previous slide when the 'A' key is pressed
     }
 }
 
