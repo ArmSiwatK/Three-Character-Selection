@@ -64,8 +64,8 @@
 
 @media (max-width: 768px) {
 
-    .gallery-set {
-        margin-bottom: 5%;
+    .gallery-side {
+        margin-top: 10%;
     }
 
     .gallery-wrapper {

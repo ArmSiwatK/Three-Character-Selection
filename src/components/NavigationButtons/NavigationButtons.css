@@ -83,8 +83,8 @@
         display: flex;
         justify-content: center;
         transform: scale(0.75);
-        margin-bottom: 5%;
-        margin-top: 75%;
+        position: absolute;
+        bottom: 5%;
     }
 
     .navigation-buttons button,
