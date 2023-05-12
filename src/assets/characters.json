@@ -240,6 +240,18 @@
   },
 
   {
+    "charID": "toyohime",
+    "name": "Watatsuki no Toyohime",
+    "title": "Moon Princess Who Connects Seas and Mountains"
+  },
+
+  {
+    "charID": "yorihime",
+    "name": "Watatsuki no Yorihime",
+    "title": "Moon Princess Possessed by Divine Spirits"
+  },
+
+  {
     "charID": "akyuu",
     "name": "Hieda no Akyuu",
     "title": "Memory of Gensokyo"
