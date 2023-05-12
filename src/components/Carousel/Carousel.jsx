@@ -62,7 +62,7 @@ function Carousel() {
     };
 
     const scrollToRandomCharacter = () => {
-        if (!lockedPanels.panel3) {
+        if (!lockedPanels.panel3 || selectedCharacters.length === 0) {
             let randomIndex = Math.floor(Math.random() * characters.length); // Generate a random index within the characters array
 
             // Check if the randomly selected index is already selected in Panel 1 or Panel 2
