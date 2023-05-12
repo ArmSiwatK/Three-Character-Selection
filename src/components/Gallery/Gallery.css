@@ -1,7 +1,12 @@
 .gallery-side {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.gallery-set {
+    display: flex;
 }
 
 .gallery-wrapper {
@@ -40,6 +45,18 @@
 
 
 
+.character-title {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), white, white, white, rgba(255, 255, 255, 0.5), transparent);
+    padding: 1% 15%;
+}
+
+
+
+
+
+
 @media (max-width: 768px) {
     .gallery-side {
         margin-bottom: 75%;
@@ -49,5 +66,9 @@
         width: 100px;
         height: 100px;
         margin: 10px 5px;
+    }
+
+    .character-title {
+        font-size: 26px;
     }
 }

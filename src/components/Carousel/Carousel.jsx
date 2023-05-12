@@ -90,15 +90,12 @@ function Carousel() {
 
     return (
         <div className="carousel-container">
-            {window.innerWidth <= 768 ? (
-                <h1 className="character-title">{character.name}</h1>
-            ) : (
-                <h1 className="character-title">{character.title}</h1>
-            )}
             <Gallery
                 currentIndex={currentIndex}
                 setCurrentIndex={setCurrentIndex}
                 selectedCharacters={selectedCharacters}
+                name={character.name}
+                title={character.title}
             />
             <NavigationButtons
                 goToPreviousSlide={goToPreviousSlide}

@@ -3,7 +3,7 @@ import { handleKeyDown, goToNextSlide, goToPreviousSlide } from '../Carousel/Car
 import characters from "../../assets/characters.json";
 import "./Gallery.css";
 
-const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
+const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, title }) => {
 
     // The initial number of characters to display in the gallery
     // Actual displayed characters is displayCount-2; characters at both ends are invisible.
@@ -78,28 +78,35 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters }) => {
 
     return (
         <div className="gallery-side">
-            {displayedCharacters.map((character, index) => {
-                // Calculate the circular index for each displayed character
-                const characterIndex = circularIndex(
-                    currentIndex - Math.floor(displayCount / 2) + index,
-                    characters.length
-                );
-                // Determine if the character is hidden (first or last in the displayedCharacters array)
-                const isHidden = index === 0 || index === displayedCharacters.length - 1;
-                // Determine if the character is currently active (based on the active index)
-                const isActive = characterIndex === activeIndex;
-                // Get the profile image URL for the character
-                const profileImg = `./profiles/${character.charID}.png`;
+            {window.innerWidth <= 768 ? (
+                <h1 className="character-title">{name}</h1>
+            ) : (
+                <h1 className="character-title">{title}</h1>
+            )}
+            <div className="gallery-set">
+                {displayedCharacters.map((character, index) => {
+                    // Calculate the circular index for each displayed character
+                    const characterIndex = circularIndex(
+                        currentIndex - Math.floor(displayCount / 2) + index,
+                        characters.length
+                    );
+                    // Determine if the character is hidden (first or last in the displayedCharacters array)
+                    const isHidden = index === 0 || index === displayedCharacters.length - 1;
+                    // Determine if the character is currently active (based on the active index)
+                    const isActive = characterIndex === activeIndex;
+                    // Get the profile image URL for the character
+                    const profileImg = `./profiles/${character.charID}.png`;
 
-                return (
-                    <div
-                        key={character.charID}
-                        className={`gallery-wrapper ${isHidden ? "hidden" : ""} ${isActive ? "active" : ""}`}
-                    >
-                        <img src={profileImg} alt={character.name} />
-                    </div>
-                );
-            })}
+                    return (
+                        <div
+                            key={character.charID}
+                            className={`gallery-wrapper ${isHidden ? "hidden" : ""} ${isActive ? "active" : ""}`}
+                        >
+                            <img src={profileImg} alt={character.name} />
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 };
