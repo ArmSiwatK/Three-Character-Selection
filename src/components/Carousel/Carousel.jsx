@@ -62,17 +62,19 @@ function Carousel() {
     };
 
     const scrollToRandomCharacter = () => {
-        let randomIndex = Math.floor(Math.random() * characters.length); // Generate a random index within the characters array
+        if (!lockedPanels.panel3) {
+            let randomIndex = Math.floor(Math.random() * characters.length); // Generate a random index within the characters array
 
-        // Check if the randomly selected index is already selected in Panel 1 or Panel 2
-        const panel1Index = selectedCharacters[0];
-        const panel2Index = selectedCharacters[1];
-        if (panel1Index === randomIndex || panel2Index === randomIndex) {
-            randomIndex = getSlideIndex(randomIndex, 'next', characters.length, selectedCharacters); // Find the next available index
+            // Check if the randomly selected index is already selected in Panel 1 or Panel 2
+            const panel1Index = selectedCharacters[0];
+            const panel2Index = selectedCharacters[1];
+            if (panel1Index === randomIndex || panel2Index === randomIndex) {
+                randomIndex = getSlideIndex(randomIndex, 'next', characters.length, selectedCharacters); // Find the next available index
+            }
+
+            setCurrentIndex(randomIndex); // Set the current index to the random index
+            scrollSound.play();
         }
-
-        setCurrentIndex(randomIndex); // Set the current index to the random index
-        scrollSound.play();
     };
 
 
