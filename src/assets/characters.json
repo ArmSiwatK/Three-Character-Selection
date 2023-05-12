@@ -303,5 +303,17 @@
     "charID": "suwako",
     "name": "Moriya Suwako",
     "title": "Pinnacle of Native Gods"
+  },
+
+  {
+    "charID": "iku",
+    "name": "Nagae Iku",
+    "title": "Beautiful Scarlet Cloth"
+  },
+
+  {
+    "charID": "tenshi",
+    "name": "Hinanawi Tenshi",
+    "title": "Girl of Neither Perception nor Non-Perception"
   }
 ]
