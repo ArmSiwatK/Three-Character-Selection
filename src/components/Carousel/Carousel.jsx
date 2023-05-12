@@ -96,8 +96,6 @@ function Carousel() {
                 <h1 className="character-title">{character.title}</h1>
             )}
             <Gallery
-                onCharSelect={handleCharSelect}
-                selectedCharID={character.charID}
                 currentIndex={currentIndex}
                 setCurrentIndex={setCurrentIndex}
                 selectedCharacters={selectedCharacters}
