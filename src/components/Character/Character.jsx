@@ -6,8 +6,8 @@ function Character(props) {
     // State to keep track of the latest props received for each panel
     const [latestProps, setLatestProps] = useState({
         panel1: { name: '', image: '' },
-        panel3: { name: ' ', image: './portraits/blank.png' },
         panel2: { name: ' ', image: './portraits/blank.png' },
+        panel3: { name: ' ', image: './portraits/blank.png' },
     });
 
 
@@ -52,13 +52,13 @@ function Character(props) {
     // useEffect to update the latestProps when props change
     useEffect(() => {
         // Iterate over the panel names and invoke the updateLatestProps function for each panel
-        ['panel1', 'panel3', 'panel2'].forEach(updateLatestProps);
+        ['panel1', 'panel2', 'panel3'].forEach(updateLatestProps);
     }, [props]);
 
 
 
     // Render the character component with three character panels
-    return <div className="characters-container">{['panel1', 'panel3', 'panel2'].map(renderCharacterPanel)}</div>;
+    return <div className="characters-container">{['panel1', 'panel2', 'panel3'].map(renderCharacterPanel)}</div>;
 }
 
 export default Character;
