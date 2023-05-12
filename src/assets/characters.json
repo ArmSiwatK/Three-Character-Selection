@@ -216,8 +216,50 @@
   },
 
   {
+    "charID": "shizuha",
+    "name": "Aki Shizuha",
+    "title": "Symbol of Loneliness and Demise"
+  },
+
+  {
+    "charID": "minoriko",
+    "name": "Aki Minoriko",
+    "title": "Symbol of Abundance and Harvest"
+  },
+
+  {
+    "charID": "hina",
+    "name": "Kagiyama Hina",
+    "title": "Secret God of Nagashi-Bina"
+  },
+
+  {
+    "charID": "nitori",
+    "name": "Kawashiro Nitori",
+    "title": "Underwater Engineer"
+  },
+
+  {
+    "charID": "momiji",
+    "name": "Inubashiri Momiji",
+    "title": "Petty Patrol Tengu"
+  },
+
+  {
     "charID": "sanae",
     "name": "Kochiya Sanae",
     "title": "Deified Human of the Wind"
+  },
+
+  {
+    "charID": "kanako",
+    "name": "Yasaka Kanako",
+    "title": "Avatar of Mountains and Lakes"
+  },
+
+  {
+    "charID": "suwako",
+    "name": "Moriya Suwako",
+    "title": "Pinnacle of Native Gods"
   }
 ]
