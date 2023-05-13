@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { handleKeyDown, findCharacterIndex, goToNextSlide, goToPreviousSlide } from './CarouselUtils';
+import { handleKeyDown, findCharacterIndex, goToNextSlide, goToPreviousSlide, scrollToRandomCharacter } from './CarouselUtils';
 import Gallery from '../Gallery/Gallery';
 import NavigationButtons from '../NavigationButtons/NavigationButtons';
 import Character from '../Character/Character';
@@ -61,23 +61,6 @@ function Carousel() {
         }
     };
 
-    const scrollToRandomCharacter = () => {
-        if (!lockedPanels.panel3 || selectedCharacters.length === 0) {
-            let randomIndex = Math.floor(Math.random() * characters.length); // Generate a random index within the characters array
-
-            // Check if the randomly selected index is already selected in Panel 1 or Panel 2
-            const panel1Index = selectedCharacters[0];
-            const panel2Index = selectedCharacters[1];
-            if (panel1Index === randomIndex || panel2Index === randomIndex) {
-                randomIndex = getSlideIndex(randomIndex, 'next', characters.length, selectedCharacters); // Find the next available index
-            }
-
-            setCurrentIndex(randomIndex); // Set the current index to the random index
-            scrollSound.play();
-            document.activeElement.blur();
-        }
-    };
-
 
 
     // Handle keydown event for navigation and character selection/deselection
@@ -95,7 +78,7 @@ function Carousel() {
             } else if (event.key === 'Backspace' && selectedCharacters.length > 0) {
                 handleCharDeselect(); // Handle character deselection when Backspace key is pressed
             } else if (['r', 'R'].includes(event.key)) {
-                scrollToRandomCharacter(); // Handle random selection when R key is pressed
+                scrollToRandomCharacter(lockedPanels, selectedCharacters, setCurrentIndex, characters); // Handle random selection when R key is pressed
             }
         };
 
@@ -124,7 +107,7 @@ function Carousel() {
                 handleCharDeselect={handleCharDeselect}
                 selectedCharacters={selectedCharacters}
                 goToNextSlide={() => goToNextSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)}
-                scrollToRandomCharacter={scrollToRandomCharacter}
+                scrollToRandomCharacter={() => scrollToRandomCharacter(lockedPanels, selectedCharacters, setCurrentIndex, characters)}
             />
             {window.innerWidth <= 768 ? (
                 <CharacterResponsive

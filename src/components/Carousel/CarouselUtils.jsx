@@ -54,3 +54,25 @@ export function handleKeyDown(event, goToNextSlide, goToPreviousSlide, selectedC
 export function findCharacterIndex(characters, charID) {
     return characters.findIndex(char => char.charID === charID); // Return the index of the character
 }
+
+
+
+
+
+
+// Scroll to a random character
+export function scrollToRandomCharacter(lockedPanels, selectedCharacters, setCurrentIndex, characters) {
+    if (!lockedPanels.panel3 || selectedCharacters.length === 0) {
+        let randomIndex = Math.floor(Math.random() * characters.length); // Generate a random index within the characters array
+
+        // Check if the randomly selected index is already selected in Panel 1 or Panel 2
+        const panel1Index = selectedCharacters[0];
+        const panel2Index = selectedCharacters[1];
+        if (panel1Index === randomIndex || panel2Index === randomIndex) {
+            randomIndex = getSlideIndex(currentIndex, 'next', characters.length, selectedCharacters); // Find the next available index
+        }
+
+        setCurrentIndex(randomIndex); // Set the current index to the random index
+        playSlideTransitionSound(); // Play the slide transition sound
+    }
+}
