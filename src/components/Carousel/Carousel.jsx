@@ -17,8 +17,8 @@ function Carousel() {
     }); // State variable to manage locked panels
 
     const character = characters[currentIndex]; // Get the character object based on the current index
-    const selectSound = new Audio('./audio/select.wav'); // Create an audio element for the select sound
-    const deselectSound = new Audio('./audio/deselect.wav'); // Create an audio element for the deselect sound
+    const selectSound = new Audio('./audio/select.wav');
+    const deselectSound = new Audio('./audio/deselect.wav');
 
 
 
@@ -31,7 +31,7 @@ function Carousel() {
         });
     };
 
-    // Update the selected characters and perform animation
+    // Update the selected characters
     const updateSelectedCharacters = (updatedSelectedCharacters) => {
         setSelectedCharacters(updatedSelectedCharacters); // Update the selected characters
         updateLockedPanels(updatedSelectedCharacters); // Update the locked panels based on the updated selected characters
