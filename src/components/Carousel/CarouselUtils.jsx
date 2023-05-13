@@ -68,7 +68,7 @@ export function goToPreviousIndex(currentIndex, charactersLength, setCurrentInde
 
 
 // Handle keydown event for navigation
-export function handleKeyDown(event, goToNextSlide, goToPreviousSlide, goToNextIndex, goToPreviousIndex, selectedCharacters) {
+export function handleKeyDown(event, goToNextSlide, goToPreviousSlide, goToNextIndex, goToPreviousIndex, scrollToRandomCharacter, selectedCharacters) {
     if (!selectedCharacters || selectedCharacters.length === 3) return; // Return if there are no selected characters or already three selected characters
 
     if (['d', 'D', 'ArrowRight'].includes(event.key)) {
@@ -79,6 +79,8 @@ export function handleKeyDown(event, goToNextSlide, goToPreviousSlide, goToNextI
         goToNextIndex(event, selectedCharacters); // Go to the next index with indexMark when the 'W' key is pressed
     } else if (['s', 'S', 'ArrowDown'].includes(event.key)) {
         goToPreviousIndex(event, selectedCharacters); // Go to the previous index with indexMark when the 'S' key is pressed
+    } else if (['r', 'R'].includes(event.key)) {
+        scrollToRandomCharacter(); // Scroll to a random character when the 'R' key is pressed
     }
 }
 

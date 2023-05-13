@@ -71,6 +71,7 @@ function Carousel() {
                 () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters),
                 () => goToNextIndex(currentIndex, characters.length, setCurrentIndex, selectedCharacters, characters),
                 () => goToPreviousIndex(currentIndex, characters.length, setCurrentIndex, selectedCharacters, characters),
+                () => scrollToRandomCharacter(lockedPanels, selectedCharacters, setCurrentIndex, characters),
                 selectedCharacters
             );
 
@@ -78,8 +79,6 @@ function Carousel() {
                 handleCharSelect(character.charID); // Handle character selection when Enter key is pressed
             } else if (event.key === 'Backspace' && selectedCharacters.length > 0) {
                 handleCharDeselect(); // Handle character deselection when Backspace key is pressed
-            } else if (['r', 'R'].includes(event.key)) {
-                scrollToRandomCharacter(lockedPanels, selectedCharacters, setCurrentIndex, characters); // Handle random selection when R key is pressed
             }
         };
 
