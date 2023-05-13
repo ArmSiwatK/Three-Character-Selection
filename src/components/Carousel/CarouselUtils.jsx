@@ -74,5 +74,6 @@ export function scrollToRandomCharacter(lockedPanels, selectedCharacters, setCur
 
         setCurrentIndex(randomIndex); // Set the current index to the random index
         playSlideTransitionSound(); // Play the slide transition sound
+        document.activeElement.blur();
     }
 }
