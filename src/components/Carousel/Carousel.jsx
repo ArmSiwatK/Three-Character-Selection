@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { handleKeyDown, findCharacterIndex, goToNextSlide, goToPreviousSlide, scrollToRandomCharacter } from './CarouselUtils';
+import { handleKeyDown, findCharacterIndex, goToNextSlide, goToPreviousSlide, scrollToRandomCharacter, goToNextIndex, goToPreviousIndex } from './CarouselUtils';
 import Gallery from '../Gallery/Gallery';
 import NavigationButtons from '../NavigationButtons/NavigationButtons';
 import Character from '../Character/Character';
@@ -69,6 +69,8 @@ function Carousel() {
                 event,
                 () => goToNextSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters),
                 () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters),
+                () => goToNextIndex(currentIndex, characters.length, setCurrentIndex, selectedCharacters, characters),
+                () => goToPreviousIndex(currentIndex, characters.length, setCurrentIndex, selectedCharacters, characters),
                 selectedCharacters
             );
 

@@ -3,7 +3,7 @@
     "charID": "reimu",
     "name": "Hakurei Reimu",
     "title": "Shrine Maiden of Paradise",
-    "indexPoint": true
+    "indexMark": true
   },
 
   {
@@ -70,7 +70,7 @@
     "charID": "letty",
     "name": "Letty Whiterock",
     "title": "What Winter Left Behind",
-    "indexPoint": true
+    "indexMark": true
   },
 
   {
@@ -149,7 +149,7 @@
     "charID": "wriggle",
     "name": "Wriggle Nightbug",
     "title": "Bug of Light Wriggling in the Dark",
-    "indexPoint": true
+    "indexMark": true
   },
 
   {
@@ -216,7 +216,7 @@
     "charID": "aya",
     "name": "Shameimaru Aya",
     "title": "Traditional Reporter of Fantasy",
-    "indexPoint": true
+    "indexMark": true
   },
 
   {
@@ -265,7 +265,7 @@
     "charID": "shizuha",
     "name": "Aki Shizuha",
     "title": "Symbol of Loneliness and Demise",
-    "indexPoint": true
+    "indexMark": true
   },
 
   {

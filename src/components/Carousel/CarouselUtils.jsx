@@ -37,14 +37,48 @@ export function goToPreviousSlide(currentIndex, charactersLength, setCurrentInde
 
 
 
+// Go to the next index with indexMark
+export function goToNextIndex(currentIndex, charactersLength, setCurrentIndex, selectedCharacters, characters) {
+    let nextIndex = getSlideIndex(currentIndex, 'next', charactersLength, selectedCharacters); // Get the next index
+
+    // Find the next index with indexMark
+    while (!characters[nextIndex].indexMark) {
+        nextIndex = getSlideIndex(nextIndex, 'next', charactersLength, selectedCharacters);
+    }
+
+    setCurrentIndex(nextIndex); // Set the current index to the next index with indexMark
+    playSlideTransitionSound(); // Play the slide transition sound
+}
+
+
+
+// Go to the previous index with indexMark
+export function goToPreviousIndex(currentIndex, charactersLength, setCurrentIndex, selectedCharacters, characters) {
+    let prevIndex = getSlideIndex(currentIndex, 'prev', charactersLength, selectedCharacters); // Get the previous index
+
+    // Find the previous index with indexMark
+    while (!characters[prevIndex].indexMark) {
+        prevIndex = getSlideIndex(prevIndex, 'prev', charactersLength, selectedCharacters);
+    }
+
+    setCurrentIndex(prevIndex); // Set the current index to the previous index with indexMark
+    playSlideTransitionSound(); // Play the slide transition sound
+}
+
+
+
 // Handle keydown event for navigation
-export function handleKeyDown(event, goToNextSlide, goToPreviousSlide, selectedCharacters) {
+export function handleKeyDown(event, goToNextSlide, goToPreviousSlide, goToNextIndex, goToPreviousIndex, selectedCharacters) {
     if (!selectedCharacters || selectedCharacters.length === 3) return; // Return if there are no selected characters or already three selected characters
 
     if (['d', 'D', 'ArrowRight'].includes(event.key)) {
         goToNextSlide(event, selectedCharacters); // Go to the next slide when the 'D' key is pressed
     } else if (['a', 'A', 'ArrowLeft'].includes(event.key)) {
         goToPreviousSlide(event, selectedCharacters); // Go to the previous slide when the 'A' key is pressed
+    } else if (['w', 'W', 'ArrowUp'].includes(event.key)) {
+        goToNextIndex(event, selectedCharacters); // Go to the next index with indexMark when the 'W' key is pressed
+    } else if (['s', 'S', 'ArrowDown'].includes(event.key)) {
+        goToPreviousIndex(event, selectedCharacters); // Go to the previous index with indexMark when the 'S' key is pressed
     }
 }
 
