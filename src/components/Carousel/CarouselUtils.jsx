@@ -57,9 +57,6 @@ export function findCharacterIndex(characters, charID) {
 
 
 
-
-
-
 // Scroll to a random character
 export function scrollToRandomCharacter(lockedPanels, selectedCharacters, setCurrentIndex, characters) {
     if (!lockedPanels.panel3 || selectedCharacters.length === 0) {
