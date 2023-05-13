@@ -19,7 +19,6 @@ function Carousel() {
     const character = characters[currentIndex]; // Get the character object based on the current index
     const selectSound = new Audio('./audio/select.wav'); // Create an audio element for the select sound
     const deselectSound = new Audio('./audio/deselect.wav'); // Create an audio element for the deselect sound
-    const scrollSound = new Audio('./audio/scroll.wav');
 
 
 
