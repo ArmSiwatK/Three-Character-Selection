@@ -369,5 +369,54 @@
     "charID": "koishi",
     "name": "Komeiji Koishi",
     "title": "Closed Eye of Love"
+  },
+
+  {
+    "charID": "nazrin",
+    "name": "Nazrin",
+    "title": "Little Dowser General",
+    "indexMark": true
+  },
+
+  {
+    "charID": "kogasa",
+    "name": "Tatara Kogasa",
+    "title": "Cheery Forgotten Umbrella"
+  },
+
+  {
+    "charID": "ichirin",
+    "name": "Kumoi Ichirin",
+    "title": "Great Wheel, Having Guarded and Been Guarded"
+  },
+
+  {
+    "charID": "minamitsu",
+    "name": "Murasa Minamitsu",
+    "title": "Water-Bound Ghost"
+  },
+
+  {
+    "charID": "shou",
+    "name": "Toramaru Shou",
+    "title": "Disciple of Bishamonten"
+  },
+
+  {
+    "charID": "byakuren",
+    "name": "Hijiri Byakuren",
+    "title": "Mystic Abbess of a Youkai Temple"
+  },
+
+  {
+    "charID": "nue",
+    "name": "Houjuu Nue",
+    "title": "Unidentified Fantastic-Flying Girl"
+  },
+
+  {
+    "charID": "hatate",
+    "name": "Himekaidou Hatate",
+    "title": "Modern-Day Thoughtography Reporter"
   }
 ]
