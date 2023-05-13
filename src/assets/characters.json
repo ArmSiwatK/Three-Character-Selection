@@ -2,8 +2,7 @@
   {
     "charID": "reimu",
     "name": "Hakurei Reimu",
-    "title": "Shrine Maiden of Paradise",
-    "indexMark": true
+    "title": "Shrine Maiden of Paradise"
   },
 
   {
@@ -15,7 +14,8 @@
   {
     "charID": "rumia",
     "name": "Rumia",
-    "title": "Youkai Lurking in Darkness"
+    "title": "Youkai Lurking in Darkness",
+    "indexMark": true
   },
 
   {
