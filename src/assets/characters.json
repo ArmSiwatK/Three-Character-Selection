@@ -320,5 +320,54 @@
     "charID": "tenshi",
     "name": "Hinanawi Tenshi",
     "title": "Girl of Neither Perception nor Non-Perception"
+  },
+
+  {
+    "charID": "kisume",
+    "name": "Kisume",
+    "title": "Dreadful Wonder of the Well",
+    "indexMark": true
+  },
+
+  {
+    "charID": "yamame",
+    "name": "Kurodani Yamame",
+    "title": "Bright Net in the Dark Cave"
+  },
+
+  {
+    "charID": "parsee",
+    "name": "Mizuhashi Parsee",
+    "title": "Jealousy Beneath the Crust"
+  },
+
+  {
+    "charID": "yuugi",
+    "name": "Hoshiguma Yuugi",
+    "title": "Renowned Primordial Strength"
+  },
+
+  {
+    "charID": "satori",
+    "name": "Komeiji Satori",
+    "title": "Girl Who Even Vengeful Spirits Fear"
+  },
+
+  {
+    "charID": "orin",
+    "name": "Kaenbyou Rin",
+    "title": "Hell's Traffric Accident"
+  },
+
+  {
+    "charID": "okuu",
+    "name": "Reiuji Utsuho",
+    "title": "Scorching, Troublesome Divine Flame"
+  },
+
+  {
+    "charID": "koishi",
+    "name": "Komeiji Koishi",
+    "title": "Closed Eye of Love"
   }
 ]
