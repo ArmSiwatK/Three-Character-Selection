@@ -52,13 +52,13 @@ function Character(props) {
     // useEffect to update the latestProps when props change
     useEffect(() => {
         // Iterate over the panel names and invoke the updateLatestProps function for each panel
-        ['panel1', 'panel2', 'panel3'].forEach(updateLatestProps);
+        ['panel2', 'panel1', 'panel3'].forEach(updateLatestProps);
     }, [props]);
 
 
 
     // Render the character component with three character panels
-    return <div className="characters-container">{['panel1', 'panel2', 'panel3'].map(renderCharacterPanel)}</div>;
+    return <div className="characters-container">{['panel2', 'panel1', 'panel3'].map(renderCharacterPanel)}</div>;
 }
 
 export default Character;
