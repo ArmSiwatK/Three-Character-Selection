@@ -102,7 +102,7 @@ function Carousel() {
                 });
 
                 await Promise.allSettled(imagePromises);
-                console.log('Images preloaded successfully');
+                console.log('Portraits preloaded successfully');
             } catch (error) {
                 console.error('Failed to preload images:', error);
             }
