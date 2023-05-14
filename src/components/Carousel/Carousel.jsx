@@ -89,6 +89,28 @@ function Carousel() {
         };
     }, [currentIndex, selectedCharacters]);
 
+    // Preload character portrait images
+    useEffect(() => {
+        const preloadImages = async () => {
+            try {
+                const imagePromises = characters.map((char) => {
+                    return new Promise((resolve) => {
+                        const image = new Image();
+                        image.src = `./portraits/${char.charID}.png`;
+                        image.onload = resolve;
+                    });
+                });
+
+                await Promise.allSettled(imagePromises);
+                console.log('Images preloaded successfully');
+            } catch (error) {
+                console.error('Failed to preload images:', error);
+            }
+        };
+
+        preloadImages();
+    }, []);
+
 
 
     return (
