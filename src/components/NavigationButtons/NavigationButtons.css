@@ -77,6 +77,13 @@
 
 
 
+@media (max-width: 1440px) {
+
+    .navigation-buttons-row {
+        margin-bottom: 10%;
+    }
+}
+
 @media (max-width: 768px) {
 
     .navigation-buttons-row {
@@ -85,6 +92,7 @@
         transform: scale(0.75);
         position: absolute;
         bottom: 5%;
+        margin-bottom: initial;
     }
 
     .navigation-buttons button,

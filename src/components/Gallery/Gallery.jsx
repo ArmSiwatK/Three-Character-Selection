@@ -78,7 +78,7 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, titl
 
     return (
         <div className="gallery-side">
-            {window.innerWidth <= 768 ? (
+            {window.innerWidth <= 1440 ? (
                 <h1 className="character-title">{name}</h1>
             ) : (
                 <h1 className="character-title">{title}</h1>

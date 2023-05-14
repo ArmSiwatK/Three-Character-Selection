@@ -34,11 +34,13 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1440px) {
     .character-panel h1 {
         display: none;
     }
+}
 
+@media (max-width: 768px) {
     .character-portrait {
         position: absolute;
         bottom: 0;
