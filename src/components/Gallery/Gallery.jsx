@@ -78,8 +78,10 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, titl
         const updateDisplayCount = () => {
             if (window.matchMedia("(max-width: 768px)").matches) {
                 setDisplayCount(5); // Set the displayCount for smaller screens
+            } else if (window.matchMedia("(max-width: 1200px)").matches) {
+                setDisplayCount(7); // Set the default displayCount for larger screens
             } else {
-                setDisplayCount(9); // Set the default displayCount for larger screens
+                setDisplayCount(9); // Set the default displayCount for even larger screens
             }
         };
 
