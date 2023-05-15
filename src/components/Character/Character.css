@@ -27,7 +27,7 @@
     height: auto;
     margin-top: -20%;
     z-index: -1;
-    background-image: linear-gradient(to bottom, transparent, white);
+    background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5));
 }
 
 .character-panel.blank-panel .character-portrait {
