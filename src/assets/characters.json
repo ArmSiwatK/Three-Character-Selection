@@ -418,5 +418,54 @@
     "charID": "hatate",
     "name": "Himekaidou Hatate",
     "title": "Modern-Day Thoughtography Reporter"
+  },
+
+  {
+    "charID": "kyouko",
+    "name": "Kasodani Kyouko",
+    "title": "Sutra-Chanting Yamabiko",
+    "indexMark": true
+  },
+
+  {
+    "charID": "yoshika",
+    "name": "Miyako Yoshika",
+    "title": "Loyal Cadaver"
+  },
+
+  {
+    "charID": "seiga",
+    "name": "Kaku Seiga",
+    "title": "Wicked Hermit Who Passes Through Walls"
+  },
+
+  {
+    "charID": "tojiko",
+    "name": "Soga no Tojiko",
+    "title": "Ghost of the Children of the Gods"
+  },
+
+  {
+    "charID": "futo",
+    "name": "Mononobe no Futo",
+    "title": "Shikaisen from Ancient Japan"
+  },
+
+  {
+    "charID": "miko",
+    "name": "Toyosatomimi no Miko",
+    "title": "Heavenly Taoist"
+  },
+
+  {
+    "charID": "mamizou",
+    "name": "Futatsuiwa Mamizou",
+    "title": "Bake-Danuki, Ten Transformations"
+  },
+
+  {
+    "charID": "kokoro",
+    "name": "Hata no Kokoro",
+    "title": "Expressive Poker Face"
   }
 ]
