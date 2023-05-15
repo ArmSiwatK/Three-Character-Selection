@@ -49,6 +49,31 @@ function Character(props) {
 
 
 
+    //Preload character portrait images
+    useEffect(() => {
+        const imageUrls = [props.image, './portraits/blank.png'];
+
+        const preloadImages = async () => {
+            const imagePromises = imageUrls.map((url) => {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.src = url;
+                    img.onload = resolve;
+                    img.onerror = reject;
+                });
+            });
+
+            try {
+                await Promise.all(imagePromises);
+                console.log('Images preloaded successfully!');
+            } catch (error) {
+                console.error('Failed to preload images:', error);
+            }
+        };
+
+        preloadImages();
+    }, []);
+
     // useEffect to update the latestProps when props change
     useEffect(() => {
         // Iterate over the panel names and invoke the updateLatestProps function for each panel
