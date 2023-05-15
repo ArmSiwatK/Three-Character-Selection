@@ -2,13 +2,15 @@
   {
     "charID": "reimu",
     "name": "Hakurei Reimu",
-    "title": "Shrine Maiden of Paradise"
+    "title": "Shrine Maiden of Paradise",
+    "color": "red"
   },
 
   {
     "charID": "marisa",
     "name": "Kirisame Marisa",
-    "title": "Ordinary Magician"
+    "title": "Ordinary Magician",
+    "color": "yellow"
   },
 
   {

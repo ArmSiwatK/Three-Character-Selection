@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto 1%;
+    margin: auto 0;
 }
 
 .character-panel h1 {
@@ -27,6 +27,11 @@
     height: auto;
     margin-top: -20%;
     z-index: -1;
+    background-image: linear-gradient(to bottom, transparent, rgb(255, 255, 255));
+}
+
+.character-panel.blank-panel .character-portrait {
+    background-image: none;
 }
 
 
