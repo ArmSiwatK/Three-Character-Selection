@@ -54,27 +54,6 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, titl
     }, [currentIndex, setCurrentIndex, selectedCharacters]);
 
     useEffect(() => {
-        const preloadImages = async () => {
-            try {
-                const imagePromises = displayedCharacters.map((character) => {
-                    return new Promise((resolve) => {
-                        const image = new Image();
-                        image.src = `./profiles/${character.charID}.png`;
-                        image.onload = resolve;
-                    });
-                });
-
-                await Promise.allSettled(imagePromises);
-                console.log("Profiles preloaded successfully");
-            } catch (error) {
-                console.error("Failed to preload images:", error);
-            }
-        };
-
-        preloadImages();
-    }, [displayedCharacters]);
-
-    useEffect(() => {
         const updateDisplayCount = () => {
             if (window.matchMedia("(max-width: 768px)").matches) {
                 setDisplayCount(5); // Set the displayCount for smaller screens
