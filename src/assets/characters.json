@@ -577,5 +577,48 @@
     "charID": "shion",
     "name": "Yorigami Shion",
     "title": "Most-Despicable and Disastrous God of Poverty"
+  },
+
+  {
+    "charID": "larva",
+    "name": "Eternity Larva",
+    "title": "Butterfly Fairy Approaching Divinity",
+    "indexMark": true
+  },
+
+  {
+    "charID": "nemuno",
+    "name": "Sakata Nemuno",
+    "title": "Yamauba Who Surpasses the Transient Barrier"
+  },
+
+  {
+    "charID": "aunn",
+    "name": "Komano Aunn",
+    "title": "Guardian Beast Devoted to Gods and Buddhas"
+  },
+
+  {
+    "charID": "narumi",
+    "name": "Yatadera Narumi",
+    "title": "Magical Jizō Manifested in the Forest"
+  },
+
+  {
+    "charID": "satono",
+    "name": "Nishida Satono",
+    "title": "All-Too-Dangerous Backup Dancer"
+  },
+
+  {
+    "charID": "mai",
+    "name": "Teireida Mai",
+    "title": "All-Too-Dangerous Backup Dancer"
+  },
+
+  {
+    "charID": "okina",
+    "name": "Matara Okina",
+    "title": "Ultimate, Absolute Secret God"
   }
 ]
