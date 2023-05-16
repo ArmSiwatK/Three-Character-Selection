@@ -522,5 +522,60 @@
     "charID": "sumireko",
     "name": "Usami Sumireko",
     "title": "First President of the Secret Sealing Club"
+  },
+
+  {
+    "charID": "seiran",
+    "name": "Seiran",
+    "title": "Pale Blue Eagle-Rabbit",
+    "indexMark": true
+  },
+
+  {
+    "charID": "ringo",
+    "name": "Ringo",
+    "title": "Orange Eagle-Rabbit"
+  },
+
+  {
+    "charID": "doremy",
+    "name": "Doremy Sweet",
+    "title": "Ruler of Dreams"
+  },
+
+  {
+    "charID": "sagume",
+    "name": "Kishin Sagume",
+    "title": "Goddess Who Invites Slips of Tongue"
+  },
+
+  {
+    "charID": "clownpiece",
+    "name": "Clownpiece",
+    "title": "Fairy of Hell"
+  },
+
+  {
+    "charID": "junko",
+    "name": "Junko",
+    "title": "　"
+  },
+
+  {
+    "charID": "hecatia",
+    "name": "Hecatia Lapislazuli",
+    "title": "Goddess of Hell"
+  },
+
+  {
+    "charID": "joon",
+    "name": "Yorigami Jo'on",
+    "title": "Most-Despicable and Disastrous God of Pestilence"
+  },
+
+  {
+    "charID": "shion",
+    "name": "Yorigami Shion",
+    "title": "Most-Despicable and Disastrous God of Poverty"
   }
 ]
