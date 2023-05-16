@@ -2,15 +2,13 @@
   {
     "charID": "reimu",
     "name": "Hakurei Reimu",
-    "title": "Shrine Maiden of Paradise",
-    "color": "red"
+    "title": "Shrine Maiden of Paradise"
   },
 
   {
     "charID": "marisa",
     "name": "Kirisame Marisa",
-    "title": "Ordinary Magician",
-    "color": "yellow"
+    "title": "Ordinary Magician"
   },
 
   {
@@ -469,5 +467,60 @@
     "charID": "kokoro",
     "name": "Hata no Kokoro",
     "title": "Expressive Poker Face"
+  },
+
+  {
+    "charID": "wakasagihime",
+    "name": "Wakasagihime",
+    "title": "Mermaid in Freshwater",
+    "indexMark": true
+  },
+
+  {
+    "charID": "sekibanki",
+    "name": "Sekibanki",
+    "title": "Rokurokubi Oddity"
+  },
+
+  {
+    "charID": "kagerou",
+    "name": "Imaizumi Kagerou",
+    "title": "Loup-Garou of the Bamboo Forest"
+  },
+
+  {
+    "charID": "benben",
+    "name": "Tsukumo Benben",
+    "title": "Tsukumogami of a Worn Biwa"
+  },
+
+  {
+    "charID": "yatsuhashi",
+    "name": "Tsukumo Yatsuhashi",
+    "title": "Tsukumogami of a Worn Koto"
+  },
+
+  {
+    "charID": "seija",
+    "name": "Kijin Seija",
+    "title": "Counterattacking Amanojaku"
+  },
+
+  {
+    "charID": "shinmyoumaru",
+    "name": "Sukuna Shinmyoumaru",
+    "title": "Descendant of the Inchlings"
+  },
+
+  {
+    "charID": "raiko",
+    "name": "Horikawa Raiko",
+    "title": "Phantasmagoric Percussionist"
+  },
+
+  {
+    "charID": "sumireko",
+    "name": "Usami Sumireko",
+    "title": "First President of the Secret Sealing Club"
   }
 ]
