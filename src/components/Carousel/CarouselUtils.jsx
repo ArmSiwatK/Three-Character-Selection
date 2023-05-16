@@ -25,6 +25,7 @@ function playSlideTransitionSound() {
 export function goToNextSlide(currentIndex, charactersLength, setCurrentIndex, selectedCharacters) {
     setCurrentIndex(getSlideIndex(currentIndex, 'next', charactersLength, selectedCharacters)); // Set the current index to the next index
     playSlideTransitionSound(); // Play the slide transition sound
+    document.activeElement.blur();
 }
 
 
@@ -33,6 +34,7 @@ export function goToNextSlide(currentIndex, charactersLength, setCurrentIndex, s
 export function goToPreviousSlide(currentIndex, charactersLength, setCurrentIndex, selectedCharacters) {
     setCurrentIndex(getSlideIndex(currentIndex, 'prev', charactersLength, selectedCharacters)); // Set the current index to the previous index
     playSlideTransitionSound(); // Play the slide transition sound
+    document.activeElement.blur();
 }
 
 
