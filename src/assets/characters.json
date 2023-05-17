@@ -134,6 +134,18 @@
   },
 
   {
+    "charID": "renko",
+    "name": "Usami Renko",
+    "title": "Physics Major"
+  },
+
+  {
+    "charID": "maribel",
+    "name": "Maribel Hearn",
+    "title": "Psychology Major"
+  },
+
+  {
     "charID": "rinnosuke",
     "name": "Morichika Rinnosuke",
     "title": "Proprietor of Kourindou"
