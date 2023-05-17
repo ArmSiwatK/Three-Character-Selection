@@ -626,5 +626,54 @@
     "charID": "okina",
     "name": "Matara Okina",
     "title": "Ultimate, Absolute Secret God"
+  },
+
+  {
+    "charID": "eika",
+    "name": "Ebisu Eika",
+    "title": "Stillborn Idol of the Riverbank",
+    "indexMark": true
+  },
+
+  {
+    "charID": "urumi",
+    "name": "Ushizaki Urumi",
+    "title": "Parental Guardian of Ancient Fish"
+  },
+
+  {
+    "charID": "kutaka",
+    "name": "Niwatari Kutaka",
+    "title": "Clerical God over Hell's Checkpoint"
+  },
+
+  {
+    "charID": "yachie",
+    "name": "Kicchou Yachie",
+    "title": "Kiketsu Family Matriarch"
+  },
+
+  {
+    "charID": "mayumi",
+    "name": "Joutouguu Mayumi",
+    "title": "Haniwa Captain"
+  },
+
+  {
+    "charID": "keiki",
+    "name": "Haniyasushin Keiki",
+    "title": "Sculptor God Crafted by Utter Isolation"
+  },
+
+  {
+    "charID": "saki",
+    "name": "Kurokoma Saki",
+    "title": "Keiga Family Matriarch"
+  },
+
+  {
+    "charID": "yuuma",
+    "name": "Toutetsu Yuuma",
+    "title": "Gouyoku Alliance Matriarch"
   }
 ]
