@@ -675,5 +675,54 @@
     "charID": "yuuma",
     "name": "Toutetsu Yuuma",
     "title": "Gouyoku Alliance Matriarch"
+  },
+
+  {
+    "charID": "mike",
+    "name": "Goutokuji Mike",
+    "title": "Lucky Charm of Prosperous Commerce",
+    "indexMark": true
+  },
+
+  {
+    "charID": "takane",
+    "name": "Yamashiro Takane",
+    "title": "Business Youkai of the Mountain Recesses"
+  },
+
+  {
+    "charID": "sannyo",
+    "name": "Komakusa Sannyo",
+    "title": "Highland-Dwelling Yamajorou"
+  },
+
+  {
+    "charID": "misumaru",
+    "name": "Tamatsukuri Misumaru",
+    "title": "Genuine Magatama-Producing Artisan"
+  },
+
+  {
+    "charID": "tsukasa",
+    "name": "Kudamaki Tsukasa",
+    "title": "Wicked Whispering White Fox"
+  },
+
+  {
+    "charID": "megumu",
+    "name": "Iizunamaru Megumu",
+    "title": "Chief of the Crow Tengu"
+  },
+
+  {
+    "charID": "chimata",
+    "name": "Tenkyuu Chimata",
+    "title": "God of the Unowned"
+  },
+
+  {
+    "charID": "momoyo",
+    "name": "Himemushi Momoyo",
+    "title": "Onyx Dragon Eater"
   }
 ]
