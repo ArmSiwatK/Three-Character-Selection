@@ -427,6 +427,12 @@
   },
 
   {
+    "charID": "kasen",
+    "name": "Ibaraki Kasen",
+    "title": "One-Armed Horned Hermit"
+  },
+
+  {
     "charID": "kyouko",
     "name": "Kasodani Kyouko",
     "title": "Sutra-Chanting Yamabiko",
@@ -467,6 +473,12 @@
     "charID": "mamizou",
     "name": "Futatsuiwa Mamizou",
     "title": "Bake-Danuki, Ten Transformations"
+  },
+
+  {
+    "charID": "kosuzu",
+    "name": "Motoori Kosuzu",
+    "title": "Bibliophile with a Deciphering Eye"
   },
 
   {
@@ -669,6 +681,18 @@
     "charID": "saki",
     "name": "Kurokoma Saki",
     "title": "Keiga Family Matriarch"
+  },
+
+  {
+    "charID": "miyoi",
+    "name": "Okunoda Miyoi",
+    "title": "Poster Girl of Geidontei"
+  },
+
+  {
+    "charID": "mizuchi",
+    "name": "Miyadeguchi Mizuchi",
+    "title": "Jailbreak King"
   },
 
   {
