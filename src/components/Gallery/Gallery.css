@@ -77,5 +77,25 @@
     .character-title {
         font-size: 26px;
         padding: 1% 9%;
+        margin: 2% 0;
+    }
+}
+
+@media (max-height: 800px) {
+
+    .gallery-side {
+        margin-top: 0;
+    }
+
+    .gallery-wrapper {
+        width: 100px;
+        height: 100px;
+        margin: 10px 5px;
+    }
+
+    .character-title {
+        font-size: 26px;
+        padding: 1% 9%;
+        margin: 2% 0;
     }
 }
