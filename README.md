@@ -1,6 +1,6 @@
 # Three Character Selection
 
-![Character Selection Demo](./demo.gif)
+![Character Selection Demo](public/demo.gif)
 
 I wanted to try something else, but I liked how the project looked at the time, so I thought I might as well kept it around with Git – and by extension, use GitHub for convenience.
 
