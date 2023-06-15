@@ -82,7 +82,7 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, titl
                     // Check if the character index is chosen
                     const isChosen = selectedCharacters.includes(characterIndex);
                     // Get the profile image URL for the character
-                    const profileImg = `./profiles/${character.charID}.png`;
+                    const profileImg = `./profiles/${character.charID}.webp`;
 
                     return (
                         <div

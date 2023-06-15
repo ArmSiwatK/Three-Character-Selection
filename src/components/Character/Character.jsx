@@ -6,8 +6,8 @@ function Character(props) {
     // State to keep track of the latest props received for each panel
     const [latestProps, setLatestProps] = useState({
         panel1: { name: '', image: '' },
-        panel2: { name: ' ', image: './portraits/blank.png' },
-        panel3: { name: ' ', image: './portraits/blank.png' },
+        panel2: { name: ' ', image: './portraits/blank.webp' },
+        panel3: { name: ' ', image: './portraits/blank.webp' },
     });
 
 
@@ -17,7 +17,7 @@ function Character(props) {
         const { name, image } = latestProps[panel];
 
         // Check if the panel is a blank panel (no name and a specific image)
-        const isBlankPanel = name === ' ' && image === './portraits/blank.png';
+        const isBlankPanel = name === ' ' && image === './portraits/blank.webp';
 
         return (
             <div key={panel} className={`character-panel ${isBlankPanel ? 'blank-panel' : ''}`}>
@@ -34,9 +34,9 @@ function Character(props) {
             // Determine the updated panel object based on the panel and its relationship with other panels
             const updatedPanel =
                 panel === 'panel2' && !props.lockedPanels['panel1']
-                    ? { name: ' ', image: './portraits/blank.png' }
+                    ? { name: ' ', image: './portraits/blank.webp' }
                     : panel === 'panel3' && !props.lockedPanels['panel2']
-                        ? { name: ' ', image: './portraits/blank.png' }
+                        ? { name: ' ', image: './portraits/blank.webp' }
                         : { name: props.name, image: props.image };
 
             // Update the latestProps state by merging the previous state with the updated panel object

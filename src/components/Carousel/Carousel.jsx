@@ -111,13 +111,13 @@ function Carousel() {
             {window.innerWidth <= 768 ? (
                 <CharacterResponsive
                     name={character.name}
-                    image={`./portraits/${character.charID}.png`}
+                    image={`./portraits/${character.charID}.webp`}
                     lockedPanels={lockedPanels}
                 />
             ) : (
                 <Character
                     name={character.name}
-                    image={`./portraits/${character.charID}.png`}
+                    image={`./portraits/${character.charID}.webp`}
                     lockedPanels={lockedPanels}
                 />
             )}
