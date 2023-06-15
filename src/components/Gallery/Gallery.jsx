@@ -59,6 +59,29 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, titl
         };
     }, []);
 
+    useEffect(() => {
+        const preloadImages = () => {
+            const imagePromises = displayedCharacters.map((character) => {
+                const profileImg = `./profiles/${character.charID}.png`;
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.src = profileImg;
+                    img.onload = resolve;
+                    img.onerror = reject;
+                });
+            });
+            Promise.all(imagePromises)
+                .then(() => {
+                    console.log("All images preloaded successfully");
+                })
+                .catch((error) => {
+                    console.log("Error preloading images:", error);
+                });
+        };
+
+        preloadImages();
+    }, [displayedCharacters]);
+
 
 
     return (
