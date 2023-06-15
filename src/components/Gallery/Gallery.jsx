@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { handleKeyDown, goToNextSlide, goToPreviousSlide } from '../Carousel/CarouselUtils';
 import characters from "../../assets/characters.json";
 import "./Gallery.css";
 
-const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, title, lockedPanels }) => {
+const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, title }) => {
 
     // The initial number of characters to display in the gallery
     // Actual displayed characters is displayCount-2; characters at both ends are invisible.
@@ -30,29 +29,13 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, titl
 
 
 
+    // Active highlight
     useEffect(() => {
         // Set the active index to the current index
         setActiveIndex(currentIndex);
-
-        const handleKeyDownEvent = (event) => {
-            // Handle keydown events for navigation within the gallery
-            handleKeyDown(
-                event,
-                () => goToNextSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters),
-                () => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters),
-                selectedCharacters
-            );
-        };
-
-        // Add the event listener for keydown events
-        document.addEventListener("keydown", handleKeyDownEvent);
-
-        // Clean up the event listener when the component unmounts
-        return () => {
-            document.removeEventListener("keydown", handleKeyDownEvent);
-        };
     }, [currentIndex, setCurrentIndex, selectedCharacters]);
 
+    // Gallery item display amount adjustment based on screen size.
     useEffect(() => {
         const updateDisplayCount = () => {
             if (window.matchMedia("(max-width: 768px)").matches) {

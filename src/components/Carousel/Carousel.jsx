@@ -99,7 +99,6 @@ function Carousel() {
                 selectedCharacters={selectedCharacters}
                 name={character.name}
                 title={character.title}
-                lockedPanels={lockedPanels}
             />
             <NavigationButtons
                 goToPreviousSlide={() => goToPreviousSlide(currentIndex, characters.length, setCurrentIndex, selectedCharacters)}
