@@ -33,6 +33,11 @@
     opacity: 1;
 }
 
+.gallery-wrapper.chosen {
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    opacity: 1;
+}
+
 .gallery-wrapper img {
     width: 100%;
     height: 100%;

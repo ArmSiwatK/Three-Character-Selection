@@ -79,13 +79,15 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, titl
                     const isHidden = index === 0 || index === displayedCharacters.length - 1;
                     // Determine if the character is currently active (based on the active index)
                     const isActive = characterIndex === activeIndex;
+                    // Check if the character index is chosen
+                    const isChosen = selectedCharacters.includes(characterIndex);
                     // Get the profile image URL for the character
                     const profileImg = `./profiles/${character.charID}.png`;
 
                     return (
                         <div
                             key={character.charID}
-                            className={`gallery-wrapper ${isHidden ? "hidden" : ""} ${isActive ? "active" : ""}`}
+                            className={`gallery-wrapper ${isHidden ? "hidden" : ""} ${isActive ? "active" : ""} ${isChosen ? "chosen" : ""}`}
                         >
                             <img src={profileImg} alt={character.name} />
                         </div>
