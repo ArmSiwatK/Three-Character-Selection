@@ -1,9 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { handleKeyDown, findCharacterIndex, goToNextSlide, goToPreviousSlide, scrollToRandomCharacter, goToNextIndex, goToPreviousIndex } from './CarouselUtils';
+
+import {
+    handleKeyDown,
+    findCharacterIndex,
+    goToNextSlide,
+    goToPreviousSlide,
+    scrollToRandomCharacter,
+    goToNextIndex,
+    goToPreviousIndex
+} from './CarouselUtils';
+
 import Gallery from '../Gallery/Gallery';
 import NavigationButtons from '../NavigationButtons/NavigationButtons';
 import Character from '../Character/Character';
 import CharacterResponsive from '../Character/CharacterResponsive';
+
 import characters from '../../assets/characters.json';
 import './Carousel.css';
 
