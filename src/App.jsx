@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Carousel from './components/Carousel/Carousel';
 import characters from './assets/characters.json';
-import './App.css';
+import './styles/App.css';
 
 function App() {
 
