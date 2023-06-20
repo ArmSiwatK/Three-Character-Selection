@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Carousel from './components/Carousel/Carousel';
+import characters from './assets/characters.json';
 import './App.css';
 
 function App() {
@@ -7,7 +8,6 @@ function App() {
   useEffect(() => {
     // Preload images when the component mounts
     const preloadImages = () => {
-      const characters = require('./assets/characters.json'); // Import characters data
       const imageUrls = characters.map((character) => `./portraits/${character.charID}.webp`);
       const profileImageUrls = characters.map((character) => `./profiles/${character.charID}.webp`);
       const allImageUrls = [...imageUrls, ...profileImageUrls];
@@ -20,8 +20,6 @@ function App() {
 
     preloadImages();
   }, []);
-
-
 
   return (
     <div className="main-container">
