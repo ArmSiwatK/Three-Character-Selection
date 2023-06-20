@@ -47,7 +47,7 @@ function Carousel() {
             if (selectedCharacters.length !== 2) {
                 goToNextSlide(newIndex, characters.length, setCurrentIndex, selectedCharacters); // Go to the next slide if not on the second selected character
             }
-            selectSound.play(); // Play the select sound
+            selectSound.play();
         }
     };
 
@@ -56,7 +56,7 @@ function Carousel() {
         if (selectedCharacters.length > 0) {
             const updatedSelectedCharacters = selectedCharacters.slice(0, -1); // Remove the last character from the selected characters array
             updateSelectedCharacters(updatedSelectedCharacters); // Update the selected characters array
-            deselectSound.play(); // Play the deselect sound
+            deselectSound.play();
         }
     };
 
@@ -88,25 +88,6 @@ function Carousel() {
             document.removeEventListener('keydown', handleKeyDownEvent); // Remove event listener when component unmounts
         };
     }, [currentIndex, selectedCharacters]);
-
-    useEffect(() => {
-        // Preload images when the component mounts
-        const preloadImages = () => {
-            const imageUrls = characters.map(
-                (character) => `./portraits/${character.charID}.webp`
-            );
-            const profileImageUrls = characters.map(
-                (character) => `./profiles/${character.charID}.webp`
-            );
-            const allImageUrls = [...imageUrls, ...profileImageUrls];
-            allImageUrls.forEach((url) => {
-                const img = new Image();
-                img.src = url;
-            });
-        };
-
-        preloadImages();
-    }, []);
 
 
 
