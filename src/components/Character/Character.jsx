@@ -3,20 +3,23 @@ import './Character.css';
 
 function Character(props) {
 
-    // State to keep track of the latest props received for each panel
+    /*
+    < --------------- State --------------- >
+    */
+
     const [latestProps, setLatestProps] = useState({
         panel1: { name: '', image: '' },
         panel2: { name: ' ', image: './portraits/blank.webp' },
         panel3: { name: ' ', image: './portraits/blank.webp' },
     });
 
-
+    /*
+    < --------------- Functions --------------- >
+    */
 
     // Render the character panel with the given panel name
     const renderCharacterPanel = (panel) => {
         const { name, image } = latestProps[panel];
-
-        // Check if the panel is a blank panel (no name and a specific image)
         const isBlankPanel = name === ' ' && image === './portraits/blank.webp';
 
         return (
@@ -31,7 +34,7 @@ function Character(props) {
     const updateLatestProps = (panel) => {
         // Check if the panel is not locked
         if (!props.lockedPanels[panel]) {
-            // Determine the updated panel object based on the panel and its relationship with other panels
+
             const updatedPanel =
                 panel === 'panel2' && !props.lockedPanels['panel1']
                     ? { name: ' ', image: './portraits/blank.webp' }
@@ -39,7 +42,6 @@ function Character(props) {
                         ? { name: ' ', image: './portraits/blank.webp' }
                         : { name: props.name, image: props.image };
 
-            // Update the latestProps state by merging the previous state with the updated panel object
             setLatestProps((prevLatestProps) => ({
                 ...prevLatestProps,
                 [panel]: updatedPanel,
@@ -47,15 +49,18 @@ function Character(props) {
         }
     };
 
+    /*
+    < --------------- useEffect Hook --------------- >
+    */
 
-
-    // useEffect to update the latestProps when props change
+    // Iterate over the panel names and invoke updateLatestProps for each panel
     useEffect(() => {
-        // Iterate over the panel names and invoke the updateLatestProps function for each panel
         ['panel2', 'panel1', 'panel3'].forEach(updateLatestProps);
     }, [props]);
 
-
+    /*
+    < --------------- JSX Structure --------------- >
+    */
 
     // Render the character component with three character panels
     return <div className="characters-container">{['panel2', 'panel1', 'panel3'].map(renderCharacterPanel)}</div>;

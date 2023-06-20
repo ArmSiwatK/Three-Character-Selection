@@ -4,34 +4,35 @@ import "./Gallery.css";
 
 const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, title }) => {
 
-    // The initial number of characters to display in the gallery
+    /*
+    < --------------- States --------------- >
+    */
+
     // Actual displayed characters is displayCount-2; characters at both ends are invisible.
     const [displayCount, setDisplayCount] = useState(9);
     const [activeIndex, setActiveIndex] = useState(null);
 
+    /*
+    < --------------- Functions --------------- >
+    */
 
-
-    // Calculate the circular index to handle looping through character indices
+    // Calculate circular index to handle looping through character indices
     const circularIndex = (index, length) => (index + length) % length;
 
-    // Get the characters to be displayed in the gallery
+    // Create an array of characters to be displayed based on the current index and displayCount
     const getDisplayedCharacters = () => {
-        // Calculate the count of characters to be displayed (limited by displayCount)
         const displayedCount = Math.min(displayCount, characters.length);
-        // Create an array of characters to be displayed based on the current index and displayCount
         return Array.from({ length: displayedCount }, (_, i) =>
             characters[circularIndex(currentIndex - Math.floor(displayCount / 2) + i, characters.length)]
         );
     };
 
-    // Get the displayed characters for the gallery
-    const displayedCharacters = getDisplayedCharacters();
+    /*
+    < --------------- useEffect Hooks --------------- >
+    */
 
-
-
-    // Active highlight
+    // Active highlight on current index
     useEffect(() => {
-        // Set the active index to the current index
         setActiveIndex(currentIndex);
     }, [currentIndex, setCurrentIndex, selectedCharacters]);
 
@@ -39,49 +40,47 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, titl
     useEffect(() => {
         const updateDisplayCount = () => {
             if (window.matchMedia("(max-width: 768px)").matches) {
-                setDisplayCount(5); // Set the displayCount for smaller screens
+                setDisplayCount(5);
             } else if (window.matchMedia("(max-width: 1200px)").matches) {
-                setDisplayCount(7); // Set the default displayCount for larger screens
+                setDisplayCount(7);
             } else {
-                setDisplayCount(9); // Set the default displayCount for even larger screens
+                setDisplayCount(9);
             }
         };
 
-        // Initial update
         updateDisplayCount();
-
-        // Listen for screen size changes
         window.addEventListener("resize", updateDisplayCount);
 
-        // Clean up the event listener when the component unmounts
         return () => {
             window.removeEventListener("resize", updateDisplayCount);
         };
     }, []);
 
-
+    /*
+    < --------------- JSX Structure --------------- >
+    */
 
     return (
         <div className="gallery-side">
+
             {window.innerWidth <= 1200 ? (
                 <h1 className="character-title">{name}</h1>
             ) : (
                 <h1 className="character-title">{title}</h1>
             )}
+
             <div className="gallery-set">
-                {displayedCharacters.map((character, index) => {
-                    // Calculate the circular index for each displayed character
+
+                {getDisplayedCharacters().map((character, index) => {
+
                     const characterIndex = circularIndex(
                         currentIndex - Math.floor(displayCount / 2) + index,
                         characters.length
                     );
-                    // Determine if the character is hidden (first or last in the displayedCharacters array)
-                    const isHidden = index === 0 || index === displayedCharacters.length - 1;
-                    // Determine if the character is currently active (based on the active index)
+
+                    const isHidden = index === 0 || index === getDisplayedCharacters().length - 1;
                     const isActive = characterIndex === activeIndex;
-                    // Check if the character index is chosen
                     const isChosen = selectedCharacters.includes(characterIndex);
-                    // Get the profile image URL for the character
                     const profileImg = `./profiles/${character.charID}.webp`;
 
                     return (
@@ -93,6 +92,7 @@ const Gallery = ({ currentIndex, setCurrentIndex, selectedCharacters, name, titl
                         </div>
                     );
                 })}
+
             </div>
         </div>
     );

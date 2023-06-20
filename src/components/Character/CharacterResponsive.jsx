@@ -2,16 +2,21 @@ import React, { useState } from 'react';
 import './Character.css';
 
 function CharacterResponsive(props) {
-    const [activePanel, setActivePanel] = useState('panel1');
 
-    // State to keep track of the latest character selected for each panel
+    /*
+    < --------------- States --------------- >
+    */
+
+    const [activePanel, setActivePanel] = useState('panel1');
     const [selectedCharacters, setSelectedCharacters] = useState({
         panel1: null,
         panel2: null,
         panel3: null,
     });
 
-
+    /*
+    < --------------- Function --------------- >
+    */
 
     // Render the character panel with the given panel name
     const renderCharacterPanel = (panel) => {
@@ -27,9 +32,10 @@ function CharacterResponsive(props) {
         );
     };
 
+    /*
+    < --------------- JSX Structure --------------- >
+    */
 
-
-    // Render the character component with the active panel
     return (
         <div className="characters-container">
             {renderCharacterPanel(activePanel)}

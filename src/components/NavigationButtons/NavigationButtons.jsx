@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "./NavigationButtons.css";
+import './NavigationButtons.css';
 
 const NavigationButtons = ({
     goToPreviousSlide,
@@ -10,37 +10,35 @@ const NavigationButtons = ({
     scrollToRandomCharacter,
 }) => {
 
+    /*
+    < --------------- States --------------- >
+    */
+
     const [bgmPlaying, setBgmPlaying] = useState(false);
     const [audio, setAudio] = useState(null);
     const [videoPlaying, setVideoPlaying] = useState(true);
 
-    // Function to toggle the background music playback
-    const toggleBackgroundMusic = () => {
-        if (bgmPlaying) {
-            audio.pause();
-        } else {
-            audio.play();
-        }
-        setBgmPlaying(!bgmPlaying);
-    };
+    /*
+    < --------------- Functions --------------- >
+    */
 
-    // Handler for toggling the background music
-    const handleBgmToggle = () => {
-        toggleBackgroundMusic();
-        // Remove focus from the clicked button to prevent unwanted key events
+    const toggleBackgroundMusic = () => {
+        bgmPlaying ? audio.pause() : audio.play();
+        setBgmPlaying(!bgmPlaying);
         document.activeElement.blur();
     };
 
-    // Function to toggle video playback
     const toggleVideoPlayback = () => {
         setVideoPlaying(!videoPlaying);
         document.activeElement.blur();
     };
 
+    /*
+    < --------------- useEffect Hook --------------- >
+    */
 
-
+    // Create new Audio object for the background music
     useEffect(() => {
-        // Create a new Audio object for the background music
         const bgmAudio = new Audio('./audio/bgm.mp3');
         bgmAudio.loop = true;
         setAudio(bgmAudio);
@@ -51,7 +49,9 @@ const NavigationButtons = ({
         };
     }, []);
 
-
+    /*
+    < --------------- JSX Structure --------------- >
+    */
 
     return (
         <div className="navigation-buttons">
@@ -68,7 +68,7 @@ const NavigationButtons = ({
                 <button onClick={scrollToRandomCharacter}>
                     Random
                 </button>
-                <button onClick={handleBgmToggle}>
+                <button onClick={toggleBackgroundMusic}>
                     BGM
                 </button>
                 <button onClick={handleCharDeselect} disabled={selectedCharacters.length === 0}>
@@ -78,11 +78,13 @@ const NavigationButtons = ({
                     ►
                 </button>
             </div>
+
             {videoPlaying && (
                 <video className="background-video" autoPlay loop muted>
                     <source src="./background.mp4" type="video/mp4" />
                 </video>
             )}
+
             <div className="gradient-overlay"></div>
         </div>
     );

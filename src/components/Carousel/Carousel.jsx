@@ -8,19 +8,26 @@ import characters from '../../assets/characters.json';
 import './Carousel.css';
 
 function Carousel() {
-    const [currentIndex, setCurrentIndex] = useState(0); // State variable to track the current index of the carousel
-    const [selectedCharacters, setSelectedCharacters] = useState([]); // State variable to store the selected characters
+
+    /*
+    < --------------- States and Variables --------------- >
+    */
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [selectedCharacters, setSelectedCharacters] = useState([]);
     const [lockedPanels, setLockedPanels] = useState({
         panel1: false,
         panel2: true,
         panel3: true,
-    }); // State variable to manage locked panels
+    });
 
-    const character = characters[currentIndex]; // Get the character object based on the current index
+    const character = characters[currentIndex];
     const selectSound = new Audio('./audio/select.wav');
     const deselectSound = new Audio('./audio/deselect.wav');
 
-
+    /*
+    < --------------- Functions --------------- >
+    */
 
     // Update the locked panels based on the selected characters
     const updateLockedPanels = (selectedChars) => {
@@ -31,36 +38,38 @@ function Carousel() {
         });
     };
 
-    // Update the selected characters
+    // Update the selected characters and locked panels
     const updateSelectedCharacters = (updatedSelectedCharacters) => {
-        setSelectedCharacters(updatedSelectedCharacters); // Update the selected characters
-        updateLockedPanels(updatedSelectedCharacters); // Update the locked panels based on the updated selected characters
+        setSelectedCharacters(updatedSelectedCharacters);
+        updateLockedPanels(updatedSelectedCharacters);
     };
 
-    // Handle character selection
+    // Handle character selection through index; go to next slide if not on second selected character
     const handleCharSelect = (charID) => {
         if (selectedCharacters.length < 3) {
-            const newIndex = findCharacterIndex(characters, charID); // Find the index of the selected character
-            setCurrentIndex(newIndex); // Set the current index to the selected character index
-            updateSelectedCharacters([...selectedCharacters, newIndex]); // Update the selected characters array with the new index
+            const newIndex = findCharacterIndex(characters, charID);
+            setCurrentIndex(newIndex);
+            updateSelectedCharacters([...selectedCharacters, newIndex]);
 
             if (selectedCharacters.length !== 2) {
-                goToNextSlide(newIndex, characters.length, setCurrentIndex, selectedCharacters); // Go to the next slide if not on the second selected character
+                goToNextSlide(newIndex, characters.length, setCurrentIndex, selectedCharacters);
             }
             selectSound.play();
         }
     };
 
-    // Handle character deselection
+    // Handle character deselection through removal from array
     const handleCharDeselect = () => {
         if (selectedCharacters.length > 0) {
-            const updatedSelectedCharacters = selectedCharacters.slice(0, -1); // Remove the last character from the selected characters array
-            updateSelectedCharacters(updatedSelectedCharacters); // Update the selected characters array
+            const updatedSelectedCharacters = selectedCharacters.slice(0, -1);
+            updateSelectedCharacters(updatedSelectedCharacters);
             deselectSound.play();
         }
     };
 
-
+    /*
+    < --------------- useEffect Hooks --------------- >
+    */
 
     // Handle keydown event for navigation and character selection/deselection
     useEffect(() => {
@@ -76,21 +85,21 @@ function Carousel() {
             );
 
             if (event.key === 'Enter' && selectedCharacters.length < 3) {
-                handleCharSelect(character.charID); // Handle character selection when Enter key is pressed
+                handleCharSelect(character.charID);
             } else if (event.key === 'Backspace' && selectedCharacters.length > 0) {
-                handleCharDeselect(); // Handle character deselection when Backspace key is pressed
+                handleCharDeselect();
             }
         };
 
-        document.addEventListener('keydown', handleKeyDownEvent); // Add event listener for keydown
+        document.addEventListener('keydown', handleKeyDownEvent);
 
         return () => {
-            document.removeEventListener('keydown', handleKeyDownEvent); // Remove event listener when component unmounts
+            document.removeEventListener('keydown', handleKeyDownEvent);
         };
     }, [currentIndex, selectedCharacters]);
 
+    // Preload images when the component mounts
     useEffect(() => {
-        // Preload images when the component mounts
         const preloadImages = () => {
             const imageUrls = characters.map((character) => `./portraits/${character.charID}.webp`);
             const profileImageUrls = characters.map((character) => `./profiles/${character.charID}.webp`);
@@ -105,7 +114,9 @@ function Carousel() {
         preloadImages();
     }, []);
 
-
+    /*
+    < --------------- JSX Structure --------------- >
+    */
 
     return (
         <div className="carousel-container">
